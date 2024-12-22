@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>הטרגדיה בתוך הקומדיה</title>
+    <link rel="icon" type="image/x-icon"
+        href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section  class="screen backgroundImg centerFlex" style="background-image: url(img/Shakespeare_Droeshout_1623_02.jpg); flex-direction: column;" alt="תמונת רקע של שייקספיר">
+        <h1 style="width: 100%; text-align: center; background: #ffffffd4; padding: 0.5em; font-size: 3em;">מי כתב את המחזות של שייקספיר?
+        </h1>
+        <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>  
+    </section>
+
+    <!-- screen 2 -->
+    <section  class="screen GridLayout equal2ChildWidthv2 gardientBackColor">
+        <div class="background-image" alt="תמונה של שייקספיר" style="background-image: url(img/William_Shakespeare_by_John_Taylor,_edited.jpg); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Horizontal"></div>
+        </div>
+
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation" alt="" style="top: 10%; left: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <p>
+             אם סוקרים את כל העובדות שידועות לנו על חייו של שייקספיר, ניכר שיש מעט מאוד שסיפור חייו, ככל שאנחנו מסוגלים לשחזר אותו, יכול להעיד על גדולתו כמחזאי.
+            </p>
+            <p>
+                אנחנו יודעים שהוא היה שחקן ובעל תיאטרון ושעוד בחייו היה בעל שם כמחזאי וכמשורר נערץ ופופולרי. אבל שייקספיר לא הותיר אחריו כמעט אף כתב יד של המחזות שלו. אפילו “הפוליו הראשון”, קובץ המחזות עליו נהוג להסתמך ושאותו אנחנו קוראים, לא מבוסס ישירות על כתב ידו של שייקספיר אלא על ספרי מחזות שהיו בעצמם העתק ושלא שרדו.
+            </p>
+        </div>
+
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation centerX" alt="" style="bottom: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <p>
+                <span>
+                    הפער הזה בין חייו של שייקספיר ובין יצירתו הוביל לטענה שאתם אולי מכירים: 
+                </span>
+                <span>
+                    שייקספיר לא היה מי שכתב את המחזות שמזוהים עם שמו.
+                </span>
+            </p>
+            <p>
+                הטענה הזו אמנם מלהיבה ומסקרנת, אבל היא טענה מופרכת, במיוחד היום לאור העובדות הרבות שקושרות את שייקספיר לעולם התיאטרון.
+            </p>
+            <p>
+                אבל איך ולמה בכלל עלתה ההשערה הזו, שלא שייקספיר הוא שכתב את המחזות? 
+            </p>
+        </div>
+    </section>
+
+    <!-- screen 3 -->
+    <section  class="screen gardientBackColor" style="--startColor: #3d3327;">
+        <div class="flyBox centerX have-scroll-animation aniType-MoveLeftToRight active-enter-animation" alt="" style="top: 20%; left: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <p>
+                עצם העיסוק בשאלת זהותו של כותב המחזות מעיד בדיוק על הכוח שאנשים רבים עדיין מייחסים לשמו של שייקספיר במנותק מחייו.
+            </p>
+            <p>
+                <strong>
+                    ככל שמחזותיו של שייקספיר השתרשו בתרבות המערבית כנכסי צאן ברזל וכיצירות מופת של ספרות גבוהה, כך מלומדים ומעצבי דעה שצידדו בגדולתו של שייקספיר התקשו ליישב את ההערצה שלהם למחזות עם דמותו הבעייתית של האיש שעלתה מהרקורד ההיסטורי.
+                </strong>
+                במיוחד חרה להם ששייקספיר, בניגוד למרבית המחזאים האחרים בני תקופתו, לא למד באוניברסיטה ולכן, על פניו, לא יכול היה לכתוב מחזות כה מלומדים שמשקפים את כל תחומי הידע של הרנסנס. 
+            </p>
+            <p>
+                אבל זו טעות עמוקה שמלמדת יותר על המצדדים בה מאשר על המחזות עצמם. המחזות של שייקספיר משקפים חכמה אנושית עמוקה ולא ידע יבש שניתן לרכוש באוניברסיטה או על ידי קריאת ספרים. ואכן, חוקרים מזמן כבר מנו בבירור אילו ספרים שייקספיר הכיר וקרא – והם לא רבים במספר. מדף הספרים של שייקספיר היה צר יחסית וכלל ספרות עממית ורומנסות, ספרות קלאסית רומית (בעיקר בתרגום לאנגלית, מה שמתיישב עם העובדה שהלטינית שלו כנראה לא הייתה מספיק טובה), בדגש על המשוררים אובידיוס וורגיליוס, וספרי היסטוריה אנגלים. 
+            </p>
+        </div>
+        <div class="hideOnMobile" style="height: 40vh;">
+
+        </div>
+        <div class="background-image screen" alt="תמונת רקע, אנשים יושבים בסלון" style="background-image: url(img/Artvee_Men\ of\ Progress.jpg); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Vertical"></div>
+        </div>
+    </section>
+
+    <!-- screen 4 -->
+    <section  class="screen GridLayout equal2ChildWidthv2 gardientBackColor"  style="--startColor: #dac8ae;">
+        <div>
+            <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation" alt="" style="bottom: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+                <p>
+                    <strong>
+                        אבל העיסוק בזהותו של שייקספיר כמחבר המחזות לא מרפה. 
+                    </strong>
+                </p>
+                <p>
+                    תאוריות קונספירציה על זהותו - או זהותה - של מחבר המחזות ממשיכות לצוץ גם היום, ללא קשר כמובן לעובדות ההיסטוריות המובהקות שמצביעות על כך שהאיש המופלא הזה שכתב 36 מחזות שהם פאר היצירה האנושית היה כנראה שחקן תיאטרון זוטר עם כשרון מופלא לשפה וגם ראש טוב לכסף ועסקים; אדם שלא למד באוניברסיטה, וכנראה נטש את אשתו וילדיו הקטנים, ושככל הנראה קיים מספר מערכות יחסים רומנטיות עם נשים ובמיוחד גברים מחוץ לנישואים.
+                    <strong>
+                        ברור שזו לא דמות ששומרי הסף של התרבות האנגלית, בעיקר זו המוסרנית של המאה ה-19, יכלו לחיות איתה.
+                    </strong>
+                </p>
+            </div>
+        </div>
+        <div class="background-image" alt="תמונה של שייקספיר חושב" style="background-image: url(img/Shakespeare\'s_comedy_of_the_Merchant_of_Venice_\(1898\)_\(14577403330\).jpg); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        </div>
+
+    </section>
+
+    <!-- screen 5 -->
+    <section  class="screen GridLayout equal2ChildWidthv2 mobile_equal2ChildWidth gardientBackColor"  style="--startColor: #1b1c13;">
+        <div class="background-image" alt="אדוארד דה-ויר, הרוזן ה-17 של אוקספורד" style="background-image: url(img/Edward-de-Vere-1575.jpg); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Horizontal mobile_GardientVertical"></div>
+            <div class="imgDiscriptionOnImg right" style="width: fit-content;">
+                <strong>
+                    אדוארד דה-ויר,
+                </strong>
+                הרוזן ה-17 של אוקספורד
+            </div>
+        </div>
+
+        <div>
+            <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation" alt="" style="bottom: 10%; left: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+                <p>כך למשל, אחד המועמדים לכאורה שעדיין מוצע בחוגים מסוימים לזהותו של מחבר המחזות הוא הרוזן ה-17 של אוקספורד,<strong> אדוארד דה-ויר</strong>. דה-ויר היה בן אצולה מתקופתו של שייקספיר שאכן היה מקורב מאוד לעולם התיאטרון והיה הפטרון של מספר להקות שחקנים. יש גם עדויות שהוא כתב שירה (לא טובה במיוחד) ויתכן והכיר את שייקספיר.</p>
+                <p>לשיטתם של תומכי התאוריה, אדוארד דה-ויר הוא מעומד מושלם כי הוא בן אצולה שזכה לחינוך פרטי עשיר עם גישה לידע רב יותר מזה שלכאורה שייקספיר זכה לו. יש רק בעיה אחת (מעבר לכך שאין שום עובדה אמיתית שתגבה את התאוריה הזו) &ndash; אדוארד דה-ויר מת בשנת 1603, מה שמצריך את&nbsp; תומכי התאוריה לטעון שדה-ויר כתב את כל המחזות מראש ואז השאיר צוואה סודית שבה שייקספיר, השחקן הבור, מוציא כל שנה כמה מהם מהארון תחת שמו. זה כמובן אבסורדי לגמרי, אבל <strong>זה מוכיח עד כמה דמותו של מחבר המחזות עדיין חשובה לאנשים רבים &ndash; שחקני תיאטרון בכירים ומלומדים כאחד &ndash; שרואים את עצמם כמי שאמונים לכאורה על האמת המוסרית של זהות המחבר.&nbsp;&nbsp;</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 6 -->
+    <section class="screen centerFlex backgrayScale-2" style="flex-direction: column; gap: 20px;">
+        <div class="have-scroll-animation aniType-MoveLeftToRight active-enter-animation" alt="" style="background-color: rgba(255, 255, 255, 0.9); z-index: 1; width: 80%; max-width: 650px;">
+            <p style="padding:0px 1.2em">התאוריה על דה-ויר אף היוותה בסיס לסרט הוליוודי על הנושא (הסרט <strong>Anonymous</strong>), שמציג את שייקספיר כשחקן טיפש ועילג שמסכים להיות השם שחתום על המחזות שדה-ויר כותב בסתר כסופר צללים. </p>
+        </div>
+
+        <div style="width: 80%; max-width: 650px;">
+            <div class="keepRatio16_9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uBmnkk0QW3Q?si=74CTqTelJC5zJko_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 7 -->
+    <section  class="screen GridLayout equal2ChildWidthv2 backgrayScale-1" style="overflow: clip visible;">
+        <img src="img/Nicholas_Hilliard_010_02.jpg" alt="" style=" position: absolute; bottom: 0; height: 115%; left: -5%; "/>
+
+        <div>
+            <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation" alt="" style="bottom: 10%; right: 5%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+                <p>היו גם מי שהציעו <strong>שלא גבר כתב את המחזות אלא אישה</strong> &ndash; הרי איך אפשר להסביר שגבר (לא משנה באיזו תקופה הוא חי) יכתוב דמויות נשים כל כך מורכבות ועמוקות כאילו ידע לליבן של נשים?</p>
+                <p>מכיוון שהעדויות מראות ששייקספיר הוא אכן האדם שכתב את המחזות, נותר לנו להאמין <strong>שהרגישות של שייקספיר למורכבויות האנושיות היתה חוצת מגדרים</strong>. או כפי שניסחה זאת הסופרת וירג'יניה וולף: שייקספיר, בניגוד לאמנים גברים אחרים, חשב כנראה עם כל המוח שלו, כולל הצד הנשי. בכך הוא ייחודי ומתעלה על כל אותם סופרים גברים לבנים שהיום מקובל לדרוש את הסרתם מהקנון התרבותי האנגלי.&nbsp;</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- screen 8 -->
+    <section class="screen backgroundImg" style="background-image: url(img/Shakespeare_Droeshout_1623_02.jpg);" alt="תמונת רקע של שייקספיר">
+
+        <div>
+            <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation centerX" alt="" style="bottom: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+                <p>
+                    אז איך ניתן להסביר את העיסוק המתמשך בשאלת זהותו של שייקספיר, בניגוד לכל הממצאים והנתונים ההיסטוריים? 
+                </p>
+                <p>בסופו של דבר, הסיבה לכך היא אולי די פשוטה. ככל שהמחזות של שייקספיר התקבעו במעמדם האוניברסלי כיצירות מופת אלמותיות, כך האגדה שקשורה בשמו הלכה וגדלה. היום השם "שייקספיר" הוא מותג תרבותי שמשמעותו משתנה בהתאם להקשר התרבותי המסוים בו היא מופיעה. וכך, <strong>כל אחד ואחת שמעריצה את המחזות רוצה ששייקספיר, כמותג תרבותי, יישקף לו או לה את עולם הערכים שלה.</strong></p>
+            </div>
+        </div>
+    </section>
+    
+
+    <a id="backToModdle" href="https://moodle.tau.ac.il/mod/hvp/view.php?id=549538">חזרה לשיעור ◄</a>
+</body>
+
+</html>
