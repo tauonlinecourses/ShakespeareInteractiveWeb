@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>הטרגדיה בתוך הקומדיה</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen{
+            min-height: calc(100vh - 2em);
+            min-height: calc(100svh - 2em);
+        }
+    </style>
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section class="screen GridLayout equal2ChildWidth">
+        <div class="backgroundImg"
+            style="background-image: url(img/digitalcollections\ folger\ 29243_02.jpg); background-size: cover; background-position: center 15%; position: relative;">
+        </div>
+        <div class="backgroundImg"
+            style="background-image: url(img/digitalcollections\ Folger\ 21803_02.jpg); background-size: cover; background-position: center 15%; position: relative;">
+        </div>
+
+        <h1 class="flyBox centerX"
+            style="bottom: 5%; text-align: center; background: #ffffffd4; padding: 0.5em; font-size: 3em; line-height: 1.1; box-shadow: 0px 4px 3px 4px #00000045;">התמות
+            המרכזיות
+            <span style="display: block; font-weight: 400; font-size: 0.5em;margin-bottom: 0.4em;">
+                בשני המחזות
+            </span>
+            <div class="BoxBottomBorder" style="width: 100%; --BoxBorderWidth:3px"></div>
+        </h1>
+        <!-- <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>   -->
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen backgroundImg"
+        style="background-image:url('./img/Artvee_Hermia\ And\ Lysander.jpg'); background-position: left 30%; background-size: 125%; min-height: 180vh;">
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num1.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">אהבה אסורה במסגרת חברה פטריארכלית</h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    נכיר את מוסכמות החברה הפטריארכלית בתקופתו של שייקספיר ואת המתח העמוק בין קשרי נישואים (שהיו בבחינת הסכמי ממון פוליטיים) ובין רגש האהבה (שנתפס כשגעון או מחלה). 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 3 -->
+    <section class="screen backgroundImg background_ParallaxEffect"
+        style="background-image:url('./img/P._Leroy\,_-_Romeo_und_Julia.jpg'); background-position: left 30%; background-size:cover;">
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 10%; left: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num2.svg" alt="Number 2" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">שאלות של זהות אישית אל מול ההבניה של זהות חברתית-משפחתית </h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    נעמוד על המתח הרעיוני במחזות בין הזהות האישית-פנימית של האוהבים הצעירים לבין זהותם החברתית-משפחתית כבני טובים שמצופה מהם למסד קשרי נישואים בהסכמת הוריהם.  
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 4 -->
+    <section class="screen backgroundImg"
+        style="background-image:url('./img/Artvee_Romeo\ and\ Juliet.jpg'); background-position: left 30%; background-size: cover; min-height: 150vh;">
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 20%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num3.svg" alt="Number 3" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">עולם של אוהבים צעירים שמתמודדים עם התעוררות מינית ורגשות סוערים </h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    נעמיק בעולם הרגשי הסוער של האוהבים הצעירים בשני המחזות והאופן שבו התעוררות מינית ורגשות אהבה סוערים מערערים על המוסכמות החברתיות, ומביאים אותם לבסוף למסלול התנגשות עם הממסד הפטריארכלי.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 5 -->
+    <section class="screen backgroundImg"
+        style="background-image:url('./img/Codex_Manesse-Minnesänger_1.jpg'); background-position: left 30%; background-size: 125%; min-height: 180vh;">
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="top: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num4.svg" alt="Number 4" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">המתח בין מוסכמות ספרותיות של אהבה חצרונית ואידאות נשגבות ובין אהבת "אמת" ממשית </h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    נכיר את המוסכמות הספרותיות של ייצוג אהבה בתקופתו של שייקספיר, ובפרט את מוסכמות ה"אהבה החצרונית": אהבה שמתקיימת במחשבה בלבד (לעומת אהבת "אמת" ממשית). כפי שנראה, שייקספיר פונה אל המוסכמות האלה במספר נקודות חשובות במחזות כדי להעצים את המשבר הרגשי שהמאהבים הצעירים, במיוחד הגברים, נקלעים אליו.  
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 6 -->
+    <section class="screen backgroundImg background_ParallaxEffect"
+        style="background-image:url('./img/Artvee_Midsummer\ Night’s\ Fairies.jpg'); background-position: left 30%; background-size: 125%;">
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num5.svg" alt="Number 5" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">המתח שבין מציאות רגשית ועולם הדמיון ובין מציאות גשמית חיצונית וחברתית </h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    התמות הקודמות מתנקזות לשאלות מורכבות יותר על המתח שתמיד קיים בהוויה האנושית בין מציאות רגשית ועולם הדמיון ובין מציאות גשמית חיצונית חברתית. כפי שנראה, רגש האהבה במחזות תמיד מתקיים במתח הזה ומטשטש את הגבולות בין מציאות ודמיון. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 7 -->
+    <section class="screen backgroundImg"
+        style="background-image:url('./img/Comedy_by_Victor-Edmond_Leharivel-Durocher-MG_850-IMG_0994-black.jpg'); background-position: left 30%; background-size:cover; min-height: 180vh;">
+       <span class="imgDiscriptionOnImgSmall" style="color: #ffffff91;">Comedy, by Victor Edmond Leharivel Durocher, photo by Rama, under CC BY-SA 3.0 FR, via Wikimedia Commons</span>
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="top: 10%; left: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num6.svg" alt="Number 6" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">הקו הדק בחיינו בין הקומי והטרגי </h2>
+                <p style="margin-left: 1.3em;">
+                    שני המחזות עוסקים במובנים רבים ושונים במדיום התיאטרלי עצמו, תכונה שנכנה "מטא-תיאטרליות". בעזרת האופי המטא-תיאטרלי של המחזות שייקספיר דן בשאלה מתי ואיך רצף אירועים מוגדר כקומי או כטרגי, שאלה שהעסיקה אותו מאוד. דרך העיסוק בנושא זה במחזות, שייקספיר מראה עד כמה דק הקו בין מה שאנחנו תופסים בחיינו כקומי או כטרגי. 
+                </p>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    כמו שרגש האהבה מטשטש את הגבול בין מציאות ודמיון בחיינו, כך גם האופי המטא-תיאטרלי של המחזות (כלומר, האופן שבו הם עוסקים במדיום התיאטרלי עצמו) מראה עד כמה דק הקו בחיינו בין מה שתמיד נתפס בדיעבד כסוף "קומי" או סוף "טרגי". או אם לדייק, הסוף הקומי תמיד דוחה את הסוף הטרגי והשאלה מתי ואיך זה קורה מאוד מעסיקה את שייקספיר במחזות שלפנינו. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 8 -->
+    <section class="screen backgroundImg"
+        style="background-image:url('./img/Imaginary_view_of_an_Elizabethan_stage.jpg'); background-position: left 30%; background-size: cover; min-height: 180vh;">
+        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="top: 10%; left: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <img src="./img/Num7.svg" alt="Number 7" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">שאלות מורכבות על תפקיד המדיום האמנותי עצמו לייצג על במה דמויות אנושיות מורכבות ולהשפיע על הקהל </h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    הדיון המטא-תיאטרלי שעולה מהמחזות עצמם מעמיד בפנינו שאלות מורכבות על האופן שבו תיאטרון, אז והיום, מפעיל אצל הקהל את המתח שקיים גם בחיינו בין מציאות ודמיון. שאלות אלו יעסיקו אותנו בשלבים מתקדמים של הקורס כשנחשוב על המודעות התיאטרלית של דמויות שונות במהלך ההצגה והאופן שבו שייקספיר פונה אלינו בקהל לקחת חלק פעיל במחזה שאנחנו צופים. 
+                </p>
+            </div>
+        </div>
+
+        <span class="imgDiscriptionOnImg">Imaginary view of an Elizabethan stage, by C. Walter Hodges, under CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons</span>
+    </section>
+
+
+    <a id="backToModdle" href="https://moodle.tau.ac.il/mod/hvp/view.php?id=322815">חזרה לשיעור ◄</a>
+</body>
+
+</html>
