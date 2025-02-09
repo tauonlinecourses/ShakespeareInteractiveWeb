@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>מי כתב את המחזות של שייקספיר?</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 1.5em);
+        }
+
+        table {
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0px 25px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        td {
+            position: relative;
+            min-width: 4em;
+        }
+
+        .sideRowColorBox {
+            width: 6px;
+            height: 4em;
+
+        }
+
+        tr:nth-child(2) .sideRowColorBox {
+            background-color: #d32f2f;
+        }
+
+        /* Red for Sanguine */
+        tr:nth-child(3) .sideRowColorBox {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+        }
+
+        /* White for Phlegmatic */
+        tr:nth-child(4) .sideRowColorBox {
+            background-color: #ffb300;
+        }
+
+        /* Yellow for Choleric */
+        tr:nth-child(5) .sideRowColorBox {
+            background-color: #000000;
+        }
+
+        /* Black for Melancholic */
+
+        table strong {
+            display: block !important;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+            color: black;
+        }
+
+        td:first-child {
+            border-left: none;
+            min-width: auto;
+        }
+
+        td:nth-child(2) {
+            border-right: none;
+            padding-right: 0px;
+        }
+
+        .imgSolo {
+            width: 50%;
+            max-width: 500px;
+            border: solid black 3px;
+            margin: 25px;
+        }
+
+        @media only screen and (max-width: 720px){
+            .imgSolo {
+            width: 80%;
+        }
+
+        td{
+            min-width: auto;
+        }
+        }
+    </style>
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section class="screen backgroundImg centerFlex" alt=""
+        style="background-image: url(./img/Wellcome\ 566786i.jpg); flex-direction: column;">
+
+        <h1 class="flyBox centerX"
+            style="bottom: 10%; text-align: center; background: #fffffff7; padding: 0.5em; font-size: 3em; line-height: 1.1; box-shadow: 0px 4px 3px 4px #00000045;">
+            מוסכמות חיזור ונישואים
+            <div class="BoxBottomBorder" style="width: 70%; --BoxBorderWidth:3px; margin: auto;"></div>
+
+        </h1>
+        <!-- 
+        <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>   -->
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen backgroundImg"
+        style="background-image: url(./img/Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg);">
+        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig"
+            style="bottom: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+            <p>חשוב לזכור <strong>שבתקופה של שייקספיר מדע הרפואה כמו שאנחנו מכירים אותו היום טרם התפתח.</strong> בעוד
+                שבאזורים אחרים בעולם, במיוחד בסין הרחוקה או בקרב האומות המוסלמיות של צפון אפריקה והמזרח התיכון, הרפואה
+                הייתה מתקדמת יחסית, <strong>באירופה הנוצרית עדיין היה איסור גורף של הכנסייה לנתח גופות למטרות
+                    רפואיות.</strong> האמונה הדתית סברה שניתוח גופה מחלל את שלמותה ופוגע ביכולת של אותו אדם לזכות בתחיית
+                המתים. יתרה מזאת, רבים בכנסייה האמינו שנסתרי גוף האדם אסורים למבט, כאילו היו סוד אלוהי כמוס של הבריאה
+                שאסור לחקור אותו. </p>
+        </div>
+    </section>
+
+    <!-- screen 3 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #ebe0c4;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation "
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>&nbsp;למרות האיסור הזה, ניתוח גופות למטרות רפואה הפך להיות רווח יותר עם הזמן, במיוחד באזורים
+                    פרוטסטנטים שהיו מחוץ לשליטה של הכנסייה הקתולית. <strong>ניתוח הגופות אפשר למדע הרפואה להתפתח במהירות
+                        גבוהה יותר, וזאת לצד גילויים וחידושים חשובים שאפשרו לבצע ניתוחים יותר מורכבים.</strong></p>
+
+                <p>עם זאת, הרפואה באנגליה של המאה ה-16 עדיין הסתמכה ברובה על שיטות ותובנות עתיקות של <strong>הרפואה
+                        הגלנית</strong>, על שם הרופא היווני העתיק <strong>קלאודיוס גלנוס (Claudius Galenus)</strong>,
+                    שמשנתו
+                    היוותה את הבסיס לכלל החשיבה הרפואית באירופה של ימי הביניים והרנסנס הרחק אל תוך המאה ה-17.</p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(img/Galenus.jpg); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        </div>
+
+    </section>
+
+    <!-- screen 4 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #2f2929;">
+        <div class="background-image" alt=""
+            style="background-image: url(img/Wellcome\ gamwycfb.jpg); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;"
+            alt="Paiting of man with viscera exposed and signs of zodiac affecting them 1497">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p>אחת התאוריות הרפואיות העתיקות והרווחות ביותר בתקופה של שייקספיר עסקה ברעיון "<strong>ארבע
+                        הליחות</strong>" (humors) או "<strong>הומוריזם</strong>". גם תאוריה זו פותחה כבר בתורתו הרפואית
+                    של גלנוס, כפי שנשתמרה לאורך ימי הביניים, והתבססה על משנתו העתיקה של ממציא הרפואה היוונית היפוקרטס.
+                </p>
+                <p>בעת העתיקה היה מדובר בחידוש דרמטי, שכן <strong>התאוריה מנסה להסביר את הופעתן של מחלות באופן
+                        טבעי</strong> ללא צורך בפנייה להסברים דתיים או מיסטיים כגון קללות או גזרות של האלים. כלומר,
+                    במקום שאדם חולה יפנה למקדש לבקש מרפא, היפוקרטס היה מהראשונים להציג טיפול רפואי טבעי שניסה להבין את
+                    שורש המחלה על בסיס אותה "תאוריית ליחות".</p>
+            </div>
+            <div class="imgDiscriptionOnImgSmall" style="bottom: 10px; left: 10px;">Man with viscera exposed and signs
+                of zodiac affecting them 1497, under CC BY 4.0, via Wikimedia Commons</div>
+        </div>
+
+    </section>
+
+    <!-- screen 5 -->
+    <section class="screen"
+        style="background: #DACFBB; display: flex ; flex-direction: column; gap: 20px; align-items: center;">
+        <div
+            style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 0px 25px;">
+            <p>על פי התאוריה, <strong>גוף אדם בריא מכיל ארבעה סוגים של נוזלים, או ליחות, שפועלים זה עם זה באופן הרמוני
+                    ומאוזן</strong>. כל אחת מהליחות קושרה גם לאחד מארבעת היסודות, לאחת מארבע עונות השנה ולמצבי רוח
+                שונים:</p>
+        </div>
+        <table>
+            <tr>
+                <th colspan="2">ליחה</th>
+                <th>מקור</th>
+                <th>יסוד</th>
+                <th>עונה</th>
+                <th>מצב רוח / רגש</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="sideRowColorBox"></div>
+                </td>
+                <td>
+                    <span>
+                        <strong>מרה אדומה (דם)</strong>
+                        Sanguine humour
+                    </span>
+                </td>
+                <td>
+                    כבד
+                </td>
+                <td>
+                    אוויר
+                </td>
+                <td>
+                    אביב
+                </td>
+                <td>
+                    התרגשות, ריגוש מיני, אומץ לב, שמחת חיים מופרזת
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="sideRowColorBox"></div>
+                </td>
+                <td>
+                    <span>
+                        <strong>מרה לבנה (ריר)</strong>
+                        Phlegmatic humour
+                    </span>
+                </td>
+                <td>
+                    מוח וריאות
+                </td>
+                <td>
+                    מים
+                </td>
+                <td>
+                    חורף
+                </td>
+                <td>
+                    רוגע, אמפתיות, זקנה, שכחה
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="sideRowColorBox"></div>
+                </td>
+                <td>
+                    <span>
+                        <strong>מרה צהובה</strong>
+                        Choleric humour
+                    </span>
+
+                </td>
+                <td>
+                    כיס המרה
+                </td>
+                <td>
+                    אש
+                </td>
+                <td>
+                    קיץ
+                </td>
+                <td>
+                    כעס וזעם, חוסר שקט, אמביציה
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="sideRowColorBox"></div>
+                </td>
+                <td>
+                    <span>
+                        <strong>מרה שחורה</strong>
+                        Melancholy humour
+                    </span>
+
+                </td>
+                <td>
+                    טחול
+                </td>
+                <td>
+                    אדמה
+                </td>
+                <td>
+                    סתיו
+                </td>
+                <td>
+                    מלנכוליה ודכאון, טורדנות, חוסר שינה, כוחות נבואה  
+                </td>
+            </tr>
+        </table>
+        <img class="imgSolo" src="./img/Wellcome 566786i.jpg">
+    </section>
+
+        <!-- screen 6 -->
+        <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="--startColor: #bbaa95;">
+            <div class="background-image" alt=""
+                style="background-image: url(img/IBN_BUTLÂN_Tacuinum_sanitatis.jpg); background-size: cover; background-position: center 15%; position: relative;"
+                alt="Paiting of man with viscera exposed and signs of zodiac affecting them 1497">
+                <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+            </div>
+            <div class="centerFlex">
+                <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                    style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                    <p>על פי השיטה הזו, <strong>אם היה עודף או חסר של אחד מהליחות בגוף, המערכת יצאה מאיזון &ndash; מה שהוביל לחולי</strong>. לדוגמה, אדם שסובל מעודף דם בגוף &ndash; כמו למשל נשים בתקופת המחזור החודשי (כך האמינו) &ndash; נוטה לרגשנות יתר וחשק מיני מופרז, בעוד שאדם "כולרי" שסובל מעודף מרה צהובה נוטה לעצבנות יתר וחוסר שקט, וכן הלאה.</p>
+<p>הרופא איבחן מחלות לפי סימפטומים שקשורים בארבע הליחות ואז המליץ לרוב על טיפול שכלל או הקזה או הוספה של נוזלים שונים לגוף, בתקווה לאזן את הליחות. מאחר והליחות גם שויכו לטמפרטורות שונות ומצבי לחות ויובש, הטיפול גם כלל לרוב המלצות לשהות במקום חם או קר, לח או יבש, בהתאם לאבחון. מכאן הנוהג הבעייתי באותה תקופה להקיז דם או לרקוח שיקויים מסוגים שונים בהתאם למחלה, שיקויים ש"חיממו" או "קיררו" את המערכת הפנימית.</p>
+<p>ככל שזה ישמע לנו מוזר היום, השיטה הזו המשיכה לשלוט בחשיבה הרפואית האירופית בתצורות שונות הרבה מעבר לתקופתו של שייקספיר, בעצם עד לגילוי החיידקים כמקור המרכזי למחלות זיהומיות בשלהי המאה ה-18.&nbsp;</p>
+                </div>
+
+            </div>
+    
+        </section>
+
+</body>
+
+</html>
