@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>מוסכמות חיזור ונישואים</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 1.5em);
+        }
+
+        @media only screen and (max-width: 720px) {
+            .flexPhoneVertical {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section class="screen backgroundImg centerFlex" alt=""
+        style="background-image: url(&quot;./img/029686-Medium_6000px Strolling actresses dressing in a barn_Cropped.jpg&quot;);flex-direction: column;display: flex;justify-content: space-around;">
+
+        <h1
+            style="bottom: 10%;text-align: center;background: #fffffff7;padding: 0.5em;font-size: 3em;line-height: 1.1;box-shadow: 0px 4px 3px 4px #00000045;margin: 1em;">
+            זהות מגדרית, מיניות והתיאטרון
+            <div class="BoxBottomBorder" style="width: 70%; --BoxBorderWidth:3px; margin: auto;"></div>
+
+        </h1>
+        <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+            style="bottom: 10%;right: 10%;width: 70%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;padding: 0px 25px;">
+            <p>כל מה שאמרנו עד לנקודה הזו מתקשר ליחסים הפטריארכליים בין נשים וגברים בתקופה בה שייקספיר חי. אבל התמונה
+                הולכת ומסתבכת כשאנו באים לחשוב על אופן ייצוג אותם יחסים על הבמות המסחריות בתקופה האליזבתנית.</p>
+            <p><strong>מה לגבי יחסים הומו-ארוטיים בין גברים? כיצד בני התקופה הבינו קשרי אהבה רומנטיים בקרב בני אותו מין?
+                    מה הקשר בין עולם התיאטרון ובין שאלות מורכבות על זהות אישית ומגדרית?</strong></p>
+            <svg style="width: 2.5em;display: block;margin: 1em auto;" width="78" height="43" viewBox="0 0 78 43"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="#cc2e36"
+                    stroke-width="7" stroke-linecap="round"></path>
+            </svg>
+        </div>
+
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen backgroundImg left"
+        style="background-image: url(&quot;./img/Imaginary_view_of_an_Elizabethan_stage.jpg&quot;);min-height: 150vh;">
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
+            style="top: 20%;left: 10%;width: 50%;max-width: 35em;background-color: rgb(255 255 255 / 97%);z-index: 1;">
+            <p><strong>הנוכחות של נשים באולם התיאטרון היתה מוגבלת.</strong></p>
+            <p>נשים ממעמדות מסוימים הורשו לצפות במחזות, אבל התיאטראות המסחריים, עליהם נרחיב בהמשך הקורס, נחשבו כמקום
+                בילוי מפוקפק שלא ראוי לנשים מהוגנות.</p>
+            <p>בנוגע למשחק על הבמה – על כך היה ממש איסור חוקי. מאחר ושחקני תיאטרון נחשדו תמיד כבני מעמד נמוך ביותר, על
+                סף הנוודים שהיו מחוץ לחוק, אישה שהייתה מצטרפת לשורותיהם הייתה נחשבת במידה רבה לפרוצה, ולכן החוק אסר על
+                כך.</p>
+        </div>
+        <div class="imgDiscriptionOnImg" style="
+direction: ltr;
+max-width: 60vw;
+bottom: 2em;
+">
+            Imaginary view of an Elizabethan stage, by C. Walter Hodges, under CC BY 4.0 , via Wikimedia Commons
+        </div>
+    </section>
+
+    <!-- screen 3 -->
+    <section class="screen gardientBackColor " style="display: flex; align-items: flex-end; justify-content: center;">
+        <div class="backgroundImg "
+            style="width: 100%;height: 70%;background-image: url(&quot;./img/Czachórski_Actors_before_Hamlet.jpg&quot;);position: absolute;min-height: auto;top: 0;">
+        </div>
+        <div class="flexPhoneVertical" style="
+    display: flex;
+    justify-content: space-around;
+    align-items: anchor-center;
+    margin: 3em;
+    gap: 20px;
+">
+            <img src="./img/Czachórski_Actors_before_Hamlet_(detail)_02.jpg" style="
+    z-index: 1;
+    width: 300px;
+">
+            <div class="have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
+                style="bottom: 10%;right: 10%;width: 80%;/* max-width: 35em; */background-color: rgba(255, 255, 255, 0.9);z-index: 1;height: fit-content;padding: 0 25px;">
+                <p>האיסור הזה הביא למוסכמה המקובלת באותה תקופה&nbsp;<strong>שאת תפקיד הנשים שיחקו על הבמה נערים
+                        צעירים</strong>, לרוב לפני גיל ההתבגרות, או גברים צעירים נשיים מאוד.<br></p>
+                <p>לנו היום, במיוחד בהקשרים של תרבות קווירית, עולות שאלות רבות: מה היה המעמד של אותם שחקנים-נשיים? איך
+                    הקהל הבין את המוסכמה הזו והתייחס אליה? האם יש חשיבות לכך שאת יוליה, הרמייה והלנה שיחקו נערים – ככל
+                    הנראה אותם נערים שהתמחו בתפקידי נשים?</p>
+                <p>היום יש לנו חשיבה מגדרית שונה ואנחנו נגיב אחרת אם נצפה במחזה "דראג" שבו גברים לבושים כנשים. בתקופה של
+                    שייקספיר, מאחר ומדובר היה במוסכמה חברתית רחבה, לא היה בכך משהו מיוחד או משונה.&nbsp;<strong>הקהל ידע
+                        להשהות את ספקנותו מול האשליה הבימתית וכששחקן זכר נכנס לבמה בדמותה של יוליה, הקהל התייחס אליו כאל
+                        יוליה</strong>. סביר להניח שאף אחד לא גיחך או חשב שיש כאן משחק מגדרי רב משמעות.&nbsp;&nbsp;</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 4 -->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone" style="">
+
+        <div class="centerFlex" style="
+    position: relative;
+">
+            <div class="imgDiscriptionOnImgSmall" style="max-width: 80vw;color: white;left: 1em;top: 0;">Rosalind from
+                William Shakespeare's play As You Like It, by Robert Walker Macbeth, under CC BY SA 4.0, via Folger
+                Shakespeare Library and Look and Learn</div>
+            <div class="have-scroll-animation aniType-MoveRightToLeft active-enter-animation"
+                style="left: 10%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;margin-top: 2em;">
+                <p>אבל כמובן שזה יהיה נאיבי לחשוב שבני התקופה, ושייקספיר במיוחד, לא היו מודעים להשלכות של משחקי המגדר
+                    שהצגת גברים בדמויות נשים עוררו. במחזות מאוחרים יותר&nbsp;<strong>שייקספיר הופך את המוסכמה עצמה ללב
+                        ההצגה, כשדמויות נשים (שמשוחקות, כאמור, על ידי גברים) מתחפשות לגברים וגורמות לבלבול מגדרי ורעיוני
+                        מורכב בדמיון הקהל</strong>. הכלל לגבי שייקספיר הוא שהנושא של Cross-dressing, או גברים בדמות
+                    נשים, הופך לחשוב במחזה רק אם שייקספיר עצמו מצביע על כך בתוך המחזה עצמו, ולא זה המקרה בשני המחזות
+                    שלנו בקורס.</p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/lookandlearn.com-YFS0146007.jpg&quot;);background-size: cover;background-position: center 15%;position: relative;min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical right"></div>
+        </div>
+        <div class="imgDiscriptionOnImg" style="bottom: 2em;right: 0;z-index: 1;">
+            בלב המחזה "<strong>כטוב בעיניכם</strong>", רוזלינד "מתחפשת לגבר", שלאחר מכן גם הוא משחק תפקיד אישה. בהתחשב
+            בכך שמלכתחילה השחקן שגילם אותה היה זכר, הבלבול המגדרי ההולך ונבנה בעיני הצופים נעשה אבסורדי.
+        </div>
+
+
+    </section>
+
+    <!-- screen 5 -->
+    <section class="screen centerFlex" style="
+    background: #1e1e1c;
+">
+        <div style="
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-between;
+" class="flexPhoneVertical">
+            <div class="backgroundImg"
+                style="background-image: url(&quot;./img/Harvard_Theatre_Collection_-_Francis_Leon_TCS_1.643.jpg&quot;);flex: 1;min-height: auto;background-position: top;">
+
+            </div>
+
+            <div style="
+    flex: 0.5;
+"></div>
+            <div class="backgroundImg"
+                style="background-image: url(&quot;./img/Harvard_Theatre_Collection_-_Francis_Leon_TCS_1.640_-_cropped.jpg&quot;);flex: 1 1 0%;min-height: auto;background-position: top;">
+
+            </div>
+
+        </div>
+        <div class="have-scroll-animation aniType-Blur active-enter-animation"
+            style="bottom: 10%;right: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;padding: 0px 25px;">
+            <p>ועדיין, צריך להתעכב על הנקודה הזו כדי לחבר אותה לנושא הכללי יותר, עליו דברנו בשיעור הקודם, בנוגע לעניין
+                הרב שהיה לשייקספיר עם שאלות של זהות אישית.&nbsp;<strong>הגדרות מגדריות הן חלק בלתי נפרד, בוודאי אצל
+                    שייקספיר, מהבניית זהות אישית</strong>, ושייקספיר ניבא רבות בכך שהרבה לחקור את השאלה הזו לאו דווקא
+                ממקום של הכרח ביולוגי. עצם העובדה ששחקן יכול לשנות צורה – כמו בוטום למשל ב"חלום ליל קיץ" או הפיה פק
+                שיכול להפוך את צורתו – ובכלל זה לשנות את זהותו המגדרית, מעידה על כך&nbsp;<strong>שמגדר הוא לא רק עובדה
+                    פיזיולוגית וביולוגית</strong>.</p>
+            <p>בעוד שהביולוגיה מגדירה את המינים, זכר ונקבה,&nbsp;<strong>מגדר עוסק בשאלות של זהות שתלויה במידה רבה
+                    בהבניה והתניה חברתית</strong>. אישה או גבר הם לא רק נקבות וזכרים במובן הביולוגי, אלא ממלאים תפקידים
+                מגדריים שהחברה הפטריארכלית מגדירה להם ומעצבת בתודעתם מגיל צעיר מאוד.&nbsp;</p>
+            <p>עד כמה יש קשר בין שתי המערכות – הביולוגית והחברתית – זו כמובן שאלה בוערת, במיוחד בימינו. אבל במובן הזה,
+                שייקספיר הקדים את זמנו ביכולת שלו לנבא תהליכים בחשיבה מגדרית שאנחנו מכירים היום מתקופתנו, גם אם ההקשר
+                ההיסטורי שונה.&nbsp;</p>
+        </div>
+    </section>
+
+    <!-- screen 6 -->
+
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #000000;">
+        <div class="" alt="" style="
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+">
+            <img src="./img/MFA_PELIKE_04.png" style="width: 100%;margin: auto;max-width: 70vw;">
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-skewX active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p>מדוע? מכיוון שכל זה מתחבר בדמיונו של שייקספיר באופן עמוק ומורכב לשאלות על רגש האהבה.&nbsp;<strong>אם
+                        רגש האהבה הוא בכל מקרה "לא רציונלי" ומשול למחלה או שגעון שמערער על הסדר החברתי, אז למה לעצור רק
+                        באהבה הטרוסקסואלית?</strong>&nbsp;לא כך היה בקרב היוונים העתיקים, לא כך ביצירתו החשובה של המשורר
+                    אובידיוס, עליו נדבר בהמשך, ולא כך אצל שייקספיר.</p>
+                <p>מאחר ושייקספיר עצמו, ככל שאנחנו מבינים, התאהב בחייו גם בנשים וגם בגברים, כך התפתחה אצלו התובנה –
+                    שתמיד מקבלת ביטוי במחזותיו –&nbsp;<strong style="">שאהבה היא בין בני אדם שמתאהבים קודם כל מתוקף
+                        אישיותם, ללא קשר לשיוכם המגדרי. כלומר, אהבה אצל שייקספיר היא תמיד על-מגדרית שכן יצר משיכה ארוטי
+                        נגזר מרגש אהבה כלפי האחר, ולא בגלל צורך ביולוגי צר.</strong></p>
+            </div>
+            <div class="imgDiscriptionOnImgSmall" style="bottom: 10px; left: 10px;">Man with viscera exposed and signs
+                of zodiac affecting them 1497, under CC BY 4.0, via Wikimedia Commons</div>
+        </div>
+        <div class="imgDiscriptionOnImg" style="bottom: 2em;right: 0;z-index: 1;">שני שחקנים גברים לובשים תחפושת נשים
+            לפני הצגת תיאטרון (סביב שנת 430 לפנה”ס)</div>
+    </section>
+
+    <!-- screen 7 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #f2eadd;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveRightToLeft active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>בחברה שבה גברים תמיד גדלו ביחד ולא הרבו להתרועע עם נשים, מובן מאליו שרבים נקשרו ביחסים הומו-ארוטיים
+                    כאלו ואחרים. חשוב להדגיש שבעוד שהכנסייה כמובן אסרה על יחסי מין בין גברים והגדירה אותם כפשע מוסרי
+                    חמור (ואף היה לכך ביטוי בחוק), בפועל&nbsp;<strong>שייקספיר ובני תקופתו ראו בכך משהו הרבה יותר טבעי
+                        והגיוני ממה שמקובל לחשוב היום</strong>. כאמור, היה לכך ביטוי גם במסורת ספרותית עתיקת יומין
+                    שהאדירה קשרי אהבה – בין אם פיזיים ובין שלא – בין גברים. הרי ככל שחברה מסוימת מדירה גברים מחברתן של
+                    נשים ומדגישה בפניהם עד כמה נשים הן "נחותות", ברור שהיו גברים שהעדיפו את חברתם ואהבתם של גברים, גם אם
+                    קיבלו על עצמם את הצורך להתחתן עם אישה ולהקים משפחה כפי שצופה מהם.</p>
+                <p>כאן חשוב להדגיש&nbsp;<strong>שהמונחים "הטרוסקסואל" וההפך שלו "הומוסקסואל" הומצאו רק במאה
+                        ה-19</strong>&nbsp;כחלק משיח פסאודו-רפואי שניסה לנתח את ה"פתולוגיה" לכאורה של משיכה ארוטית בין
+                    גברים. שייקספיר ובני תקופתו לא היו מבינים את המונחים האלה ובמובן הזה גישתם מאוד שונה מזו של בני
+                    תקופות מאוחרות יותר ולכאורה "נאורות" יותר.</p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/The_Mens_Bath_MET_DP816942.jpg&quot;); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        </div>
+
+    </section>
+
+    <!-- screen 8 -->
+
+    <section class="screen backgroundImg"
+        style="background-image: url(&quot;./img/Artvee_In Fairy Land – An Elfin Dance.jpg&quot;);">
+        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+            style="top: 10%;right: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+            <span
+                data-metadata="<!--(figmeta)eyJmaWxlS2V5IjoiRklqWTlTbEplMzNMTnZKSVRpQ1o1NCIsInBhc3RlSUQiOjE4OTk5NjQ1NywiZGF0YVR5cGUiOiJzY2VuZSJ9Cg==(/figmeta)-->"
+                style="font-size: 23.04px; word-spacing: 3.6864px; white-space-collapse: preserve;"></span>
+            <p><span style="">הדיונים האלה אמנם פחות רלוונטיים לשני המחזות שלפנינו בקורס, בהם שייקספיר מתמקד בחברה
+                    הפטריארכלית עצמה ובמוסכמות שלה, אבל הם חשובים כי הם מקרינים על דברים שנאמר בשיעורים הבאים.</span>
+            </p>
+            <p><span style="">רק כך נוכל להבין ב"</span><strong>רומיאו ויוליה</strong><span style="">" את ההבדל בין
+                    האופן שבו יוליה אוהבת את רומיאו ובין האופן שבו רומיאו אוהב את יוליה. וכך גם ב"</span><strong>חלום
+                    ליל קיץ</strong><span style="">", הדיונים האלו יעזרו לנו להבין את משמעות תפקידן של הפיות כיצורים
+                    קסומים על-מגדריים, או את כוחו של שיקוי קסם שיכול לגרום לכל אדם להתאהב בדבר הראשון שבו עיניו יחזו –
+                    בין אם זה אדם אחר או אפילו חיה.</span></p>
+        </div>
+    </section>
+
+</body>
+
+</html>
