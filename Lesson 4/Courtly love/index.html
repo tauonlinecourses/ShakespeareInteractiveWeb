@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>אהבה חצרונית</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 1.5em);
+        }
+
+        @media only screen and (max-width: 720px) {
+
+            .GridPhoneReveseOrder>*:nth-child(1) {
+                order: 2
+            }
+
+            .GridPhoneReveseOrder>*:nth-child(2) {
+                order: 1
+            }
+
+            .flexPhoneVertical {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+    <!-- Screen 1 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="background-image: url(&quot;./img/Leighton-God_Speed!.jpg&quot;);flex-direction: column;background-position-y: 35%;">
+
+        <h1 class="flyBox" style="bottom: 10%; text-align: center; background: #fffffff7; padding: 0.5em; font-size: 3em; line-height: 1.1; box-shadow: 0px 4px 3px 4px #00000045;">
+            אהבה חצרונית<div class="BoxBottomBorder" style="width: 70%; --BoxBorderWidth:3px; margin: auto;"></div>
+
+        </h1>
+        <!-- 
+    <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+    </svg>   -->
+    </section>
+
+    <!-- Screen 2 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #e4d6b3;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>מוסכמות החיזור של <strong>"אהבה חצרונית"</strong> (בצרפתית גם <strong>fin’amor</strong>, "אהבה נעלה/אצילה") התפתחו בחצרות
+                    המלכות של צרפת בתקופת ימי הביניים החל מהמאה ה-11.</p>
+                <p>הן התפתחו כחלק מגינוני חברה מורכבים שנועדו להאדיר את <strong>קשרי המרות בין אביר למלכו או מלכתו במסגרת
+                        החברה הפאודלית</strong>. האביר משרת את גברתו (lady) החצרונית דרך מעשי "סגידת אהבה" (love service)
+                    באותה דבקות ונאמנות כפי שהוא משרת את מלכו, בדרך כלל בעלה החוקי של הגבירה.</p>
+                <p><span></span><span
+                        >האישה במסורת הזו היא בעמדת כוח מוחלט מול הגבר שמשרת אותה
+                        מרחוק. ככזאת, <strong>האישה באהבה חצרונית הופכת לדמות נשית נשגבה של שלמות שמעוררת השראה כאידאל, לרוב
+                            רוחני ודתי, שהמאהב החצרוני תמיד שואף לסגוד לו.</strong></span></p>
+                <p><span ><strong>לכן, אהבה חצרונית אינה מערכת יחסים רומנטית אמיתית
+                            שיכולה להתקיים במציאות. היא מוסכמה חברתית וספרותית שמטרתה העיקרית היא להאדיר אידאלים של
+                            פרישות מינית, טהרה, ומסירות גברית לערכי דת נעלים ומופשטים שמקבלים האנשה בדמות אישה
+                            אלוהית.</strong></span></p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Codex_Manesse_Bernger_von_Horheim.jpg&quot;); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        </div>
+
+    </section>
+
+    <!-- Screen 3 -->
+    <section class="screen resateGridOnPhone GridLayout equal2ChildWidthv2 gardientBackColor GridPhoneReveseOrder"
+        style="">
+        <div style="position: absolute;top: 0px;width: 700px;height: 50vh;background-image: url(&quot;./img/Aleanor_of_Aqutaine_and_Henri_II.png&quot;);background-position: right bottom;background-size: contain;"
+            class="backgroundImg" alt="פסלי הקבורה של אלינור מאקוויטן והנרי השני"></div>
+        <div class="" alt="" style="min-height: 70vw;position: relative;/* order: 2; */">
+            <div class="imgDiscriptionOnImg right"
+                alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
+                style="bottom: 2em;width: fit-content;">פסלי הקבורה של אלינור מאקוויטן והנרי השני</div>
+
+        </div>
+        <div class="" style="display: flex;align-items: start;/* order: 1; */">
+            <div class="have-scroll-animation aniType-Blur active-enter-animation"
+                style="left: 10%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;">
+                <p>גינוני האהבה החצרונית קיבלו במהרה ביטוי עשיר ומורכב בספרות התקופה על פני שלל רומנסות ושירי טרובדורים.
+                    הגינונים הללו הפכו לאופנתיים במיוחד תחת שלטונה של המלכה <strong>אלינור מאקוויטן</strong> (1124-1204) בסוף המאה
+                    ה-12. היא השפיעה על שני חצרות מלכות מרכזיים: ראשית בצרפת כאשתו של המלך <strong>לואי השביעי</strong>, ובהמשך,
+                    לאחר מותו, באנגליה כאשתו של המלך החזק ורב ההשפעה <strong>הנרי השני</strong>.</p>
+                <p>ככל שהמלחמות הבלתי פוסקות שאפיינו את אירופה במאות ה-11-13 הלכו ודעכו, כך תפקידו של האביר כלוחם
+                    בתקופות שלום ממושכות קיבל ביטוי מסוגנן וסמלי בתחרויות דו קרב ורכיבה שבהן כל אביר "נלחם" עבור אחת
+                    מנשות החצר.&nbsp;&nbsp;</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Screen 4 -->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone background-image"
+        style="background-image: url(&quot;./img/Artvee_The Poet’s Dream; ‘The Pursuit of the Ideal’ (1881).jpg&quot;);background-size: cover;background-position: top center;min-height: 150vh;">
+
+
+        <div class="" style="
+    ">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;">
+                <p>כך, במקביל, <strong>יצירות ספרותיות רבות העלו על נס את דמותו של האביר החצרוני הנעלה שמקדש את עקרונות
+                        הסגידה לאל ולאמות מוסר טהרניות דרך מסירותו לעלמה כלשהי, לרוב בתולה, שבעצמה הפכה במהרה לסמל דתי
+                        לאהבת האל</strong>. בהמשך, מוסכמות האהבה החצרונית השתכללו ופרחו עד שהגיעו לשיאם בספרות האירופית
+                    במאה ה-14 והרנסנס המוקדם, מדרום צרפת וספרד, עד איטליה וחצרות המלכות של הקיסרות הרומית הקדושה במרכז
+                    אירופה.</p>
+            </div>
+
+        </div>
+        <div style="
+        min-height: 40vh;
+    ">
+
+        </div>
+
+    </section>
+
+    <!-- Screen 5 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #f2e2cb;">
+        <div class="centerFlex">
+            <div class="have-scroll-animation active-enter-animation aniType-MoveRightToLeft"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p><span style="font-size: 19.2px;">מוטיבים של אהבה חצרונית נעלה השתרשו במיוחד בחצר המלכות של הקיסר
+                        הרומי הקדוש פרדריק השני שישב בסיציליה. שם הומצאה במאה ה-12 <strong>הסונטה </strong>– שיר מתוחכם בן 14
+                        שורות שלימים יהפוך למבנה השירי האופנתי ביותר לשירת חול על אהבה מיוסרת, במיוחד בצפון איטליה.
+                        לימים, <strong>הסונטה תהפוך לסוגה השירית הנפוצה ביותר לכתיבת שירת אהבת חצרונית ותהיה לכך השפעה מרחיקת
+                            לכת גם על שייקספיר</strong>.</span></p>
+            </div>
+            <div class="imgDiscriptionOnImgSmall imgDiscriptionOnImg"
+                style="bottom: 10px;left: 10px;TEXT-ALIGN: LEFT;color: white;direction: ltr;">&nbsp;סונטות של המשורר
+                האיטלקי <strong>פטררקה</strong></div>
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Petrarch_canzoniere.jpg&quot;);background-size: cover;background-position: top left;position: relative;min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical right"></div>
+            <div class="imgDiscriptionOnImg right"
+                alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
+                style="bottom: 2em;width: fit-content;">פסלי הקבורה של אלינור מאקוויטן והנרי השני</div>
+        </div>
+
+
+    </section>
+
+    <!-- Screen 6 -->
+    <section class="screen centerFlex" style="
+    background: #1e1e1c;
+">
+        <div style="
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-between;
+" class="flexPhoneVertical">
+            <div class="backgroundImg" style="background-image: url(&quot;./img/Codex_Manesse-Minnesänger_1.jpg&quot;); flex: 1 1 0%; min-height: auto; background-position: center top;">
+
+            </div>
+
+            <div style="
+    flex: 0.5;
+"></div>
+            <div class="backgroundImg" style="background-image: url(&quot;./img/Cornelis_de_Vos_-_Apollo_chasing_Daphne,_1630.jpg&quot;); flex: 1 1 0%; min-height: auto; background-position: center top;">
+
+            </div>
+
+        </div>
+        <div class="have-scroll-animation aniType-Blur active-enter-animation" style="bottom: 10%;right: 10%;width: 60%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;padding: 0px 25px;margin: 30px auto;">
+            <h2>החיבור לשירת אובידיוס</h2>
+<p><strong>איך עלינו להבין את החיבור המעט מוזר של שירת אובידיוס למוסכמות האהבה החצרונית שהתפתחו בימי הביניים?</strong>
+                לכאורה, מדובר בחיבור בעייתי, שהרי אובידיוס מתמקד באהבה מינית וארוטית סוערת בעוד שאהבה חצרונית מאדירה את
+                חיי הפרישות של המאהב המיוסר במחשבתו (אם לא בגופו). ואכן, שירת האהבה החצרונית בימי הביניים התקיימה במתח
+                מתמיד עם מסורות עתיקות, קדם-נוצריות, שכן המסורות האלו כפרו לחלוטין ברעיון של פרישות מינית או ריחוק מדומה
+                בין המאהב ומושא אהבתו.</p>
+            <p><span style="font-size: 19.2px;">ועדיין, ישנם קווי דמיון שאפשרו לשתי המסורות להשפיע זו על זו, במיוחד
+                    במהלך המאה ה-14 עם החייאתו של אובידיוס בקרב משוררים רבים. כאמור, גם אובידיוס מתאר בשירתו,
+                    וב"מטמורפוזות" במיוחד, אוהבים נכזבים שתשוקתם הבוערת בדרך כלל ממיתה עליהם אסון. <strong>לקורא הנוצרי קל
+                        היה להתעלם מהרובד המיני של תשוקה פיזית וממשית ולהסיט את הסיפורים על דרך אלגוריה דתית לדיון מופשט
+                        באהבה אלוהית</strong>. כך למשל הסיפור בספר הראשון על דפנה ואפולו נקרא כאלגוריה מורכבת למרדף של האדם
+                    אחר אהבת האל. אפולו לכאורה מסמל את נפש האדם שרודפת אחר אהבת האל בדמותה של דפנה. באופן הזה, משוררים
+                    רבים בימי הביניים המאוחרים יכלו לפרש את אובידיוס באופן שהתיישב עם מוסכמות האהבה החצרונית ולשאול ללא
+                    מפרע דימויים, קווי עלילה ורעיונות מ"המטמורפוזות".&nbsp;&nbsp;</span></p>
+        </div>
+    </section>
+
+</body>
+
+</html>
