@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>מי כתב את המחזות של שייקספיר?</title>
+    <title>מוסכמות חיזור ונישואים</title>
     <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
     <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
@@ -13,10 +13,11 @@
 
 <body onload="start()">
     <style>
-        .screen{
+        .screen {
             min-height: calc(100vh - 1.5em);
         }
     </style>
+
     <!-- loading Screen -->
     <section id="loadingScreen" class="screen"
         style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
@@ -48,7 +49,7 @@
             <div class="gradient-Horizontal"></div>
         </div>
         <div class="centerFlex">
-            <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig "
+            <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig"
                 style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
                 <img src="./img/num1.svg" alt="Number 1" style="position: relative; top: 0.4em;">
                 <div>
@@ -93,8 +94,9 @@
 
     <!-- screen 3 -->
     <section class="screen backgroundImg"
-        style="background-image:url('./img/Las_Meninas\,_by_Diego_Velázquez\,_from_Prado_in_Google_Earth.jpg'); background-position: bottom; background-size: cover; min-height: 220vh;" alt="תמונה של האינפנטה, הנסיכה הספרדית, כילדה">
-        <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig"
+        style="background-image:url('./img/Las_Meninas\,_by_Diego_Velázquez\,_from_Prado_in_Google_Earth.jpg'); background-position: bottom; background-size: cover; min-height: 220vh;"
+        alt="תמונה של האינפנטה, הנסיכה הספרדית, כילדה">
+        <div class="flyBox flexTop have-scroll-animation aniType-MoveRightToLeft"
             style="top: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
             <img src="./img/num2.svg" alt="Number 1" style="position: relative; top: 0.4em;">
             <div>
@@ -130,33 +132,53 @@
     </section>
 
     <!-- screen 4 -->
+    <section class="screen backgroundImg background_ParallaxEffect"
+        style="background-image: url(&quot;./img/Pieter_de_Hooch_-_The_Courtyard_of_a_House_in_Delft.jpg&quot;);min-height: 180vh;">
+        <div class="flyBox have-scroll-animation aniType-Blur"
+            style="top: 10%;right: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+            <p><span style="font-size: 19.2px;"><b>בקרב המעמדות הנמוכים</b>, המצב היה שונה: גיל החתן לא היה גמיש כמו
+                    במקרה של בני האצולה, שכן רק מי שהצליח לצבור רכוש יכול היה להתחתן. בן למעמד הנמוך היה יכול להתחתן רק
+                    אם ביסס את עצמו כלכלית. אם נער כלשהו עבד כשוליה במקצוע מסוים, הוא לא יכול היה להתחתן עד שלא סיים את
+                    תקופת ההתמחות שלו והחל לפעול כאמן או בעל מקצוע עצמאי, מה שבדרך כלל לא קרה לפני גיל 20 ומעלה.</span>
+            </p>
+            <p><span style="font-size: 19.2px;">נקודה נוספת שעולה מהמקורות היא שבאופן כללי, <b>ראש בית אב היה אחראי על
+                        כלכלתם ועתידם הכלכלי של כל בני ביתו, כולל המשרתים שעבדו אצלו</b>. אם משרתת ענייה עבדה בבית של
+                    סוחר עמיד, האחריות לחתן אותה כראוי הייתה של בעל הבית אצלו גרה ועבדה, ולא של הוריה (אם בכלל עוד היו
+                    בתמונה). על בעל הבית היה לדאוג לחתן אותה בבוא העת עם חתן מתאים ממעמד חברתי דומה, בעיקר כדי למנוע
+                    לידות מחוץ לנישואים.</span></p>
+        </div>
+    </section>
+
+    <!-- screen 5 -->
     <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor">
         <div class="background-image" alt=" "
             style="background-image: url(./img/Artvee_Till\ holy\ church\ incorporate\ two\ as\ one.jpg); background-size: cover; background-position: center 15%; position: relative;">
             <div class="gradient-Horizontal"></div>
         </div>
         <div class="centerFlex">
-            <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig"
-            style="margin: 25px; top: 10%; right: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
-            <img src="./img/num3.svg" alt="Number 1" style="position: relative; top: 0.4em;">
-            <div>
-                <h2 class="h3NoStyle">פרידה וגירושים</h2>
-                <p style="margin-bottom: 0px; margin-left: 1.3em;">
-                    <strong>
-                        טקס הנישואים היה מוסד דתי שלא ניתן להתיר אותו.
-                    </strong>
-                    למרות שבאנגליה הפרוטסטנטית שלאחר הרפורמציה מוסד הנישואים לא נתפס כקדוש כמו אצל הקתולים, גירושים לא
-                    היו אפשריים בתקופתו של שייקספיר. במקרים חריגים, אם אפשר היה להוכיח לבתי המשפט הכנסייתיים שאחד מבני
-                    הזוג נאף או נוהג באלימות, ניתן היה לקבל מהכנסייה היתר מיוחד להפרדת בני הזוג mensa e torro (פרידה
-                    משולחן ומיטה), כלומר לאפשר להם לגור בנפרד, אבל לעולם לא להתחתן שוב.
-                </p>
+            <div class="flexTop have-scroll-animation aniType-MoveLeftToRight"
+                style="margin: 25px; top: 10%; right: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+                <img src="./img/num3.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+                <div>
+                    <h2 class="h3NoStyle">פרידה וגירושים</h2>
+                    <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                        <strong>
+                            טקס הנישואים היה מוסד דתי שלא ניתן להתיר אותו.
+                        </strong>
+                        למרות שבאנגליה הפרוטסטנטית שלאחר הרפורמציה מוסד הנישואים לא נתפס כקדוש כמו אצל הקתולים, גירושים
+                        לא
+                        היו אפשריים בתקופתו של שייקספיר. במקרים חריגים, אם אפשר היה להוכיח לבתי המשפט הכנסייתיים שאחד
+                        מבני
+                        הזוג נאף או נוהג באלימות, ניתן היה לקבל מהכנסייה היתר מיוחד להפרדת בני הזוג mensa e torro (פרידה
+                        משולחן ומיטה), כלומר לאפשר להם לגור בנפרד, אבל לעולם לא להתחתן שוב.
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
 
     </section>
 
-    <!-- screen 5 -->
+    <!-- screen 6 -->
     <section class="screen backgroundImg"
         style="background-image:url('./img/Vasily_Pukirev_-_Неравный_брак_-_Google_Art_Project_cropped.jpg'); background-position: top center; background-size: cover; min-height: 280vh;">
         <div class="flyBox flexTop have-scroll-animation aniType-ScaleSmallToBig"
@@ -164,9 +186,8 @@
             <img src="./img/num4.svg" alt="Number 1" style="position: relative; top: 0.4em;">
             <div>
                 <h2 class="h3NoStyle">חופש בחירה בנישואים</h2>
-                <p style="margin-bottom: 0px; margin-left: 1.3em;">
-                    <strong>
-                        נאי הכרחי לנשואים מבחנה דתית היה שבני הזוג נכנסים בברית הנישואים בדעת צלולה ונפש חפצה.
+                <p style="margin-bottom: 0px; margin-left: 1.3em;"><strong>תנאי הכרחי לנשואים מבחנה דתית היה שבני הזוג
+                        נכנסים בברית הנישואים בדעת צלולה ונפש חפצה.
                     </strong>
                     אחד המקרים היחידים בהם הותר לבני זוג לבטל את נישואיהם ולהתחתן שוב היה אם הוכח שאחד מהם לא היה בדעת
                     צלולה בעת החתונה או שנכפה עליהם להתחתן כנגד רצונם. וזו כמובן נקודה רגישה, כי רבים מבני התקופה, ונשים
@@ -197,42 +218,47 @@
         </div>
     </section>
 
-    <!-- screen 6 -->
+    <!-- screen 7 -->
     <section class="screen GridLayout fr2and1ChildWidth  gardientBackColor">
         <div class="centerFlex">
-            <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig"
-            style="bottom: 10%; right: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 80px 20px; padding: 25px;">
-            <img src="./img/num5.svg" alt="Number 1" style="position: relative; top: 0.4em;">
-            <div>
-                <h2 class="h3NoStyle">חיזור</h2>
-                <p style="margin-bottom: 0px; margin-left: 1.3em;">
-                    למרות הפתיחות היחסית והתנודתיות החברתית של התקופה,
-                    <strong>
-                        החברה השייקספירית עדיין הייתה שמרנית וגברים ונשים גודלו וחונכו בנפרד מגיל צעיר מאוד.
-                    </strong>
-                    בנות, אם קיבלו חינוך, חונכו בבית אביהן באופן פרטי ונאסר עליהן לצאת מהבית ללא מלווה. נערים צעירים
-                    גדלו וחונכו רק עם בני מינם מבית הספר עד לאוניברסיטה (שאסרה על כניסת נשים לתחומיה).
-                </p>
-                <p style="margin-bottom: 0px; margin-left: 1.3em;">
-                    לכן,
-                    <strong>
-                        היו מעט מאוד הזדמנויות לבני נוער צעירים לחזר זה אחר זו.
-                    </strong>
-                    גם כאן היתה השפעה למעמד החברתי: ככל שהמעמד היה גבוה יותר, כך ההפרדה המגדרית היתה יותר גורפת. בעוד
-                    שבני משרתים ואומנים נהגו לחיות יחד בבתי אב שבהם היה חיכוך רב יותר בין המינים, בני אצולה לא באו במגע
-                    עם המין השני ללא פיקוח קפדני.
-                </p>
-                <p style="margin-bottom: 0px; margin-left: 1.3em;">
-                    <strong>
-                        מכאן שחיזור לקראת אירוסים היווה בפני עצמו טקס חברתי מורכב
-                    </strong>
-                    שדרש לרוב את הסכמת אבי הכלה: גבר היה צריך לבקש מאבי הכלה אישור לא רק כדי להתחתן עם בתו, אלא אפילו
-                    כדי להתחיל לחזר אחריה, וגם אז החיזורים נעשו תחת השגחה. כשאגאוס בתחילת "חלום ליל קיץ" מאשים את ליסנדר
-                    שהוא החליף "משכונים של אהבה" (love tokens) עם בתו, הוא בעצם מאשים אותו שחיזר אחריה ללא הסכמתו וללא
-                    השגחה ולכן למעשה "גנב את ליבה".
-                </p>
+            <div class="flexTop have-scroll-animation aniType-MoveRightToLeft"
+                style="bottom: 10%; right: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 80px 20px; padding: 25px;">
+                <img src="./img/num5.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+                <div>
+                    <h2 class="h3NoStyle">חיזור</h2>
+                    <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                        למרות הפתיחות היחסית והתנודתיות החברתית של התקופה,
+                        <strong>
+                            החברה השייקספירית עדיין הייתה שמרנית וגברים ונשים גודלו וחונכו בנפרד מגיל צעיר מאוד.
+                        </strong>
+                        בנות, אם קיבלו חינוך, חונכו בבית אביהן באופן פרטי ונאסר עליהן לצאת מהבית ללא מלווה. נערים צעירים
+                        גדלו וחונכו רק עם בני מינם מבית הספר עד לאוניברסיטה (שאסרה על כניסת נשים לתחומיה).
+                    </p>
+                    <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                        לכן,
+                        <strong>
+                            היו מעט מאוד הזדמנויות לבני נוער צעירים לחזר זה אחר זו.
+                        </strong>
+                        גם כאן היתה השפעה למעמד החברתי: ככל שהמעמד היה גבוה יותר, כך ההפרדה המגדרית היתה יותר גורפת.
+                        בעוד
+                        שבני משרתים ואומנים נהגו לחיות יחד בבתי אב שבהם היה חיכוך רב יותר בין המינים, בני אצולה לא באו
+                        במגע
+                        עם המין השני ללא פיקוח קפדני.
+                    </p>
+                    <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                        <strong>
+                            מכאן שחיזור לקראת אירוסים היווה בפני עצמו טקס חברתי מורכב
+                        </strong>
+                        שדרש לרוב את הסכמת אבי הכלה: גבר היה צריך לבקש מאבי הכלה אישור לא רק כדי להתחתן עם בתו, אלא
+                        אפילו
+                        כדי להתחיל לחזר אחריה, וגם אז החיזורים נעשו תחת השגחה. כשאגאוס בתחילת "חלום ליל קיץ" מאשים את
+                        ליסנדר
+                        שהוא החליף "משכונים של אהבה" (love tokens) עם בתו, הוא בעצם מאשים אותו שחיזר אחריה ללא הסכמתו
+                        וללא
+                        השגחה ולכן למעשה "גנב את ליבה".
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
         <div class="background-image" alt=""
             style="background-image: url(./img/artvee_Courtship\ \(ca.\ 1665\).jpg); background-size: cover; background-position: center 15%; position: relative;">
@@ -241,57 +267,61 @@
 
     </section>
 
-    <!-- screen 7 -->
-    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor" style="min-height: 120vh; --startColor: #9c8359;">
+    <!-- screen 8 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor"
+        style="min-height: 120vh; --startColor: #9c8359;">
         <div class="background-image" alt="ציור של קתרין מ'אילוף הסוררת'"
             style="background-image: url(img/digitalcollectionsfolger_Elsie\ Leslie.jpg); background-size: cover; background-position: center 15%; position: relative;">
             <div class="gradient-Horizontal"></div>
-            
-        <div class="imgDiscriptionOnImg right" style="z-index: 1;">
-            במחזה
-            <strong>
-                "אילוף הסוררת".
-            </strong>
-            קתרינה המפחדת שפטרוצ'יו "מבריז" מיום חתונתם, אומרת:
-            <span class="textAlign-Left" style="display: block; margin: 5px 0px 5px 5px; direction: ltr;">
-                <strong>
 
-                    He’ll [...] proclaim the banns;
-                    <br>
-                    Yet never means to wed where he hath woo’d.
+            <div class="imgDiscriptionOnImg right" style="z-index: 1;">
+                במחזה
+                <strong>
+                    "אילוף הסוררת".
                 </strong>
-            </span>
-            כלומר, פטרוצ'יו יצהיר בפומבי על כוונתו להתחתן, אך לא יעמוד בה ברגע האמת.
-        </div>
-        </div>
-        <div class="centerFlex" >
-            <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig"
-            style="margin: 25px; bottom: 10%; right: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
-            <img src="./img/num6.svg" alt="Number 1" style="position: relative; top: 0.4em;">
-            <div>
-                <h2 class="h3NoStyle">טקס הנישואים והתנגדות לנישואים</h2>
-                <p style="margin-bottom: 0px; margin-left: 1.3em;">
-                    כשתקופת החיזור הסתיימה והוחלט על ברית נישואים,
+                קתרינה המפחדת שפטרוצ'יו "מבריז" מיום חתונתם, אומרת:
+                <span class="textAlign-Left" style="display: block; margin: 5px 0px 5px 5px; direction: ltr;">
                     <strong>
-                        בני הזוג נדרשו להתייצב בכנסייה המקומית ולהצהיר בפומבי על כוונתם להתחתן.
+
+                        He’ll [...] proclaim the banns;
+                        <br>
+                        Yet never means to wed where he hath woo’d.
                     </strong>
-                    זהו מנהג חשוב שתקף באנגליה עד היום ושמכונה
-                    <strong>
-                        the banns.
-                    </strong>
-                    מדובר בעצם בהליך האירוסים הפורמלי שבו ניתנת לכל אדם בקהילה הזכות להגיש את התנגדותו לאירוסים על בסיס
-                    מידע שעלול לערער את קדושת הנישואים. ההליך הזה נועד בעיקר כדי למנוע מקרים של ביגמיה (מצב שבו גבר נשוי
-                    ליותר מאישה אחת) שהייתה מנוגדת לחוק.
-                </p>
+                </span>
+                כלומר, פטרוצ'יו יצהיר בפומבי על כוונתו להתחתן, אך לא יעמוד בה ברגע האמת.
             </div>
         </div>
+        <div class="centerFlex">
+            <div class="flexTop have-scroll-animation aniType-Blur"
+                style="margin: 25px; bottom: 10%; right: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
+                <img src="./img/num6.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+                <div>
+                    <h2 class="h3NoStyle">טקס הנישואים והתנגדות לנישואים</h2>
+                    <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                        כשתקופת החיזור הסתיימה והוחלט על ברית נישואים,
+                        <strong>
+                            בני הזוג נדרשו להתייצב בכנסייה המקומית ולהצהיר בפומבי על כוונתם להתחתן.
+                        </strong>
+                        זהו מנהג חשוב שתקף באנגליה עד היום ושמכונה
+                        <strong>
+                            the banns.
+                        </strong>
+                        מדובר בעצם בהליך האירוסים הפורמלי שבו ניתנת לכל אדם בקהילה הזכות להגיש את התנגדותו לאירוסים על
+                        בסיס
+                        מידע שעלול לערער את קדושת הנישואים. ההליך הזה נועד בעיקר כדי למנוע מקרים של ביגמיה (מצב שבו גבר
+                        נשוי
+                        ליותר מאישה אחת) שהייתה מנוגדת לחוק.
+                    </p>
+                </div>
+            </div>
         </div>
 
     </section>
 
-    <!-- screen 8 -->
-    <section class="screen backgroundImg" style="background-image: url(./img/Artvee_Romeo\ and\ Juliet\ P.\ Leroy.jpg);">
-        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig"
+    <!-- screen 9 -->
+    <section class="screen backgroundImg"
+        style="background-image: url(./img/Artvee_Romeo\ and\ Juliet\ P.\ Leroy.jpg);">
+        <div class="flyBox have-scroll-animation aniType-MoveRightToLeft active-enter-animation"
             style="bottom: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
             <p>
                 חשוב להבין שבעיני החוק הדתי,
@@ -311,7 +341,7 @@
         </div>
     </section>
 
-    <!-- screen 8 -->
+    <!-- screen 10 -->
     <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor">
         <div class="background-image" alt="תמונה של סר וולטר ואלי"
             style="background-image: url(./img/Sir_Walter_Ralegh_by_\'H\'_monogrammist.jpg); background-size: cover; background-position: center 15%; position: relative;">
