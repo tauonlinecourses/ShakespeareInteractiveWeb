@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>הטרגדיה בתוך הקומדיה</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <script defer src="../Code/editable.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 2em);
+            min-height: calc(100svh - 2em);
+        }
+    </style>
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section class="screen backgroundImg centerFlex background_ParallaxEffect" alt=""
+        style="background-image: url(&quot;./img/Italian_(Florentine)_School_-_Boccaccio_(1313–1375)_(Giovanni_Boccaccio)_-_355512_-_National_Trust.jpg&quot;);flex-direction: column;background-position: center 24%;">
+
+        <h1 class="flyBox"
+            style="bottom: 10%; text-align: center; background: #fffffff7; padding: 0.5em; font-size: 3em; line-height: 1.1; box-shadow: 0px 4px 3px 4px #00000045;">
+            שירת האהבה של פטררקה<div class="BoxBottomBorder" style="width: 70%; --BoxBorderWidth:3px; margin: auto;">
+            </div>
+
+        </h1>
+        <!-- 
+        <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>   -->
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #f1d1c3;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>אחד המשוררים החשובים ביותר בעלייתה הפופולרית של שירת האהבה החצרונית בשילוב מוטיבים משירתו של אובידיוס
+                    באירופה במאה ה-14 הוא ללא ספק <b>פרנצ'סקו פטרארקה </b>(1304-1374).</p>
+                <p>פטרארקה הוא דמות מפתח ברנסנס האיטלקי המוקדם. בתור איש כנסייה ומשורר למדן, <b>פטרארקה היה מהראשונים
+                        לחפש במנזרי אירופה אחר כתבי עת עתיקים של שירת רומא הקלאסית, כמו זו של אובידיוס, במטרה להחיות
+                        ולחקות אותה</b> (היו לו כוונות דומות גם לגבי ספרות יוון העתיקה, אבל למרות מאמצים רבים הוא לא
+                    הצליח ללמוד את השפה היוונית).</p>
+                <p>פעילותו הספרותית הענפה בהחייאת השפה הלטינית הקלאסית כאבן פינה של התרבות האיטלקית החדשה בתקופתו מיצבה
+                    אותו <b>כאבי ההומניזם</b>, ואכן רבים רואים היום בפטרארקה כ"הומניסט הראשון" <b>וכמבשר הרנסנס
+                        באיטליה</b>. פטרארקה מיקד את מרבית המפעל הספרותי שלו <b>בשימור יצירות המופת הקלאסיות של רומא
+                        העתיקה ובכתיבה מקורית חדשה בלטינית.</b></p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Altichiero,_ritratto_di_Francesco_Petrarca.jpg&quot;);background-size: cover;background-position: 95% center;position: relative;min-height: 60vh;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        </div>
+
+    </section>
+
+
+    <!-- screen 3 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #ede0cf;">
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Manuscrito_de_Petrarca.jpg&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveBottomToTop active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p>בנוסף לכתיבה בלטינית, פטרארקה כתב שירה גם באיטלקית. הוא התייחס לכתיבה הזו כתחביב שולי, מאחר וקיווה
+                    שיזכה לתהילת עולם בזכות שירה אפית בלטינית בסגנון וירגיליוס ובזכות פרויקטים אחרים.</p>
+                <p>ולמרות זאת, <b>לאורך חייו פטרארקה חיבר אוסף של 366 שירי אהבה באיטלקית, רובם הגדול סונטות, לאישה בשם
+                        "לאורה".</b> אנחנו יודעים היום ממכתבים שנשתמרו שפטרארקה כנראה לא ייעד את השירים האלה לפרסום, אלא
+                    רק חלק אותם עם מעגל מצומצם של חברים. <b>הוא ראה בשירים האלה כשירי חול נחותים</b> ביחס ליצירותיו
+                    האחרות וכמובן לא חשב לרגע שדווקא אלה יביאו לו את התהילה שייחל לה כמשורר.&nbsp;</p>
+                <p>אבל פטרארקה טעה. שירי האהבה ללאורה התפרסמו לאחר מותו של פטרארקה תחת השם <b>Il Canzoniere (ספר
+                        השירים)</b>, בצמוד לכותרת נוספת בלטינית <b>Rerum vulgarium fragmenta</b> ("השירים [או, אסופת
+                    קטעי שירה] שעוסקים בחול [ולא בקודש]"). באופן אירוני, שירי האהבה האיטלקים של פטרארקה הפכו במהרה לנכסי
+                    צאן ברזל של שירת האהבה האירופית בתקופת הרנסנס ומושא לחיקוי בשפות רבות, ביניהן באנגלית של המאה ה-16.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+   
+    <!-- screen 4 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #dcd9d0;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;"><b>לאורך שנים רבות פטרארקה שכלל וסגנן את הסונטה האיטלקית.</b></span></p><p><span style="font-size: 19.2px;">הוא הושפע מהאופנה לכתיבת סונטות על אהבה חצרונית נעלה כפי שהתבססה בקרב משוררי "הסגנון המתוק החדש" (Dolce Stil Novo) שפעלו בדור שלפני כן בצפון איטליה. משוררים אלו (ביניהם <b>דנטה </b>ויצירתו <b>Vita Nuova</b>) כתבו <b>שירים בעלי מטען תיאולוגי ופילוסופי: דמות האישה בהם היא לכל היותר אלגוריה דתית מופשטת</b>.</span></p><p><span style="font-size: 19.2px;">לעומת משוררי “הסגנון המתוק החדש”, <b>פטרארקה רוקן את השירים שלו מאותו מטען תיאולוגי ופילוסופי והתמקד (לפחות בהתחלה) אך ורק בסערת הרגשות ובלבטים של המאהב המיוסר</b>.</span></p><p><span style="font-size: 19.2px;">חשוב להכיר בקצרה את דמותה של לאורה עליה פטרארקה כותב ואת ההשפעה ארוכת השנים שהייתה לדמותה על השירה האירופית שתבוא לאחר מכן, ובכלל זה על שייקספיר.</span></p>
+            </div>
+
+        </div>
+        <div class="background-image " alt="ציור של דמות האישה הינה אלגוריה דתית מופשטת" style="background-image: url(&quot;./img/Portrait_de_Dante.jpg&quot;);background-size: cover;background-position: center 15%;min-height: 60vh;position: relative;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+    <div class="imgDiscriptionOnImg left" alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;">אצל <b>דנטה</b>, השייך לדור קודם של משוררים, דמות האישה הינה אלגוריה דתית מופשטת</div>
+        </div>
+
+    </section>
+
+    <!-- screen 5 -->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="
+    --startColor: #cfc0ab;
+">
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Francesco_Petrarca01.jpg&quot;);background-size: cover;background-position: 12% 15%;position: relative;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-Blur active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <h2 style="
+    margin-top: 0px;
+">דמותה של לאורה</h2>
+                <p>השאלה הראשונה שחשוב לשאול היא: <b>האם אותה לאורה מפורסמת מכתביו של פטרארקה מבוססת בכלל על אישה
+                        אמיתית?</b></p>
+                <p>פטרארקה עצמו מספר לנו בכתביו האוטוביוגרפים שב-6 לאפריל 1327 (כשהיה בן 23), לאחר שוויתר על קריירה דתית
+                    ככומר, חזה בשעת בוקר מוקדמת במהלך תפילות בכנסייה בדמותה של אישה בשם לאורה שהפיחה בו תשוקת אהבה
+                    סוערת. לדבריו, הוא חיזר אחריה אך היא לא נענתה לו משום שהייתה נשואה.</p>
+                <p>מעבר לכך - לא ידוע לנו שום דבר על לאורה. עם זאת, הסברה הרווחת במחקר היא שאכן מדובר בדמות אמיתית:
+                    <b>לאורה דה נובס</b> שהייתה אשתו של היו דה סאד (Hugues de Sade). טענה זו נתמכת בעובדה שלאורה דה נובס
+                    מתה ממחלה בשנת 1348 – אירוע שפטרארקה עצמו מדבר עליו במכתביו כמשבר עצום בחייו היצירתיים.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- screen 6 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone" style="
+    --startColor: #1e1e1e;
+">
+        <div class="imgDiscriptionOnImgSmall left" style="
+    color: white;
+    top: 0.8em;
+    left: 0.8em;
+">Statue of Francesco Petrarca- Uffizi Gallery, by Wikibusters, under CC BY-SA 4.0, via Wikimedia Commons</div>
+        <div class="background-image" alt="פסלו של פטרארקה בארמון האופיצי, פירנצה"
+            style="background-image: url(&quot;./img/Statue_of_Francesco_Petrarca-_Uffizi_Gallery-noBG.png&quot;);background-size: contain;background-position: center;position: relative;background-repeat: no-repeat;margin-top: 6vh;min-height: 60vh;">
+            <div class="imgDiscriptionOnImg right"
+                alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
+                style="bottom: 2em;width: fit-content;">פסלו של פטרארקה בארמון האופיצי, פירנצה</div>
+
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+
+                <p>מה הקשר אם כך בין האישה האמיתית לזו שפטרארקה מדמיין? <b>האם יתכן שגוף השירים הגדול על לאורה, שאותו
+                        פטרארקה כתב לאורך שנים, מבוסס אך ורק על פגישה מקרית אחת עם לאורה האמיתית?</b> ההסבר המקובל, שהוא
+                    גם ההסבר ההגיוני היחיד, הוא שפטרארקה דובר אמת: כנראה באמת פגש בה פעם אחת, התאהב, והם נפרדו והלכו
+                    לדרכם. אך בעוד שלאורה כנראה חיה את חייה לאחר מכן בלי לחשוב על פטרארקה או להיות מודעת אליו, פטרארקה
+                    לא הצליח להפסיק לחשוב עליה ולו לרגע אחד, ולמעשה המשיך לכתוב עליה שירים עד יום מותו.</p>
+                <p>ואם האובססיה הזו לא מוזרה מספיק, צריך להזכיר שלמרות שתפקידו בכנסייה כלבלר ודיפלומט מנע ממנו להתחתן,
+                    נולדו לפטרארקה שני ילדים מחוץ לנישואים מאישה לא ידועה. הוא היה מאוד קרוב לילדיו, ובמיוחד לבתו
+                    פרנצ'סקה שסעדה אותו עד יום מותו, ואף דאג לאמץ אותם באופן רשמי כך שלא יוגדרו כממזרים. ועדיין, <b>לא
+                        ידוע לנו שום דבר על אם ילדיו. עליה פטרארקה לא כתב כלום, אפילו לא במכתבים, בעוד שעל לאורה, אותה
+                        פגש כנראה רק פעם אחת, מעולם לא הפסיק לכתוב.&nbsp;</b></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- screen 7 -->
+    <section class="screen backgroundImg"
+        style="background-image: url(&quot;./img/Artvee_The First Meeting of Petrarch and Laura.jpg&quot;); min-height: 180vh;">
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
+            style="top: 5%;left: 5%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+            <p>כלומר, <b>לאורה עבור פטרארקה מהווה פרדיגמה לדמות האישה הנעלמת באהבה חצרונית</b>. דמותה שעולה מהשירים היא
+                של אישה עם יופי אלוהי, שיער זהוב כאור השמש, עיניים בורקות ככוכבים או יהלומים, ואצילות נפש שמתאפיינת
+                בענווה וחסד, אך גם בקרירות וריחוק. כשנודע לפטרארקה על מותה של לאורה האמיתית בשנת 1348 הוא כתב לחבר במכתב
+                שהאבל שלו כה כבד שהוא נשבע שלא יכתוב לעולם עוד שירים כי מקור ההשראה שלו כבה. אבל כנראה שזו הייתה שבועת
+                שווא, כי די מהר הוא חזר לכתוב סונטות לכבודה, והמשיך לעשות זאת עד יומו האחרון.</p>
+            <p>בשנותיו האחרונות, ככל שפטרארקה עצמו התקרב לסוף חייו, הסונטות הפכו לתפילות דתיות בהן לאורה היא מלאך או
+                דמות קדושה שביכולתה לגאול את פטרארקה מייסורי חייו ולהבטיח לו מקום בעולם הבא.&nbsp;&nbsp;</p>
+        </div>
+    </section>
+
+    <!-- screen 8 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #000000;">
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Artvee_Petrarch’s Laura_darker head.png&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p><span style="font-size: 19.2px;">מעניין לראות <b>שלמרות שלאורה עומדת במרכז הסונטות, פטרארקה כמעט ולא
+                            מפנה אותן אל לאורה עצמה</b>. כלומר, לא מדובר בשירי פיתוי, כפי שהיה מקובל במסורות השירה של
+                        התקופה (וכפי שעוד ימשיך להיות פופולרי גם בתקופתו של שייקספיר), בהם המאהב החצרוני מבקש לשכנע את
+                        האישה להיעתר לאהבתו, אלא <b>בשירים שמתעדים את עמדת המאהב המיוסר כשהוא נתון לבד במחשבתו</b>.
+                        המהלך הזה חשוב כי הוא אפשר לפטרארקה, על פני מאות סונטות, לתעד מעין סיפור מסע רוחני ורגשי של אדם
+                        שמתחבט עם רגשות כמעט בלתי אפשריים של אהבה ותשוקה נכזבת. <b>המוקד בשירים לא היה האהובה הממשית אלא
+                            התשוקה של המאהב אליה</b>. כך ניתן גם להבין את השינוי שדמותה של לאורה עברה לאורך השירים ואת
+                        העובדה שהקשר בין האישה האמיתית לאישה הדמיונית הלך והתרחק ככל שהשנים עברו.&nbsp;&nbsp;</span></p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- screen 9 -->
+    <section
+        class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone background-image background_ParallaxEffect"
+        style="background-image: url(&quot;./img/Petrarch_and_Laura.jpg&quot;);background-size: cover;background-position: center center;min-height: 130vh;background-attachment: fixed;">
+
+        <div class="centerFlex" style="align-items: end;justify-content: flex-start;">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;"><b>לאורה לא מתפקדת בשירים כאישה ממשית אלא כסמל מופשט</b>. כך למשל,
+                        בחיבור ישיר לאובידיוס, פטרארקה מרבה לשחק על שמה של לאורה (Laura), שפירושו עץ הדפנה. הוא משתמש
+                        בשם כמטאפורה לכתר עלי דפנה שסימל בעת הרומית העתיקה את שלטונם של קיסרים ומנצחים ובהמשך גם את
+                        ההשראה האלוהית של משוררים (מכאן הביטוי האנגלי poet laureate – משורר לאומי שחובש לראשו את עלי
+                        הדפנה). לאורה, לפיכך, היא מקור ההשראה האלוהי, תרתי משמע, לשירתו של פטרארקה. בנוסף, השם שלה
+                        באיטלקית גם נשמע כמו La’aura – ההילה, הרוח – ולכן מסמל גם משב רוח, ומכאן בהשאלה אויר לנשימה או
+                        רוח אלוהית.</span></p>
+                <p><span style="font-size: 19.2px;">וכך, השירים מאופיינים ברבדים מורכבים של דימויים פסיכולוגים שסובבים
+                        את דמותה המרוחקת של אישה נשגבה שנאהבת מרחוק, במחשבה ובשיר, שאט אט הופכת למטאפורה רחבה לכל
+                        מאווייו הכמוסים ביותר של האדם. זו הסיבה לכך שלאורה, כמו דמויות נשים רבות אחרות בשירה החצרונית של
+                        הרנסנס, מתקיימת אך ורק בחלל דמיוני, בתווך הארוטי, ולכאורה אינסופי, שבין המשורר למושא אהבתו שתמיד
+                        מתרחק ואינו בהישג ידו. <b>האישה בשירים האלו היא לא אישה אמיתית ולמאהב החצרוני אין אפשרות לברוח
+                            מכלא מחשבתו שלמעשה כופה עליו עמדה של פרישות מהחיים הממשיים</b>.</span></p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- screen 10 -->
+    <section class="screen gardientBackColor centerFlex" style="
+    align-items: end;
+    flex-direction: column;
+">
+        <div style="position: absolute;top: 0px;width: 100%;height: 50vh;background-image: url(&quot;./img/Apollo_Daphne_Albani_Louvre_INV18.jpg&quot;);background-position: right top;background-size: contain;" class="backgroundImg " alt="פסלי הקבורה של אלינור מאקוויטן והנרי השני"></div>
+        <div class="" alt="" style="min-height: 20vw;position: relative;/* order: 2; */width: 100%;">
+            
+
+        </div>
+        <div class="" style="
+    margin: auto;
+">
+            <div class="have-scroll-animation aniType-Blur active-enter-animation" style="left: 10%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;">
+                <h2 style="
+    margin-top: 0px;
+">השפעתו של אובידיוס על פטרארקה&nbsp;</h2>
+<p><span style="font-size: 19.2px;">כמו משוררים רבים בני התקופה, <b>פטרארקה שאב השראה רבה משירתו הקלאסית של אובידיוס</b>. הוא שילב מוטיבים רבים מה"מטמורפוזות" על תשוקה בוערת ודמויות מיתיות, אך הפך אותם בשירתו <b>לדימויים דתיים על סובלימציה מינית וטהרת הנפש שמייחלת לגאולה מכבלי הבשר והגוף המיוסר</b>.&nbsp;</span></p>
+                <p>למשל, בשיר מספר 6, בתחילת הרצף, פטרארקה חוזר <b>לסיפור של דפנה ואפולו</b> של אובידיוס ומספר אותו מחדש על פני 14 שורות. הוא לוקח את העמדה המרומזת של אל השירה אפולו כאחד הקורבנות של חץ התשוקה של אל האהבה. באופן מהפכני לתקופה, הסונטה מגוללת רצף מחשבות ורגשות ללא הקשר ברור, שעיקרם כוחה של "תשוקה טרופה" "folle mi´ desio" לגרום לו לרדוף אחר זו "שברחה ממנו במנוסה". הסונטה מתפתחת בקו אירוני שבו הדובר מצד אחד מלין על כך שאל האהבה פגע בו והפך אותו למאהב נגד רצונו, ומצד שני מודה לו על כך שבזכותו זכה לראות את לאורה, או עץ הדפנה, דרך עיני האהבה. בשורה האחרונה הפרדוקס הזה מזדקק לדימוי חד של המשורר שמנסה לטעום מעלי העץ ומגלה שטעמם מחמיר את פצעי אהבתו במקום לרפא אותם. עלי הדפנה מקנים לו את ההשראה לבטא את עצמו בשירה ולזכות בתהילה, אבל זו שירה שמנציחה לכאורה את האהבה שלעולם לא יזכה בה.&nbsp;</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- screen 11 -->
+    <section class="screen backgroundImg" style="background-image: url(&quot;./img/Artvee_The Poet’s Dream; ‘The Pursuit of the Ideal’ (1881).jpg&quot;);"><div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 10%;left: 5%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;"><p><span style="font-size: 19.2px;">כך, שיר אחר שיר, ברצף ארוך מאוד של סונטות, פטרארקה חוזר על אותם מוטיבים ורעיונות אבל באופן יצירתי שגורם לשירים לצבור רוחב ומנעד רגשי עצום. <b>לכל אורך הדרך טביעת האצבע של אובידיוס ניכרת וברורה, על אף שמדובר לכאורה במבנה של אהבה חצרונית מובהק. כלומר, השירים הם במקביל גם ארוטיים ורוויי רגש יצרי, ומצד שני כל העת מתכחשים לרגשות האלה ומנסים לתעל אותם לטובת אהבה שכלתנית לאידאלים נשגבים</b>. בסוף מדובר באהבה נרקיסיסטית של המשורר שמאוהב בעצמו ובעיקר מאוהב בעמדה של "להיות מאוהב" לשם אמנות השירה שמקנה לו יוקרה ותהילה.&nbsp;</span></p>
+    </div>
+</section>
+
+
+
+
+</body>
+
+</html>
