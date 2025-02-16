@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>מקורות היסטוריים</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <script defer src="../Code/editable.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 2em);
+            min-height: calc(100svh - 2em);
+        }
+
+        .conSideElementLeft {
+            display: flex;
+            padding: 3%;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        /*card info display style*/
+        .cardInfoDisplay {
+            flex-basis: 30%;
+            min-width: 20em;
+            position: relative;
+            flex-grow: 1;
+        }
+
+        .cardInfoDisplay>div:first-child {
+            background: rgb(255, 255, 255);
+            height: fit-content;
+        }
+
+        .cardInfoDisplay>div:first-child>h3,
+        .cardInfoDisplay>div:first-child>p,
+        .cardInfoDisplay>div:first-child>div:not(.backgroundImg) {
+            padding: 20px;
+            margin: 0px;
+        }
+
+        .cardInfoDisplay>div:first-child>.backgroundImg {
+            height: 35vh;
+        }
+
+        .cardInfoDisplay>div.imgDiscriptionOnImg {
+            position: relative;
+            margin-top: 10px;
+            bottom: auto;
+            min-width: calc(100% - 2em);
+        }
+
+        .cardInfoDisplay img {
+            max-width: 650px;
+            margin: auto;
+            display: block;
+        }
+
+        .cardInfoDisplay p {
+            max-width: inherit;
+        }
+
+        @media only screen and (max-width: 720px) {
+            .phone80vwWidth {
+                width: 80vw !important;
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+
+            .phoneGridOrder2{
+                order: 2;
+            }
+        }
+    </style>
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section class="screen backgroundImg" style="background-image: url(&quot;./img/Shakespeare-Testament.jpg&quot;);">
+
+        <div class="backgroundImg"
+            style="background-image: url(img/digitalcollections\ Folger\ 21803_02.jpg); background-size: cover; background-position: center 15%; position: relative;">
+        </div>
+
+        <h1 class="flyBox centerX"
+            style="top: 10%; text-align: center; background: #ffffffd4; padding: 0.5em; font-size: 3em; line-height: 1.1; box-shadow: 0px 4px 3px 4px #00000045;">
+            מקורות היסטוריים
+            <div class="BoxBottomBorder" style="width: 100%; --BoxBorderWidth:3px"></div>
+
+        </h1>
+        <p class="flyBox centerX" style="bottom: 10%;padding: 20px;">בבואנו לסקור שאלות היסטוריות על מציאות חברתית
+            בתקופה מרוחקת, חשוב
+            להבין קודם כל: <strong>מה הם מקורות המידע שההיסטוריון פונה אליהם כדי לשחזר תמונה היסטורית בנושא
+                מסוים?</strong></p>
+        <!--<svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"></path>
+        </svg>-->
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen gardientBackColor GridLayout equal2ChildWidthv2 mobile_equal2ChildWidth" style="/* display: flex; *//* padding: 3%; */">
+        <div class="background-image" alt="" style="background-image: url(./img/Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg);background-size: cover;background-position: 65% 15%;position: relative;">
+            <div class="gradient-Horizontal"></div>
+        </div>
+        <div style="margin: auto;">
+            <div class="flexTop have-scroll-animation aniType-Blur active-enter-animation" style="left: 10%;/* width: 50%; */max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;display: block;height: fit-content;margin: 4em 1em;">
+                <p>הטקסטים המרכזיים בהם אנו עוסקים בקורס הם שני המחזות שלנו: “רומיאו ויוליה” ו”חלום ליל
+                    קיץ”. <strong>האם אנחנו יכולים ללמוד מהמחזות עצמם על התקופה בה נכתבו, על היחסים החברתיים, החוקים
+                        והמנהגים?</strong></p>
+                <p>במובנים מסוימים, התשובה חיובית: יצירות אמנות וספרות מתקופה מסוימת יכולות להעיד על הלך הרוח בתקופה או
+                    להצביע על מגמות תרבותיות רחבות. עם זאת, <strong>יש קושי להסתמך על יצירות אמנות כמסמכים
+                        היסטוריים.</strong> הרי די ברור שהקשר בין יצירה כלשהי למציאות החברתית שמשתקפת בה איננו חד ערכי
+                    ולא
+                    מובן מאליו.</p>
+                <p>תארו לכם שלא היינו יודעים שום דבר על אנגליה במאה ה-16 למעט שני המחזות של שייקספיר שלפנינו בקורס, ללא
+                    כל
+                    הקשר אחר. מן הסתם היינו משערים שהיה נהוג, למשל, לחתן בני נוער בגיל 14 ושהיה מקובל לגזור עונש מוות על
+                    נערות צעירות שמסרבות להתחתן עם החתן שאביהן בחר עבורן. אולי אפילו היינו חושבים, על בסיס "חלום ליל
+                    קיץ",
+                    שאנשים באמת האמינו בפיות ובשיקויי קסם. אבל זה לא נכון. כמו שנראה, הגיל המקובל לחתונה עבור נערות
+                    היה&nbsp; 16 או 17 (ובוודאי לא 14), ואף נערה לא הומתה כי לא צייתה לאביה. החוק "העתיק" שאגאוס מדבר
+                    עליו
+                    בתחילת "חלום ליל קיץ" הוא דמיוני לגמרי. לא היה חוק כזה באנגליה באף תקופה.</p>
+                <p><strong>יצירות אמנות משקפות מציאות באופן דמיוני ויצירתי ולכן נתקשה ללמוד מהן אמת היסטורית-חברתית
+                        כלשהי.</strong> כדי שנוכל להבין את האופן שבו שייקספיר משקף לקהל הצופים שלו מוטיבים שהיו מוכרים
+                    להם
+                    מחייהם, עלינו לפנות למקורות היסטוריים אחרים. היסטוריון חברתי של אנגליה בתקופת הרנסנס נדרש לפנות לשלל
+                    מקורות שכל אחד מהם דורש פרשנות מיוחדת.</p>
+                <p><strong>כשאנו באים, לפיכך, לדון בתמונה החברתית באנגליה של המאה ה-16 בכל הנוגע לחיזור, אהבה ונישואים,
+                        חשוב
+                        לזכור את הנקודות הבאות:&nbsp;</strong></p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- screen 3 -->
+<section class="screen" style="
+    background: #393939;
+">
+        <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig" style="bottom: 10%;left: 10%;width: 60%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 2em auto;">
+            <img src="./img/Num1.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">הרקורד ההיסטורי</h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    ההיסטוריון פונה למספר רב של מקורות שכל אחד מהם מספר סיפור שונה ומספק אתגרים משלו:
+                </p>
+            </div>
+        </div>
+        <div style="display: flex;gap: 20px;justify-content: center;flex-wrap: wrap;margin: 20px;">
+            <div class="cardInfoDisplay">
+                <div>
+                    <h3 class="h3NoStyle">מסמכים משפטיים, חוזי נישואים וירושות</h3>
+                    <p>מסמכים רבים כאלו מתקופתו של שייקספיר שרדו וניתן ללמוד מהם רבות על חוקי החברה בזמנו ועל האופן שבו
+                        רכוש
+                        נקשר בהסכמי נישואים.</p>
+                    <img src="./img/Shakespeare-Testament.jpg" style="
+    width: 100%;
+" alt="צוואתו המפורסמת של וויליאם שייקספיר, בה הוא מוריש לאשתו, אן האת'וויי, את המיטה השנייה הכי טובה בבית.
+">
+                </div>
+                <div class="imgDiscriptionOnImg">צוואתו המפורסמת של וויליאם שייקספיר, בה הוא מוריש לאשתו, אן האת'וויי,
+                    את המיטה השנייה הכי טובה בבית.</div>
+            </div>
+
+            <div class="cardInfoDisplay">
+                <div>
+                    <h3 class="h3NoStyle">ספרי מוסר</h3>
+                    <p>לאורך המאה ה-16 נכתבו ספרי מוסר רבים, לרוב על-ידי אנשי דת, שהציבו (בעיקר בפני נשים) את הנורמות
+                        המצופות בענייני אהבה וחיזור. ספק אם אנשים רבים באמת קראו בספרים האלה, אבל עצם קיומם מעיד על
+                        הצורך החברתי "לתקן" התנהגות שחותרת תחת מוסכמות חברתיות-דתיות. לכן, ספרי מוסר יכולים ללמד אותנו
+                        על המוסכמות החברתיות עצמן ועל העובדה שהיה קושי מסוים לאכוף אותן אל מול מציאות חברתית מורכבת.</p>
+                    <img src="./img/Baldessare_Castiglione_-_Il_Cortigiano_(1549).tiff.jpg" style="
+    width: 100%;
+" alt="צוואתו המפורסמת של וויליאם שייקספיר, בה הוא מוריש לאשתו, אן האת'וויי, את המיטה השנייה הכי טובה בבית.
+">
+                </div>
+                <div class="imgDiscriptionOnImg"> ספר החצרן (באנגלית Book of the Courtier) של בלדסר קסטיליונה. הסופר
+                    איטלקי, אבל הספר היה פופולארי גם באנגליה.</div>
+            </div>
+
+
+            <div class="cardInfoDisplay">
+                <div>
+                    <h3 class="h3NoStyle">מכתבי אהבה</h3>
+                    <p>שרדו מהתקופה לא מעט מכתבי אהבה אישיים, במיוחד של בני אצולה, שיכולים בהחלט ללמד אותנו משהו על
+                        עולמם הפנימי והרגשי של בני התקופה ולהעיד על כך שבני אדם מאוהבים, אז כמו היום, מתנהגים באופן
+                        דומה. למשל, שרדו מכתבי האהבה שהמלכה אליזבת הראשונה החליפה עם אהובה רוברט דאדלי, בהם אליזבת נהגה
+                        לצייר זוג עיניים לצד חתימת שמה, כאילו הייתה אומרת, "עיניים שלי". </p>
+                    <img src="./img/digitalcollections folger 94840 Robert Dudley Elizabeth_eyes.png" style="
+    width: 100%;
+" alt="צוואתו המפורסמת של וויליאם שייקספיר, בה הוא מוריש לאשתו, אן האת'וויי, את המיטה השנייה הכי טובה בבית.
+">
+
+                </div>
+                <div class="imgDiscriptionOnImg">במכתב זה שכתב דאדלי לאליזבת', ניתן לראות פעמיים את אייקון העיניים, פעם
+                    אחת מעל המילה moost שנכתבת עם o כפול, ופעם אחת בחותמת התחתונה.</div>
+            </div>
+
+        </div>
+        <div class="flexTop have-scroll-animation aniType-MoveBottomToTop active-enter-animation" style="bottom: 10%;left: 10%;width: 60%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 2em auto;">
+            <p style="
+    margin: auto;
+">
+                שלל המקורות האלה, אם הם נקראים יחד, בהחלט יכולים ללמד אותנו הרבה על אהבה וחיזור באנגליה של המאה ה-16.
+                אבל עדיין צריך להיזהר מקביעת עובדות באופן כללי מבלי לקחת בחשבון את המורכבות האנושית שמאפיינת כל חברה,
+                ובמיוחד חברה שנתונה בתמורות גדולות.&nbsp;
+            </p>
+            <div>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 4 -->
+    <section class="screen backgroundImg background_ParallaxEffect"
+        style="background-image: url(&quot;./img/collections.britishart.yale.eduThe Family of Henry VIII.jpg&quot;);background-position: center;background-size: cover;min-height: 130vh;">
+        <div class="flexTop phone80vwWidth have-scroll-animation aniType-ScaleSmallToBig centerX"
+            style="width: 60%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 2em 0px;">
+            <img src="./img/Num2.svg" alt="Number 2" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">מציאות כלכלית וחברתית מורכבת בתקופת מעבר מטלטלת</h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">אל מול מסמכים רבים שנשתמרו מהתקופה הנוגעים בנדוניות
+                    והסכמי ממון, צריך לזכור שאנגליה במאה ה-16 הייתה נתונה בתקופת מעבר לא פשוטה תחת שלטון הטיודורס.</p>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;"><span style="font-size: 19.2px;">כפי שראינו בשיעור
+                        הקודם, <b>תקופת הרנסנס</b>, שהגיעה לשיאה באנגליה תחת שלטונו של הנרי השמיני, <b>שינתה בהדרגה את
+                            הממלכה מקצה לקצה</b>. הרפורמציה, מלחמות הדת, עליית ההומניזם, תהליכי עיור מואצים, המצאת הדפוס
+                        ועליית האוריינות, והתחזקות מעמד הסוחרים – כל אלה שינו באופן דרמטי את הנוף החברתי של אנגליה במהלך
+                        המאה ה-16.&nbsp;</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- screen 5 -->
+<section class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone background-image" style="background-image: url(&quot;./img/Pieter_Aertsen_-_Market_Scene_-_Google_Art_Project.jpg&quot;);background-size: cover;background-position: center;">
+
+        <div style="
+min-height: 40vh;
+">
+
+        </div>
+        <div class="centerFlex" style="
+">
+            <div class="have-scroll-animation aniType-MoveLeftToRight BoxBottomBorder active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>בחצי השני של המאה, בו שייקספיר חי ופעל, אנגליה של ימי הביניים נכחדה כמעט כליל. החברה עדיין הייתה חברה
+                    פטריארכלית נוקשה עם תפיסת מעמדות והיררכיה ברורה שנשענו על מסד רעיונות פאודלי. אבל <b>יחסי הכוחות בין
+                        המעמדות השונים עמדו למבחן</b> אל מול התנודתיות החברתית של מעמד הסוחרים שצמח באותה תקופה. בנוסף,
+                    המציאות הכלכלית הפכה מורכבת לאור <b>עלייתם של שווקי כלכלה חופשית</b> שנשענו על מסחר ימי בינלאומי
+                    והלוואות בריבית. נוצר מצב חדש בו האנשים העשירים ביותר בממלכה לא היו בהכרח בני אצולה. פתאום גם בן
+                    מעמד הסוחרים, אם צבר מספיק ממון, יכול היה לשאוף להתחתן "אל תוך" מעמדות גבוהים יותר ואפילו לרכוש
+                    לעצמו תואר אצולה.</p>
+                <p><span style="font-size: 19.2px;">קתרינה דה מדיצ'י למשל, אחת המלכות החזקות ביותר באירופה של המאה ה-16,
+                        קיבלה את מעמדה אך ורק מתוקף נישואיה למלך צרפת הנרי השני. היא לא הגיעה ממשפחת אצולה ותיקה אלא
+                        הייתה בת למשפחת מדיצ'י העשירה מפירנצה באיטליה – משפחה של סוחרים ובנקאים שהפכו לאצולה רק בזכות
+                        הממון והכוח שצברו, ויש עוד דוגמאות רבות למקרים דומים.</span></p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- screen 6 -->
+    <section class="screen" style="
+    background: #121212;
+">
+        <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 10%;left: 10%;width: 60%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 2em auto;">
+            <img src="./img/Num3.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">משטור מיניות ופשיעה מינית</h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;">
+                    במקביל לתנודתיות החברתית החדשה, בני התקופה נאלצו להתמודד, אז כמו היום, גם עם <b>תופעות חברתיות
+                        שליליות רבות שאתגרו את יציבות מוסד הנישואים כאבן הפינה של החברה הפטריארכלית</b>. לידות מחוץ
+                    לנישואים וממזרות, הפלות, ניאופים ואלימות בתוך המשפחה היו תופעות נפוצות במאה ה-16, כמו בכל תקופה,
+                    ורשויות החוק באנגליה התקשו להתמודד איתן.
+                </p>
+            </div>
+        </div>
+        <div style="display: flex;gap: 20px;justify-content: center;flex-wrap: wrap;margin: 20px;">
+            <div class="cardInfoDisplay" style="
+    height: 100%;
+    flex-basis: 45%;
+">
+                <div>
+                    <h3 class="h3NoStyle">ממזרות</h3>
+                    <p>הצורך למשטר יחסי מין (ובמיוחד יחסי מין מחוץ לנישואים) לא היה רק צורך דתי-מוסרי, אלא צורך כלכלי עם
+                        משמעות חברתית עמוקה. הסיבה לכך היא שילד שנולד ממזר (בהגדרת החוק הנוצרי, בשונה מהיהדות, מדובר
+                        בילד שנולד מחוץ לנישואים) היה ללא מעמד משפטי בחברה. על-פי חוק, ממזר היה מנוע מלרשת רכוש או
+                        להתמנות לתפקיד מקצועי כלשהו אלא אם אומץ באופן רשמי על ידי אביו. בנות ממזרות היו גם הן ללא שום
+                        מעמד חברתי ואי אפשר היה לחתן אותם, אלא אם, שוב, אביהן היה מאמץ אותן. למרות זאת, ומאחר שלא היו
+                        אמצעי מניעה, היו הרבה מאוד לידות מחוץ לנשואים. הילדים הממזרים שנולדו, במיוחד בקרב בני המעמדות
+                        הנמוכים שלא יכלו לטפל בילדיהם, ניתנו למשמורת של הכנסייה המקומית שנאלצה לממן את כלכלתם עד לגיל
+                        בגרות. כלומר, לידות מחוץ לנישואים היוו נטל כלכלי כבד על החברה והיה צורך למגר את התופעה.&nbsp;
+                    </p>
+                    <div class="backgroundImg" style="background-image: url(&quot;./img/Octave_Tassaert_-_Destitute_Dead_Mother_holding_her_sleeping_Child_in_Winter_-_2013.257_-_Cleveland_Museum_of_Art.jpg&quot;);">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cardInfoDisplay" style="
+    height: 100%;
+    flex-basis: 45%;
+">
+                <div>
+                    <h3 class="h3NoStyle">זנות ואלימות מינית</h3>
+                    <p>מסמכים משפטיים רבים מהתקופה מעידים על הקושי של הרשויות המלכותיות והעירוניות להתמודד עם פשעים
+                        שהוגדרו ככאלה בחוק ושאיימו על קדושת מוסד הנישואים, במיוחד זנות וסרסור. מצד אחד, זו הייתה חברה
+                        שמרנית ודתית שמשטרה ואף דיכאה ברבים התנהגות מינית לא הולמת והענישה בחומרה מעשי אונס ואלימות
+                        מינית. מצד שני, היה קושי רב לאכוף את החוקים האלה בתנאים מסוימים. למשל, בעוד שזנות נאסרה במרחב
+                        העירוני של לונדון, בתי בושת רבים פעלו מחוץ לחומות העיר באזורים "אפורים" מבחינה חוקית שהיו מעבר
+                        לשליטת הרשויות העירוניות. בנוסף, החוק הקשה מאוד על נשים שנפגעו לקבל הגנה משפטית: נשים היו זקוקות
+                        לתמיכתו של גבר, קרוב משפחה מדרגה ראשונה, שיפעל בשמן בבתי המשפט. במציאות הזו נשים רבות סבלו
+                        מאלימות ללא יכולת ממשית לקבל הגנה מהחוק.&nbsp;&nbsp;</p>
+                    <div class="backgroundImg" style="background-image: url(&quot;./img/Quentin_Massys_-_Ill-Matched_Lovers,_c._1520-25.jpg&quot;);">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="cardInfoDisplay">
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- screen 7 -->
+    <section class="screen" style="
+    background: #343434;
+">
+        <div class="flexTop have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="bottom: 10%;left: 10%;width: 60%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 2em auto;">
+            <img src="./img/Num4.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+            <div>
+                <h2 class="h3NoStyle">פער בין המוסר הכנסייתי ובין החוק המלכותי</h2>
+                <p style="margin-bottom: 0px; margin-left: 1.3em;"><span style="font-size: 19.2px;">קושי נוסף היה <b>הפער בין אמות המידה המוסריות של הכנסייה</b>, שהפעילה בתי משפט משלה לדיני משפחה ומוסר, <b>לבין שלטון החוק המלכותי שהציג אמות מידה סותרות</b>. לא רק שבני האצולה (ובמיוחד הנרי השמיני) התנהגו בצורה הוללת שלא תאמה את ערכי הכנסייה, אלא שההתנהגות הזו גם קיבלה ביטוי בחוק. למשל, הפשע של "מעשי סדום" שאנו מבינים היום כפשע מיני, הובן באותה תקופה כפשע פוליטי מופשט, והיה נהוג להשתמש במונח הזה כדי לתאר באופן כללי ערב רב של פשעים נגד הכתר, גם אם לא היה להם כלל אופי מיני.&nbsp;</span></p>
+            </div>
+        </div><img src="./img/6zon.png" style="
+    width: 100%;
+" alt="שש הנשים של הנרי השמיני. שלושה מנישואיו בוטלו על ידי הכנסייה">
+<div class="imgDiscriptionOnImg"><span style="">שש הנשים של הנרי השמיני. שלושה מנישואיו בוטלו על ידי הכנסייה</span></div>
+        
+
+    </section>
+
+    <!-- screen 8 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #000000;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-Blur active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;">כך גם <b>הצנזורה המלכותית שהופעלה על פרסום ספרים או מחזות על הבמה התמקדה בעיקר בתכנים פוליטיים רגישים ופחות בתכנים מיניים</b> אליהם הייתה סלחנות מסוימת, למעט במקרים קיצוניים במיוחד. למשל, נאסר על שייקספיר ומחזאים אחרי בני זמנו לקלל על הבמה, להציג מופעי זימה, או לחלל את הדת ואת שם ישו ואלוהים, אבל האיסור על כך נבע ממניעים פוליטיים של סדר ציבורי ולא ממניעים דתיים-מוסריים.</span></p><p><span style="font-size: 19.2px;">זה לא מנע משייקספיר ובני זמנו למצוא דרכים יצירתיות לעקוף את האיסורים האלה. שייקספיר היה כאמור מאוד יצירתי עם השפה האנגלית וכשרצה שדמות שלו תדבר בשפה נמוכה ווולגארית, הוא מצא דרכים מקוריות להמציא עבורן קללות צבעוניות פרי המצאתו (קללות רבות שעד היום הן מטבעות לשון בשפה האנגלית).</span></p>
+            </div>
+
+        </div>
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/Life_of_Michael_Angelo,_1912_-_David_+_Fig_Leaf_Focus.jpg&quot;);background-size: contain;background-position: bottom;position: relative;min-height: 60vh;background-repeat: no-repeat;">
+            <div class="imgDiscriptionOnImg right"><span style="font-size: 11.52px;">הרפליקה המצונזרת של פסלו של מיכלאנג’לו "דויד" במוזיאון ויקטוריה ואלברט באנגליה.</span></div>
+        </div>
+
+    </section>
+
+
+    <!-- screen 9 -->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone background-image" style="background-image: url(&quot;./img/digitalcollectionsfolger_Katherine and Petruchio.jpg&quot;);background-size: cover;background-position: center;min-height: 150vh;">
+            
+        <div class="centerFlex phoneGridOrder2" style="align-items: end;">
+            <div class="flexTop have-scroll-animation aniType-MoveRightToLeft active-enter-animation" style="bottom: 10%;left: 10%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 20px;">
+        <img src="./img/Num5
+.svg" alt="Number 1" style="position: relative; top: 0.4em;">
+        <div>
+            <h2 class="h3NoStyle">אידאליזציה ספרותית וסטראוטיפים חברתיים</h2>
+            <p style="margin-bottom: 0px; margin-left: 1.3em;"><span style="font-size: 19.2px;">לבסוף, לאחר שחקר את כל אלה, ההיסטוריון יכול לפנות לאמנות וספרות התקופה כדי ללמוד עליה. הוא יעדיף לבחון קומדיות או ספרות סאטירית שמעבירה ביקורת על החברה דרך הגחכתם של סטראוטיפים חברתיים. קומדיות עירוניות שסיפרו את סיפורי חייהם של אנשים פשוטים בנוף העירוני של לונדון, או ערים דומות באירופה, התמקדו לרוב בבני מעמד הסוחרים ועלילות רומנטיות-קומיות סביב חיזור ונישואים. דמויות מוכרות כללו את האישה הסוררת, האלמנה ה"קטלנית" שקברה מספר רב של בעלים, בן הטובים הנהנתן, הזונה עם לב הזהב, איש הדת המתחסד, האוהבים המיוסרים, וכן הלאה.</span></p><p style="margin-bottom: 0px; margin-left: 1.3em;"><span style="font-size: 19.2px;">חשוב כמובן להבדיל בין הגזמה לשם קומדיה לבין מציאות היסטורית, אבל אם מצליבים את התמונה החברתית שעולה ממחזות התקופה עם מקורות היסטוריים אחרים אפשר לקבל תמונה יחסית ברורה על האופן שבו אנשים ניהלו את חייהם בתוך המתח המתמיד בין אהבה, חיזור ומשיכה מינית לבין מוסד הנישואים הפטריארכלי.</span></p>
+        </div>
+    </div>
+
+        </div>
+<div style="min-height: 40vh;position: relative;">
+<div class="imgDiscriptionOnImg " style="
+    top: 5%;
+    bottom: auto;
+"><span style="font-size: 11.52px;">במחזה המוקדם <b>"אילוף הסוררת"</b>, שייקספיר משחק עם הדמות הסטריוטיפית: על פי מה אנו קובעים שאישה היא סוררת, והאם בכלל האישה היא הסוררת במחזה?</span></div>
+</div>
+
+
+    </section>
+
+</body>
+
+</html>
