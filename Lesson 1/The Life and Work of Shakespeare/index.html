@@ -2,69 +2,153 @@
 <html>
 
 <head>
-    <title>הטרגדיה בתוך הקומדיה</title>
-    <link rel="icon" type="image/x-icon"
-        href="../GeneralImg/FaceRealIcon.png">
+    <title>חיו ועבודתו של שייקספיר</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
     <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
     <script defer src="../Code/code.js"></script>
+    <script defer src="./scroolAnimation.js"></script>
     <style id="animationStyle">
     </style>
 </head>
 
 <body onload="start()">
     <style>
-        #MainTitle{
-            line-height: 1.6em;
-    text-align: center;
-    display: grid;
-    height: 50%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    grid-template-columns: 1fr 2fr 1fr;
-        }
-        #MainTitle img{
-            height: 15em;
-        }
-        #MainTitle span:nth-child(1), #MainTitle span:nth-child(3){
-            font-size: 1.5em;
-        }
-        #MainTitle span:nth-child(2){
-            font-weight: 400;
+        .screen {
+            min-height: calc(100vh - 1em);
         }
 
-        .CenterInnerP P {
-            margin: 1em auto 0px auto;
-            text-align: center;
+        .screenWithTimeline {
+            padding-right: 10em;
         }
 
-        .centerX{
-            left: 50%;
-            transform: translate(-50%, 0px);
+        .innerContainer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
         }
 
-        .quoteWithStyle q::after {
-    position: absolute;
-    top: auto;
-}
+        /* Timeline style */
 
-        @media only screen and (max-width: 720px) {    
-            #MainTitle{
-                grid-template-columns: auto;
+        .Timeline {
+            position: fixed;
+            height: 100vh;
+            width: 3em;
+            z-index: 4;
+            align-content: center;
+            animation-name: TimelineBar;
+        }
+
+        .Timeline .gradient-Horizontal {
+            width: 20em;
+            --startColor: black;
+            background: linear-gradient(var(--linearDeg), var(--startColor) 25%, var(--endColor) 95%);
+            height: 100%;
+            top: 0;
+        }
+
+        .Timeline .allEvents {
+            height: 90%;
+            display: grid;
+            align-items: center;
+            position: relative;
+            width: 4vw;
+        }
+
+        .Timeline .dot,
+        .Timeline .dotLong {
+            background: white;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 1000px;
+        }
+
+        .Timeline .dotLong {
+            height: 7vh;
+        }
+
+        .timelineEvent {
+            position: relative;
+            margin: auto;
+        }
+
+        .timelineEventDetails {
+            visibility: hidden;
+
+            position: absolute;
+            top: 50%;
+            RIGHT: -1em;
+            user-select: none;
+            padding-right: 10px;
+            width: 10em;
+            line-height: 1em;
+            opacity: 0;
+            transform: scale(0.8) translateY(-50%);
+
+            transition: all 300ms;
+        }
+
+        .timelineEvent:hover .timelineEventDetails,
+        .timelineEvent:focus-visible .timelineEventDetails {
+            visibility: visible !important;
+            RIGHT: 0.5em;
+            opacity: 1 !important;
+            background: #0000008c;
+            z-index: 200;
+            backdrop-filter: blur(2px);
+            outline: white solid;
+            border-radius: 5px;
+            padding: 0.5em;
+        }
+
+        .timelineEvent:hover .timelineEventDetails span,
+        .timelineEvent:focus-visible .timelineEventDetails span {
+            opacity: 0.7 !important;
+        }
+
+        .timelineEventDetails .year {
+            color: red;
+            font-size: 1.3em;
+        }
+
+        .timelineEventDetails .eventName {
+            color: white;
+            display: block;
+        }
+
+
+        .animationAncer {
+            position: absolute;
+            top: -10vh;
+        }
+
+        .Timeline .line {
+            height: 90%;
+            position: absolute;
+            border-right: 4px solid #ffffff;
+            right: calc(2vw - 2px);
+            border-radius: 20px;
+        }
+
+        @media only screen and (max-width: 950px) {
+            .Timeline {
+                display: none;
             }
-          .centerX{
-            left: auto;
-            transform: translate(0px,0px);
-          }
 
-          .flyBox{
-            padding: 0.05em 1.2em !important;
-          }
+            .screenWithTimeline {
+                padding-right: 0px;
+            }
         }
-#MainTitle span{
-display: block;
-}
+
+        @media only screen and (max-width: 720px) {
+            .screenWithTimeline {
+                padding-right: 0px;
+            }
+
+            .mobileBackBlack {
+                background-color: black;
+            }
+        }
     </style>
 
     <section id="loadingScreen" class="screen"
@@ -73,92 +157,581 @@ display: block;
         <span>טוען אתר</span>
     </section>
 
-    <section class="screen" style="min-height: 100vh;">
-        <div class="blockSpacing" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div  id ="MainTitle" class="BoxBottomBorder">
-                <img src="img/Mask_Picture1.png " alt="" style="rotate: -10deg;">
-                <h1 >
-                    <span>
-                        הטרגדיה
-                    </span>
-                    <span>בתוך</span>
-                    <span>הקומדיה</span>
-                </h1>
-                <img  src="img/Mask_Picture2.png" alt=""  style="rotate: 15deg;"/>
-            </div>
+    <!-- Timeline -->
 
-            <div class="CenterInnerP">
-                <p>דיברנו בקורס לא פעם על שאלות הנוגעות לסוגות הדרמתיות של <strong>קומדיה וטרגדיה</strong> בתקופתו של שייקספיר.</p>
-<p>בשיעור הבא, כשנעמיק את קריאתנו ב"רומיאו ויוליה", נלמד גם יותר לעומק על האופן שבו שייקספיר התפתח בסוגה הטרגית עד שכתב את המחזה.</p>
-<p><strong>אבל לפני כן, בואו נסכם מספר נקודות חשובות בנוגע ליחס בין קומדיה וטרגדיה.</strong></p>
-            </div>
+    <div class="Timeline scroolAnimation">
+        <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        <div class="line"></div>
+        <div class="allEvents">
+            <a href="#Section-ShakespeareBirth" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1564</span>
+                    <span class="eventName">שייקספיר נולד</span>
+                </div>
+            </a>
 
-            <img style="width: 2.5em; margin: 0px auto; display: block; margin-top: calc(6% + 40px);"
-                src="../GeneralImg/ArrowDown.png"
-                alt="חץ שמצביע למטה- תגלול למטה" />
+            <a href="#Section-ShakespeareAsChild" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1571-1579</span>
+                    <span class="eventName">שייקספיר הילד</span>
+                </div>
+            </a>
+            <a href="#Section-MarriageAndFamily" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1579-1582</span>
+                    <span class="eventName">נישואים ומשפחה</span>
+                </div>
+            </a>
+            <a href="#Section-LostYears" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1582-1592</span>
+                    <span class="eventName">השנים האבודות</span>
+                </div>
+            </a>
+            <a href="#Section-PlayAndWriting" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1590-1591</span>
+                    <span class="eventName">משחק וכתיבת מחזות</span>
+                </div>
+            </a>
+            <a href="#Section-WritingPoetry" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1592-1594</span>
+                    <span class="eventName">כתיבת שירה</span>
+                </div>
+            </a>
+            <a href="#Section-PlayersBand" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1594</span>
+                    <span class="eventName">הקמת להקת השחקנים</span>
+                </div>
+            </a>
+
+            <a href="#Section-RomeoAndJuliet" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1595-1596</span>
+                    <span class="eventName">“רומיאו ויוליה” ו”חלום ליל קיץ”</span>
+                </div>
+            </a>
+            <a href="#Section-TheGlobe" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1599</span>
+                    <span class="eventName">הקמת תיאטרון ה-Globe</span>
+                </div>
+            </a>
+            <a href="#Section-RoyalBand" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1605</span>
+                    <span class="eventName">להקת השחקנים המלכותית</span>
+                </div>
+            </a>
+            <a href="#Section-Blackfriars" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1608</span>
+                    <span class="eventName">הקמת תיאטרון Blackfriars</span>
+                </div>
+            </a>
+            <a href="#Section-LastYears" class="timelineEvent">
+                <div class="dotLong scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1611-1616</span>
+                    <span class="eventName">השנים האחרונות</span>
+                </div>
+            </a>
+            <a href="#Section-ShakespeareDeath" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1616</span>
+                    <span class="eventName">מותו של שייקספיר</span>
+                </div>
+            </a>
+            <a href="#Section-FirstPolioEdition" class="timelineEvent">
+                <div class="dot scroolAnimation"></div>
+                <div class="timelineEventDetails scroolAnimation">
+                    <span class="year">1623</span>
+                    <span class="eventName">מהדורת הפוליו הראשון</span>
+                </div>
+            </a>
+
         </div>
-    
+    </div>
+
+    <!--Screen Back 1,2-->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor"
+        style="--startColor: #000000;position: fixed;z-index: -1;height: 100vh;width: 100vw;">
+
+        <div style="
+    margin: 3em 0px;
+">
+            <div class="RightMarkBorder" style="
+    height: 100%;
+    margin-right: 1.5em;
+    --BoxBorderWidth: 0.5em;
+">
+
+            </div>
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;img/William_Shakespeare_by_John_Taylor,_edited.jpg&quot;);background-size: cover;background-position: center 15%;position: relative;min-height: 70vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom right" style="width: 75%;"></div>
+        </div>
 
     </section>
 
-    <section class="screen backgroundImg background_ParallaxEffect centerFlex" style="background-image:url('img/Mosaic_depicting_theatrical_masks_of_Tragedy_and_Comedy.jpg'); background-position-y: center;">
-        <div class="have-scroll-animation aniType-ScaleSmallToBig" style="top: 10%; right: 10%; width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; padding: 0px 1em;">
-            <p>שייקספיר קיים את העיקר מבחינת שתי המוסכמות הבסיסיות של טרגדיה וקומדיה: הקומדיות שלו מסתיימות בנישואי הגיבורים והטרגדיות שלו מסתיימות במות הגיבורים.</p>
-            <p>אבל <strong>שייקספיר לעולם לא דבק בהפרדה ברורה בין שתי הסוגות</strong>: ישנם לא מעט מחזות שייקספיריים (וגם מחזות של מחזאים אחרים מהתקופה) שנתקשה מאוד לסווג תחת הכותרת של "קומדיה" או "טרגדיה".</p>
-            <p>המצב היה כל כך נזיל עד שחוקרים נאלצים לדבר על חלק מהמחזות מתקופתו של שייקספיר במונחים כמו "<strong>טרגיקומדיה</strong>" (tragicomedy) או "<strong>מחזות בעיה</strong>" (problem plays), וזאת משום שקשה מאוד לסווג אותם.</p>
-            <p>כך לדוגמה, יכול להיות מחזה עם עלילה קומית מובהקת שפתאום מסתיים באופן טרגי, או, מה שהיה יותר נפוץ, מחזה טרגי לכל דבר שפתאום מסתיים בסוף קומי טוב.</p>
+    <!--Screen 1-->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="
+    --startColor: transparent;
+">
+        <div style="
+    color: white;
+    display: grid;
+    align-content: space-around;
+    margin: 0px 3.5em 0px 2em;
+    text-align: right;
+">
+            <h1 style="
+    font-size: 5em;
+    margin: 0;
+    line-height: 1em;
+">שייקספיר
+                האיש</h1>
+            <p style="
+    font-size: 2.5em;
+    text-align: right;
+    line-height: 1em;
+">חייו ופועלו
+                <b style="
+    display: block;
+">של ויליאם שייקספיר</b>
+            </p>
+
         </div>
-        <p class="imgDiscriptionOnImgSmall styleOption2" style="width: 80%; bottom: 0px; color: #dddddd; left: 10px;">
-            Mosaic depicting theatrical masks of Tragedy and Comedy, by Carole Raddato, under CC-BY-SA, via Wikimedia Commons
-        </p>
+        <div class="" alt="" style="">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+
+
     </section>
 
-    <section class="screen centerFlex" style="flex-direction: column;">
-        <p>ניתן לראות בדיוק מה שייקספיר חשב על הנושא אם נפנה לנאום המפורסם של פולוניוס במחזה "<strong>המלט</strong>" שבו הוא מציג את השחקנים שבאים להעלות הצגה בארמון:</p>
-        <div class="centerFlex quoteWithStyle left have-scroll-animation aniType-skewX">
-            <div style="max-width: 700px;">
-                <q style="text-align: justify;">השחקנים הכי טובים בעולם, אם זה לטרגדיה, קומדיה, היסטוריה, פסטורליה, פסטורליה-קומית, היסטוריה-פסטורלית, טרגי-קומדיה-היסטורית-פסטורלית, דיאלוג בלי הפסקות או פואמה בלי גבולות הם קלים כמו ליצנים ושוקלים כמו יוונים. לאסכולה ספרותית ואימפרוביזציה חופשית - אלה האנשים היחידים.</q>
-                <span><p>(<strong>המלט</strong>, מערכה 2, תמונה 2. תרגום: דורי פרנס)</p></span>
+    <!--Screen 2-->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="
+    --startColor: transparent;
+">
+        <div style="display: grid;align-content: space-around;margin: 0px 4.5em 0px 2.5em;" class="mobileBackBlack">
+
+            <p style="color: white;">חייו הביוגרפיים של ויליאם שייקספיר עמדו במשך שנים רבות בגדר תעלומה.</p>
+            <div style="">
+                <p style="color: white;"><b>
+                        מיצירתו של שייקספיר לא ניתן ללמוד הרבה על חייו</b>. בניגוד לאמנים אחרים בני תקופתו, שייקספיר לא
+                    נהג לספר על עצמו, בוודאי לא במחזותיו. כשחקן תיאטרון מובהק, שייקספיר נהג להתחבא מאחורי הדמויות אותן
+                    שיחק וכתב. הסונטות שכתב – רצף של שירי אהבה מורכבים המופנים למאהב או מאהבת אלמונים – חושפות משהו
+                    מחייו הפרטיים של שייקספיר, אבל גם כאן מדובר רק ברמזים שלרוב מעלים יותר שאלות מאשר עובדות.
+                </p>
+                <p style="
+    color: white;
+"><span style="font-size: 19.2px;"><b>אך עם השנים, היסטוריונים וחוקרים מצאו מסמכים מסוגים שונים שהחלו להשלים את התמונה
+                            הכוללת אודות חייו של ויליאם שייקספיר האדם</b>. בחמישים השנים האחרונות במיוחד, יותר ויותר
+                        ביוגרפיות נכתבות על חייו של המחזאי הנודע (מי מדוייקת יותר ומי פחות). אנחנו יודעים היום לא מעט על
+                        חייו של שייקספיר, הרבה בזכות הצלבת מקורות שונים מהתקופה שמתעדים תחנות שונות בחייו.&nbsp;</span>
+                </p>
+                <p style="color: white;">
+                    <span style="font-size: 19.2px;">ניתן לסכם את התחנות האלה די בפשטות, והסיפור
+                        שהן מספרות... לא בהכרח מעניין. לאורך הקורס אנחנו נתמקד ביצירתו של שייקספיר יותר מאשר בסיפור
+                        חייו, ובכל זאת - חשוב שנכיר אותו.</span>
+                </p>
+            </div>
+
+        </div>
+        <div class="" alt="" style="">
+
+        </div>
+
+
+    </section>
+
+    <!--Screen 3-->
+    <section id="Section-ShakespeareBirth" class="screen backgroundImg screenWithTimeline"
+        style="background-image: url(&quot;img/shutterstock_1326670742.jpg&quot;);">
+        <div id="slidAnimationTag-1" class="animationAncer"></div>
+        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+            style="top: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+            <p><span style="font-size: 19.2px;">ויליאם שייקספיר נולד <b>בשנת 1564</b>, מתישהו בין ה-21 ל-23 באפריל,
+                    בעיירה <b>סטרטפורד אפון-איבון</b> (Stratford-upon-Avon) שבמרכז אנגליה.</span></p>
+            <p><span style="font-size: 19.2px;">הוא נולד למשפחה אמידה: אביו, ג'ון שייקספיר, הוא אומן כפפות שעוסק גם
+                    במסחר הצמר המקומי ואמו מרי ארדן ירשה רכוש רב כבת למשפחת ארדן שקשורה לאצולה הנמוכה במחוז.</span></p>
+        </div>
+    </section>
+
+    <!--Screen 4-->
+    <section id="Section-ShakespeareAsChild" class="screen backgroundImg screenWithTimeline background_ParallaxEffect"
+        style="background-image: url(&quot;img/Balthasar_Beschey_-_Commedia_dellArte.jpg&quot;);">
+        <div id="slidAnimationTag-2" class="animationAncer"></div>
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
+            style="top: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+            <p><span style="font-size: 19.2px;">שייקספיר רוכש בבית הספר המקומי בעירו <b>חינוך הומניסטי עשיר</b>. בניגוד
+                    להוריו, שידעו כנראה רק לקרוא, שייקספיר גם לומד לכתוב בגיל צעיר.&nbsp;</span></p>
+            <p><span style="font-size: 19.2px;">עדויות מצביעות על כך שלפחות פעמיים בתקופת ילדותו מבקרות בעיירתו של
+                    שייקספיר קבוצות שחקנים נודדים שמעלות הצגות בכיכר העיר. שייקספיר עצמו גם ככל הנראה משחק בהצגות של בית
+                    הספר שלו כחלק מתכנית הלימוד של התקופה. <b>הגיוני להניח ששתי החוויות האלה השפיעו על שייקספיר, שנדבק
+                        בחיידק הבמה כבר בגיל צעיר.</b>&nbsp;</span></p>
+        </div>
+    </section>
+
+    <!--Screen 5-->
+    <section id="Section-MarriageAndFamily" class="screen backgroundImg screenWithTimeline background_ParallaxEffect"
+        style="background-image: url(&quot;./img/Folger_Shakespeare with his family_cropped.jpg&quot;);"
+        alt="שייקספיר ומשפחתו">
+        <div id="slidAnimationTag-3" class="animationAncer"></div>
+        <div class="innerContainer">
+            <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="botto,: 10%;right: 1%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;bottom: 10%;">
+                <p><span style="font-size: 19.2px;">שייקספיר רוכש בבית הספר המקומי בעירו <b>חינוך הומניסטי עשיר</b>.
+                        בניגוד
+                        להוריו, שידעו כנראה רק לקרוא, שייקספיר גם לומד לכתוב בגיל צעיר.&nbsp;</span></p>
+                <p><span style="font-size: 19.2px;">עדויות מצביעות על כך שלפחות פעמיים בתקופת ילדותו מבקרות בעיירתו של
+                        שייקספיר קבוצות שחקנים נודדים שמעלות הצגות בכיכר העיר. שייקספיר עצמו גם ככל הנראה משחק בהצגות של
+                        בית
+                        הספר שלו כחלק מתכנית הלימוד של התקופה. <b>הגיוני להניח ששתי החוויות האלה השפיעו על שייקספיר,
+                            שנדבק
+                            בחיידק הבמה כבר בגיל צעיר.</b>&nbsp;</span></p>
             </div>
         </div>
+
+        <div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
+            style="bottom: 2em;width: fit-content;">שייקספיר ומשפחתו</div>
     </section>
 
-    <section class="screen backgroundImg background_ParallaxEffect" style="background-image:url('img/William_Shakespeare_by_John_Taylor.jpg'); background-position: left 30%; background-size: 125%;">
-        <div class="flyBox have-scroll-animation aniType-Blur active-enter-animation" style="bottom: 7%; right: 10%; width: 40%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1;">
-            <p>האמת היא, ששייקספיר ראה את המוסכמות כמסגרת דרמתית מלאכותית. הוא פעל בתוך המסגרות האלה אבל אהב תמיד לחתור תחתן, ולו מתוך ההבנה <strong>שבחיים שלנו לא ניתן באמת להבדיל בין הממד הקומי</strong> (שעוסק בתשוקה לחיים) <strong>ובין הממד הטרגי</strong> (שעוסק בפחד הקמאי שלנו מהמוות). המוות והחיים כרוכים זה בזה תמיד, וכך גם במחזות של שייקספיר.</p>
+    <!--Screen 6-->
+    <section id="Section-LostYears" class="screen screenWithTimeline centerFlex" style="
+    background: black;
+">
+        <div id="slidAnimationTag-4" class="animationAncer"></div>
+        <div class="have-scroll-animation aniType-Blur"
+            style="width: 50%; max-width: 35em; z-index: 1; background: transparent;">
+            <p style="
+    color: white;
+"><b>אין שום עדות למעשיו של שייקספיר בשנים אלו. כל מה שאנחנו יודעים זה שבשנת 1592 שייקספיר מופיע בלונדון כשחקן תיאטרון
+                    וכמחזאי מתחיל.</b></p>
+            <p style="
+    color: white;
+">מה שייקספיר עושה בשנים הללו? יש המון השערות שונות: יש שאומרים שהוא היה סוחר, אחרים טוענים שהוא היה מורה פרטי בבתי
+                אצולה נוספים. יש חוקרים שסוברים ששייקספיר בכלל היה חייל ושכיר חרב, ויש שטוענים שהוא הצטרף ללהקת שחקנים
+                נודדת עד שמצא את דרכו ללונדון.
+            </p>
+            <p style="
+    color: white;
+">מה שאנחנו יודעים בוודאות זה שמיד לאחר לידת בתו הבכורה שייקספיר עוזב את סטרפורד ואת משפחתו הצעירה. הוא יחזור לבקר
+                בביתו רק מדי פעם ולתקופות קצרות. </p>
         </div>
-    </section>  
+    </section>
 
-    <section class="screen">
-        <div style="height: 100vh; width: 100vw; display: flex; position: absolute;">
-            <div class="backgroundImg" style="background-image:url('img/artvee_Romeo and Juliet 1884.jpg'); height: 100%; width: 50%; position: relative; background-position-y: center;" alt="">
+    <!--Screen 7-->
+    <section id="Section-PlayAndWriting"
+        class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone background-image"
+        style="background-image: url(&quot;./img/Chesterfield_portrait.jpg&quot;);background-size: cover;background-position: center 20%;">
+        <div id="slidAnimationTag-5" class="animationAncer"></div>
+        <div style="
+min-height: 40vh;
+">
+
+        </div>
+        <div class="centerFlex" style="
+">
+            <div class="have-scroll-animation aniType-MoveRightToLeft active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>עדויות מצביעות על כך ששייקספיר חי ופועל בלונדון<b> כשחקן תיאטרון</b>. למרות שלל תאוריות וסברות, אין
+                    עדות מוצקה שתצביע אילו תפקידים שיחק ובאילו מחזות.</p>
+                <p><span style="font-size: 19.2px;">בשלב הזה שייקספיר גם מתחיל <b>לכתוב עבור הבמה האליזבנית</b> למספר
+                        להקות שחקנים שונות. הוא כותב תחילה יחד עם מחזאים אחרים, ובשלב מסוים עובר לכתוב לבד.</span></p>
+                <p><span style="font-size: 19.2px;">בהמשך, אנחנו יודעים ששייקספיר גם משחק תפקידים קטנים במחזות שהוא עצמו
+                        כותב, אבל לא ידוע לנו בדיוק אילו תפקידים.</span></p>
             </div>
-            <div class="backgroundImg"  alt="" style="background-image:url('img/Sir_Joseph_Noel_Paton_-_The_Quarrel_of_Oberon_and_Titania.jpg'); height: 100%; width: 50%; position: relative;  background-position-y: top;">
+
+        </div>
+
+    </section>
+
+    <!--Screen 8-->
+    <section id="Section-WritingPoetry"
+        class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone screenWithTimeline "
+        style="--startColor: #323131;">
+        <div id="slidAnimationTag-6" class="animationAncer"></div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveBottomToTop active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;">התיאטראות בלונדון נסגרים לתקופה ממושכת בשל מגפת הדבר שפורצת באנגליה.
+                        סגירת התיאטראות והמגיפה גודעים את הקריירה של שייקספיר כמחזאי.</span></p>
+                <p><span style="font-size: 19.2px;">כמו רבים מחבריו למקצוע, <b>הוא פונה בשנים האלה לכתיבת שירים ארוכים
+                            בסגנון הקלאסי כדי למשוך את חסותם של בני אצולה שישלמו לו על שיריו.</b>&nbsp;</span></p>
+                <p><span style="font-size: 19.2px;">הוא כותב שני שירים ארוכים חשובים: Venus and Adonis ו–The Rape of
+                        Lucrece וזוכה למימון מהרוזן הצעיר של סאות'המפטון, <b>הנרי ווריאוזלי</b> (Herny Wriothesley), אשר
+                        הופך לפטרון של שייקספיר בתקופה הזו. באותם ימים שייקספיר גם מתחיל לכתוב את הסונטות המפורסמות שלו,
+                        שרבות מהן פונות אל עלם צעיר ויפה. יש חוקרים שסבורים שאותו עלם צעיר הוא למעשה ווריאוזלי, אבל זה
+                        נותר בגדר השערה בלבד.&nbsp;</span></p>
             </div>
-        </div>
 
-        <div class="flyBox have-scroll-animation aniType-blur active-enter-animation centerX" style="width: 50%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); padding: 0px 20px; text-align: justify; bottom: 10%;">
-            <p>כמו שכבר רמזנו בשיעור הראשון, <strong>הדבר נכון במיוחד לגבי "חלום ליל קיץ" ו"רומיאו ויוליה" שהם כמו תמונת מראה זה של זה</strong>. לא רק ששייקספיר כתב את שני המחזות האלה כצמד באותה שנה, אלא נראה כי הוא ממש חשב עליהם ביחד וקיפל אותם אחד בתוך השני.</p>
-            <p>בתוך "חלום ליל קיץ", קומדיה קסומה על אהבה, בעלי המלאכה מעלים הצגה טרגית על אהבה נכזבת שמסתיימת במוות, בדומה להתרחשות ברומיאו ויוליה.</p>
-            <p>בתוך "רומיאו ויוליה" הטרגי, עולם הפיות הקומי מפציע כחלום בלהות שרודף את בני הנוער הצעירים שמתמודדים עם תחושות מורכבות של התעוררות מינית ואהבה נכזבת.</p>
         </div>
-    </section>
-
-    <section class="screen" style="display: grid;">
-        
-        <div class=" have-scroll-animation aniType-blur active-enter-animation" style="width: 50%; margin: auto; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); padding: 0px 20px; text-align: justify;">
-            <p><strong>לזליגה הזו בין המחזות ובין הסוגות הדרמתיות יש משמעות פילוסופית-קיומית עמוקה</strong>: שייקספיר מצביע על כך שההבדל בין הקומי לטרגי בחיינו הוא לרוב רק עניין של מזל או נסיבות ולכן ההגדרות האלה הן מלאכותיות.</p>
-            <p>הסוף הקומי של "חלום ליל קיץ" תלוי בכוחו האקראי של שיקוי קסמים דמיוני, בעוד שהסוף הטרגי של "רומיאו ויוליה" נגרם בסוף רק בגלל חוסר מזל של תזמון גרוע (ודבר דואר שלא נמסר בזמן).</p>
+        <div class="background-image" alt="ציוק של הנרי ווריאוזלי"
+            style="background-image: url(&quot;./img/Wriothesley_southampton.jpg&quot;); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+            <div class="imgDiscriptionOnImg "
+                alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
+                style="bottom: 2em;width: fit-content;">הנרי ווריאוזלי (Herny Wriothesley), רוזן סאות’המפטון</div>
         </div>
-        <div style="display: flex; height: min(40vh, 40vw); justify-content: center; gap: 50px;">
-            <img src="img/Mask_Picture2.png " alt=""  style="rotate: -10deg;">
-            <img src="img/Mask_Picture1.png " alt=""  style="rotate: 15deg;">
-          
-        </div>
-        
 
     </section>
 
+    <!--Screen 9-->
+    <section id="Section-PlayersBand" class="screen resateGridOnPhone screenWithTimeline "
+        style="--startColor: #000000;background: black;">
+        <div id="slidAnimationTag-7" class="animationAncer"></div>
+        <div style="
+    width: 45%;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+">
+            <img src="./img/RichardBurbage.jpg" alt="השחקן ריצ'רד ברבאג' (Richard Burbage)" style="width: 100%;">
+            <span style="
+    color: white;
+    font-size: 0.6em;
+    line-height: 0px;
+">השחקן ריצ'רד ברבאג' (Richard Burbage)</span>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;">עם פתיחת התיאטראות מחדש, שייקספיר מתחיל את שיתוף הפעולה ארוך השנים
+                        שלו עם השחקן <b>ריצ'רד ברבאג'</b> (Richard Burbage) שישחק את כל התפקידים הראשיים במחזותיו של
+                        שייקספיר. הם מקימים יחד את הלהקה <b>The Lord Chamberlain’s Men</b> שהופכת במהרה ללהקת השחקנים
+                        המובילה בממלכה.</span></p>
+                <p><span style="font-size: 19.2px;">החל מאותו רגע שייקספיר כותב אך ורק עבור הלהקה שלו ושל ברבאג’. הוא
+                        מקפיד לכתוב <b>שני מחזות חדשים כל שנה</b> עבור עונת הקיץ של אותה שנה, לרוב בזוגות של טרגדיה
+                        וקומדיה. ישנן שנים בהן יכתוב גם שלושה או ארבעה מחזות חדשים.&nbsp;</span></p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!--Screen 10-->
+    <section id="Section-RomeoAndJuliet"
+        class="screen GridLayout equal2ChildWidthv2 resateGridOnPhone screenWithTimeline " style="
+    background: #323131;
+">
+        <div id="slidAnimationTag-8" class="animationAncer"></div>
+        <div class="centerFlex" style="
+">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p style="">שייקספיר כותב את המחזות "<b>רומיאו ויוליה</b>" ו"<b>חלום ליל קיץ</b>" בהם נתמקד בקורס. לא
+                    ידוע איזה מחזה נכתב קודם, אבל ברור שהמחזות נכתבו כזוג סמוך מאוד אחד לשני. ככל הנראה, "חלום ליל קיץ"
+                    נכתב עבור אירוע מלכותי לכבוד חתונתם של בני אצולה (יש ויכוח לגבי זהותם) והוצג בארמון בפני המלכה
+                    אליזבת הראשונה לפני שעלה על הבמה המסחרית.&nbsp;</p>
+                <p style=""><span style="font-size: 19.2px;">באותן שנים שייקספיר כותב גם את "ריצ'רד השני" ו"הסוחר
+                        מוונציה".&nbsp;</span></p>
+            </div>
+
+        </div>
+        <div style="
+    min-height: 40vh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+">
+            <div style="
+    position: relative;
+    height: fit-content;
+">
+                <img height="300" width="300" style="
+    height: auto;
+" src="./img/First_Quarto_Printing_of_A_Midsummer_Nights_Dream.jpg"
+                    alt="כריכת המחזה חלום ליל קיץ בגרסת הקווארטו הראשון">
+                <div class="imgDiscriptionOnImg">כריכת המחזה <b>חלום ליל קיץ</b> בגרסת הקווארטו הראשון
+                </div>
+            </div>
+            <div style="
+    position: relative;
+    height: fit-content;
+    margin-bottom: 2.5em;
+">
+                <img src="./img/Romeoandjuliet1597.jpg" height="300" width="300" style="
+    height: auto;
+" alt="כריכת המחזה רומיאו ויוליה בגרסת הקווארטו הראשון">
+                <div class="imgDiscriptionOnImg">
+                    כריכת המחזה <b>רומיאו ויוליה</b> בגרסת הקווארטו הראשון
+                </div>
+            </div>
+            <div class="imgDiscriptionOnImgSmall" style="
+    bottom: 5px;
+    left: 5px;
+    color: white;
+">First Quarto Printing of A Midsummer Night's Dream, by William Shakespeare, Richard Bradock and Thomas Fisher
+                (printers), under CC BY-SA 4.0, via Wikimedia Commons</div>
+        </div>
+
+
+    </section>
+
+    <!--Screen 11-->
+    <section id="Section-TheGlobe" class="screen backgroundImg screenWithTimeline "
+        style="background-image: url(&quot;./img/Folger Digital Collections 005800-Medium_6000px.jpg&quot;);min-height: 180vh;">
+        <div id="slidAnimationTag-9" class="animationAncer"></div>
+
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
+            style="bottom: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+            <p><span style="font-size: 19.2px;"><b>שייקספיר וברבאג' בונים על הגדה הדרומית של התמזה, מחוץ לגבולות העיר
+                        לונדון, את תיאטרון הגלוב (Globe) לשימוש בלעדי של הלהקה שלהם</b>. התיאטרון הופך לבית הקבוע של
+                    שייקספיר ושל שחקניו. להקת השחקנים ממשיכה להציג בו גם לאחר מותו של שייקספיר.</span></p>
+            <p><span style="font-size: 19.2px;"><b>בשנת 1613 תיאטרון הגלוב נשרף כליל</b>. זה קורה במהלך הצגה של המחזה
+                    All Is True שכתב שייקספיר יחד עם המחזאי ג'ון פלצ'ר. התיאטרון נבנה מחדש שנה לאחר מכן ואז נהרס סופית
+                    בשנת 1644.</span></p>
+            <p><span style="font-size: 19.2px;"><b>בשנת 1997 תיאטרון הגלוב נבנה מחדש סמוך למיקומו המקורי</b>. עד היום
+                    ניתן לצפות בו בהצגות של שייקספיר שמדמות באופן הקרוב ביותר את חוויית הצפייה האליזבתנית.</span></p>
+        </div>
+        <div class="imgDiscriptionOnImg">כריכת המחזה <b>חלום ליל קיץ</b> בגרסת הקווארטו הראשון
+        </div>
+    </section>
+
+    <!--Screen 12-->
+    <section id="Section-RoyalBand" class="screen backgroundImg screenWithTimeline centerFlex"
+        style="background-image: url(&quot;./img/Folger_Shakespeare before the court of Queen_cropped.jpg&quot;); align-items: end;">
+        <div id="slidAnimationTag-10" class="animationAncer"></div>
+        <div class="have-scroll-animation aniType-MoveBottomToTop active-enter-animation "
+            style="width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;PADDING: 1px 25px;margin: 25px;">
+            <p class=""><span style="font-size: 19.2px;">שייקספיר ולהקתו זוכים ברישיון מהמלך ג’יימס הראשון לפעול בממלכה
+                    כלהקת השחקנים המלכותית. הם משנים את שמם ל"<b>אנשי המלך</b>" (King’s Men). לכבוד המעמד הזה ועבור המלך
+                    שייקספיר כותב את המחזה "<b>מקבת'</b>".&nbsp;</span><span
+                    style="font-size: 19.2px; word-spacing: 3.072px;">&nbsp;</span></p>
+        </div>
+    </section>
+
+    <!--Screen 13-->
+    <section id="Section-Blackfriars"
+        class="screen GridLayout equal2ChildWidthv2 gardientBackColor screenWithTimeline resateGridOnPhone " style="">
+        <div id="slidAnimationTag-11" class="animationAncer"></div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveRightToLeft active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><b>שייקספיר ושותפיו העסקיים פותחים לקהל תיאטרון נוסף בתוך החלל הסגור של בלאקפריירס (Blackfriars)
+                        במרכז לונדון</b>. תיאטרון בלאקפריירס קטן יותר מהגלוב, אבל הוא סגור ולכן מאפשר לשייקספיר ולהקתו
+                    לפעול גם בעונת החורף. החלל הסגור וצורת הבמה השונה מאפשרים לשייקספיר לכתוב מחזות שלא היה יכול לכתוב
+                    לגלוב: שימוש בתפאורה מורכבת, ניצול של החלל האקוסטי למוזיקה ושילוב פעלולים מיוחדים (כמו, לדוגמה,
+                    שחקנים שמרחפים באוויר על חבלים שתלויים מהתקרה).</p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Blackfriars_theatre_conjectural_reconstruction_1921.jpg&quot;);background-size: cover;background-position: center 15%;position: relative;min-height: 70vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical right"></div>
+            <div class="imgDiscriptionOnImg">תיאטרון בלאקפריירס (Blackfriars)</div>
+        </div>
+
+    </section>
+
+    <!--Screen 14-->
+    <section id="Section-LastYears"
+        class="screen GridLayout equal2ChildWidthv2 gardientBackColor resateGridOnPhone background-image background_ParallaxEffect"
+        style="background-size: cover;background-position: top center;background-image: url(./img/Miranda_-_The_Tempest_JWW.jpg);background-attachment: fixed;">
+        <div id="slidAnimationTag-12" class="animationAncer"></div>
+        <div style="min-height: 40vh;">
+
+        </div>
+        <div class="centerFlex" style="">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>בשנת 1611 שייקספיר כותב את המחזה האחרון שלו כמחזאי עצמאי: <b>"הסערה" (The Tempest)</b>. למרות שהמחזה
+                    מהווה סוג של פרידה של שייקספיר מהבמה, שייקספיר ממשיך לכתוב מחזות עד יום מותו בשיתוף עם מחזאים צעירים
+                    שהיו בני טיפוחיו.</p>
+                <p><span style="font-size: 19.2px;">הטענה הרווחת במחקר היא שבשנים האחרונות לחייו שייקספיר עוזב את לונדון
+                        וחוזר לעיר הולדתו ולחיק משפחתו כאיש עשיר בעל תואר אבירות. ואכן, יש עדויות רבות על פועלו של
+                        שייקספיר בסטרטפורד בשנים האלה, בין היתר במסגרת נישואיהן של שתי בנותיו. אבל למעשה אין כל עדות לכך
+                        ששייקספיר עוקר לחלוטין את חייו מלונדון, ויתכן שהוא ממשיך לחלק את זמנו בין לונדון
+                        וסטרטפורד.</span></p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--Screen 15-->
+    <section id="Section-ShakespeareDeath"
+        class="screen GridLayout equal2ChildWidthv2 gardientBackColor screenWithTimeline " style="">
+        <div id="slidAnimationTag-13" class="animationAncer"></div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-Blur active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>שייקספיר מת ב-23 באפריל 1616, ביום הולדתו ה-52 (או סמוך לו), ונקבר בכנסיה של עיר הולדתו סטרטפורד.</p>
+                <p><span style="font-size: 19.2px;">למרות שלל סברות ותאוריות קונספירציה, נסיבות מותו אינן ידועות. כחודש
+                        לפני מותו הוא כותב את צוואתו שבה הוא מצהיר שהוא בבריאות טובה ודעת צלולה. בצוואה שלו אין שום
+                        התייחסות למחזות שלו או לרכוש שקשור בעולם התיאטרון, אלא בעיקר לרכוש שהוא מותיר לבנותיו ואשתו
+                        מהעיזבון שלו בסטרטפורד. עובדה זו תמיד שימשה את המצדדים בתאוריות קונספירציה ששייקספיר כלל לא היה
+                        המחזאי שכתב את המחזות שנשתמרו תחת שמו. כך או אחרת, <b>שייקספיר הותיר תחת שמו קורפוס של 38 מחזות
+                            (בנוסף למספר מחזות אחרים שלא שרדו), אוסף סונטות, ומספר שירים ארוכים אחרים</b>.</span></p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Shakespeare-Testament.jpg&quot;); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom right"></div>
+            <div class="imgDiscriptionOnImg">צוואתו של שייקספיר</div>
+        </div>
+
+    </section>
+
+    <!--Screen 16-->
+    <section id="Section-FirstPolioEdition"
+        class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone screenWithTimeline "
+        style="--startColor: #4b4b4b;">
+        <div id="slidAnimationTag-14" class="animationAncer"></div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span>כשבע שנים לאחר מותו של שייקספיר, ג'ון המינגס והנרי קונדל (שניים מהשחקנים הבכירים בלהקת "שחקני
+                        המלך" וממשיכי דרכו של שייקספיר) מחליטים לשמר את מורשתו של שייקספיר. כשחקנים בכירים בלהקתו, יש
+                        להמינגס וקונדל גישה ישירה לספרי המחזות ששימשו את הלהקה ושהיו הרכוש היקר ביותר שלהם. הם מחליטים
+                        לפרסם מהדורה של כל המחזות שנשתמרו ונאספו לאורך השנים תחת שמו, וכך מתפרסם מה שמכונה "<b>הפוליו
+                            הראשון</b>" תחת הכותרת:</span>
+                    <span style="font-size: 19.2px;"><b style="
+    display: block;
+    direction: ltr;
+">Mr. William Shakespeare's Comedies, Histories, &amp; Tragedies</b></span>
+                </p>
+                <p><span>אמנם חלק גדול מהמחזות של שייקספיר כבר התפרסמו לאורך השנים בהוצאות פיראטיות, לרוב מתוך ניסיון של
+                        מוכרי ספרים לעשות "קופה" בעקבות מחזות פופולריים במיוחד. אך <b>“הפוליו הראשון” הוא הפעם הראשונה
+                            שכל מחזותיו של שייקספיר יוצאות לאור במהדורה אחת מפוארת, וכנראה בנוסח הקרוב ביותר
+                            למקור</b>.&nbsp;</span></p>
+                <p><span>"הפוליו הראשון" מכיל 36 מחזות, מאורגנים לפי סוגות של קומדיות, מחזות היסטוריים (מחזות שעוסקים
+                        בהיסטוריה המלוכנית של אנגליה) וטרגדיות (שאינן עוסקות בהיסטוריה האנגלית). <b>ה"פוליו הראשון",
+                            שיצא שוב במהדורה מעודכנת ומתוקנת ב-1632, הוא הטקסט החשוב ביותר בשימור מורשתו של שייקספיר
+                            ומהווה את הבסיס לכל המהדורות המודפסות של המחזות לאורך השנים ועד היום</b>.</span></p>
+            </div>
+
+        </div>
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/William_Shakespeare_-_First_Folio_1623.jpg&quot;); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;">
+            <div class="imgDiscriptionOnImg">מהדורת <b>הפוליו הראשון</b> של כל מחזותיו של שייקספיר, 1623</div>
+        </div>
+
+    </section>
+    <div id="slidAnimationTag-15"></div>
 </body>
 
 </html>
