@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
     <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
     <script defer src="../Code/code.js"></script>
+    <script defer src="../Code/editable.js"></script>
     <script defer src="./scroolAnimation.js"></script>
     <style id="animationStyle">
     </style>
@@ -18,6 +19,9 @@
             min-height: calc(100vh - 1em);
         }
 
+        h1{
+            font-size: 5em;
+        }
         .screenWithTimeline {
             padding-right: 10em;
         }
@@ -147,6 +151,13 @@
 
             .mobileBackBlack {
                 background-color: black;
+            }
+
+            h1{
+                font-size: 16vw;
+            }
+            .imgDiscriptionOnImgSmall{
+                max-width: 75vw;
             }
         }
     </style>
@@ -301,7 +312,6 @@
     text-align: right;
 ">
             <h1 style="
-    font-size: 5em;
     margin: 0;
     line-height: 1em;
 ">שייקספיר
@@ -328,7 +338,7 @@
     <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="
     --startColor: transparent;
 ">
-        <div style="display: grid;align-content: space-around;margin: 0px 4.5em 0px 2.5em;" class="mobileBackBlack">
+        <div style="display: flex;margin: 0px 4.5em 0px 2.5em;flex-direction: column;justify-content: center;" class="mobileBackBlack">
 
             <p style="color: white;">חייו הביוגרפיים של ויליאם שייקספיר עמדו במשך שנים רבות בגדר תעלומה.</p>
             <div style="">
@@ -361,16 +371,13 @@
     </section>
 
     <!--Screen 3-->
-    <section id="Section-ShakespeareBirth" class="screen backgroundImg screenWithTimeline"
-        style="background-image: url(&quot;img/shutterstock_1326670742.jpg&quot;);">
+    <section id="Section-ShakespeareBirth" class="screen backgroundImg screenWithTimeline" style="background-image: url(&quot;img/shutterstock_1326670742.jpg&quot;);" role="img" aria-label="תמונה של בית ילדותו של שייקספיר">
         <div id="slidAnimationTag-1" class="animationAncer"></div>
-        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
-            style="top: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="top: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
             <p><span style="font-size: 19.2px;">ויליאם שייקספיר נולד <b>בשנת 1564</b>, מתישהו בין ה-21 ל-23 באפריל,
-                    בעיירה <b>סטרטפורד אפון-איבון</b> (Stratford-upon-Avon) שבמרכז אנגליה.</span></p>
-            <p><span style="font-size: 19.2px;">הוא נולד למשפחה אמידה: אביו, ג'ון שייקספיר, הוא אומן כפפות שעוסק גם
-                    במסחר הצמר המקומי ואמו מרי ארדן ירשה רכוש רב כבת למשפחת ארדן שקשורה לאצולה הנמוכה במחוז.</span></p>
+                    בעיירה <b>סטרטפורד אפון-איבון</b> (Stratford-upon-Avon) שבמרכז אנגליה.</span></p><p><span style="font-size: 19.2px;">הוא נולד למשפחה אמידה: אביו, ג'ון שייקספיר, הוא אומן כפפות שעוסק גם במסחר הצמר המקומי ואמו מרי ארדן ירשה רכוש רב כבת למשפחת ארדן שקשורה לאצולה הנמוכה במחוז.</span></p>
         </div>
+        <div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;"><span style="white-space-collapse: preserve;"><b>בית ילדותו של שייקספיר</b> בעיירה סטרטפורד אפון-איבון</span></div>
     </section>
 
     <!--Screen 4-->
@@ -389,28 +396,17 @@
     </section>
 
     <!--Screen 5-->
-    <section id="Section-MarriageAndFamily" class="screen backgroundImg screenWithTimeline background_ParallaxEffect"
-        style="background-image: url(&quot;./img/Folger_Shakespeare with his family_cropped.jpg&quot;);"
-        alt="שייקספיר ומשפחתו">
+    <section id="Section-MarriageAndFamily" class="screen backgroundImg screenWithTimeline background_ParallaxEffect" style="background-image: url(&quot;./img/Folger_Shakespeare with his family_cropped.jpg&quot;);" alt="שייקספיר ומשפחתו">
         <div id="slidAnimationTag-3" class="animationAncer"></div>
         <div class="innerContainer">
-            <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation"
-                style="botto,: 10%;right: 1%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;bottom: 10%;">
-                <p><span style="font-size: 19.2px;">שייקספיר רוכש בבית הספר המקומי בעירו <b>חינוך הומניסטי עשיר</b>.
-                        בניגוד
-                        להוריו, שידעו כנראה רק לקרוא, שייקספיר גם לומד לכתוב בגיל צעיר.&nbsp;</span></p>
-                <p><span style="font-size: 19.2px;">עדויות מצביעות על כך שלפחות פעמיים בתקופת ילדותו מבקרות בעיירתו של
-                        שייקספיר קבוצות שחקנים נודדים שמעלות הצגות בכיכר העיר. שייקספיר עצמו גם ככל הנראה משחק בהצגות של
-                        בית
-                        הספר שלו כחלק מתכנית הלימוד של התקופה. <b>הגיוני להניח ששתי החוויות האלה השפיעו על שייקספיר,
-                            שנדבק
-                            בחיידק הבמה כבר בגיל צעיר.</b>&nbsp;</span></p>
+            <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="botto,: 10%;right: 1%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;bottom: 10%;">
+                <p><span style="font-size: 19.2px;">בשנת 1579, כשהוא בן 15, שייקספיר מסיים את לימודיו ומתחיל ככל הנראה לעבוד כמורה פרטי בבית אצולה כלשהו במחוז.</span></p><p><span style="font-size: 19.2px;">השערה זו נתמכת בעובדה שבשנת 1582, בגיל 18, שייקספיר נושא לאישה את <b>אן הת’אווי</b>. מכיוון שאן היתה מבוגרת ממנו, סביר ששייקספיר היה יכול להתחתן איתה רק אם היתה לו משרה כלשהי.</span></p><p><span style="font-size: 19.2px;">אן הייתה כנראה בהריון עוד לפני שהם התחתנו. בזמן קצר יחסית <b>לזוג נולדים שלושה ילדים: בתו הבכורה סוזנה, והתאומים גו'דית והמנט</b>. בנם המנט ימות ממחלה בגיל 11. מותו היכה בשייקספיר קשות ויש עדויות רבות להצביע על כך שהמחזה "המלט" נוגע באופן עמוק לאבל של שייקספיר על בנו.</span></p>
             </div>
         </div>
 
-        <div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
-            style="bottom: 2em;width: fit-content;">שייקספיר ומשפחתו</div>
+        <div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;">שייקספיר ומשפחתו</div>
     </section>
+
 
     <!--Screen 6-->
     <section id="Section-LostYears" class="screen screenWithTimeline centerFlex" style="
@@ -590,12 +586,10 @@ min-height: 40vh;
     </section>
 
     <!--Screen 11-->
-    <section id="Section-TheGlobe" class="screen backgroundImg screenWithTimeline "
-        style="background-image: url(&quot;./img/Folger Digital Collections 005800-Medium_6000px.jpg&quot;);min-height: 180vh;">
+    <section id="Section-TheGlobe" class="screen backgroundImg screenWithTimeline " style="background-image: url(&quot;./img/Folger Digital Collections 005800-Medium_6000px.jpg&quot;); min-height: 180vh;">
         <div id="slidAnimationTag-9" class="animationAncer"></div>
 
-        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
-            style="bottom: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
+        <div class="flyBox have-scroll-animation aniType-MoveLeftToRight active-enter-animation" style="bottom: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;">
             <p><span style="font-size: 19.2px;"><b>שייקספיר וברבאג' בונים על הגדה הדרומית של התמזה, מחוץ לגבולות העיר
                         לונדון, את תיאטרון הגלוב (Globe) לשימוש בלעדי של הלהקה שלהם</b>. התיאטרון הופך לבית הקבוע של
                     שייקספיר ושל שחקניו. להקת השחקנים ממשיכה להציג בו גם לאחר מותו של שייקספיר.</span></p>
@@ -605,8 +599,7 @@ min-height: 40vh;
             <p><span style="font-size: 19.2px;"><b>בשנת 1997 תיאטרון הגלוב נבנה מחדש סמוך למיקומו המקורי</b>. עד היום
                     ניתן לצפות בו בהצגות של שייקספיר שמדמות באופן הקרוב ביותר את חוויית הצפייה האליזבתנית.</span></p>
         </div>
-        <div class="imgDiscriptionOnImg">כריכת המחזה <b>חלום ליל קיץ</b> בגרסת הקווארטו הראשון
-        </div>
+        <div class="imgDiscriptionOnImg"><b>תיאטרון הגלוב (Globe)</b></div>
     </section>
 
     <!--Screen 12-->
