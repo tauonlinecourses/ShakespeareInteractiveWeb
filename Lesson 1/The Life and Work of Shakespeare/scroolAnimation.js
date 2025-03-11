@@ -239,6 +239,8 @@ function ScollAnimation() {
                     opacity: 1;
                     right: 25px;
                     transform: scale(1.1) translateY(-50%);
+                    font-weight: 900;
+                    font-size: 1.15em;
                 }
             }
     
