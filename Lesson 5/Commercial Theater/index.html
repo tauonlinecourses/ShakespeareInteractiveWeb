@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>הטרגדיה בתוך הקומדיה</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+    <script defer src="../Code/editable.js"></script>
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 2em);
+            min-height: calc(100svh - 2em);
+        }
+
+        @media only screen and (max-width: 720px) {
+
+            .GridPhoneReveseOrder>*:nth-child(1) {
+                order: 2
+            }
+
+            .GridPhoneReveseOrder>*:nth-child(2) {
+                order: 1
+            }
+
+            .flexPhoneVertical {
+                flex-direction: column;
+            }
+
+            .phoneTop {
+                top: 2em;
+                bottom: auto !important;
+            }
+
+            .marginBottomPhone{
+                --marginBottomPhone:5em;
+                margin-bottom: var(--marginBottomPhone) !important;
+            }
+        }
+    </style>
+    <!-- loading Screen -->
+
+
+    <!-- screen 1 -->
+    <section class="screen backgroundImg centerFlex" alt=""
+        style="background-image: url(&quot;./img/Folger_The boxes, O woe is me.jpg&quot;);flex-direction: column;background-position: center bottom;background-color: rgb(232, 233, 228);">
+
+        <h1 class="flyBox centerX"
+            style="bottom: 10%;text-align: center;background: #ffffffd4;padding: 0.5em;font-size: 3em;line-height: 1.1;box-shadow: 0px 4px 3px 4px #00000045;">
+            עליית התיאטרון המסחרי
+            <div class="BoxBottomBorder" style="width: 70%; --BoxBorderWidth:3px; margin: auto;"></div>
+
+        </h1>
+        <!-- 
+        <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>   -->
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen GridLayout equal2ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #8d6f5e;">
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveRightToLeft active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>הסיפור על עליית התאטרון המסחרי באנגליה בעשורים האחרונים של המאה ה-16
+                        הוא <b>סיפור על איש אחד, ג'יימס ברבג' (James Burbage), שהיה לו רעיון מבריק: להקים תאטרון מסחרי
+                            במבנה קבוע מחוץ לחומות העיר לונדון.</b></p>
+                <p>ברבג', נגר-בנאי במקצועו (כלומר, נגר שמתמחה בבניית מבני עץ גדולים)
+                        היה גם איש תאטרון ושחקן בעל שם. הוא נהג להופיע יחד עם שני בניו, קת'ברט וריצ'רד, בהצגות בסביבת
+                        העיר לונדון (בנו ריצ'ארד בהמשך יהפוך לאחד השחקנים המפורסמים ביותר בממלכה והשחקן הראשי של
+                        שייקספיר). ידוע לנו שברבג' ולהקתו אף ביקרו והופיעו פעמיים לפחות בעיר הולדתו של שייקספיר במהלך
+                        שנות ה-70, מה שיכול אולי להעיד על היכרות מוקדמת של שייקספיר עם הלהקה.</p>
+            </div>
+
+        </div>
+        <div class="centerFlex" alt="" style="min-height: 60vh;flex-direction: column;gap: 1.6em;margin: 20px;">
+            <img src="./img/RichardBurbage.jpg" alt="דיוקנו של ריצ'רד ברבג’" style="
+    width: 100%;
+    max-width: 450px;
+">
+            <div class="imgDiscriptionOnImg phoneTop" alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;position: relative;max-width: 345px;top: auto;"><span style="font-size: 11.52px;">דיוקנו של <b>ריצ'רד ברבג’,</b> בנו של ג'יימס ברבג', לימים השחקן הראשי
+                    בלהקתו של שייקספיר</span></div>
+        </div>
+
+    </section>
+
+    <!-- screen 3 -->
+    <section class="screen GridLayout equal2ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #19160f;">
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Robert_Dudley,_1st_Earl_of_Leicester,_Collection_of_Waddesdon_Manor.jpg&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+            <div class="imgDiscriptionOnImg right"
+                alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם"
+                style="bottom: 2em;width: fit-content;/* top: 2em; *//* bottom: auto; */"><span
+                    style="font-size: 11.52px;"><b>רוברט דאדלי</b>, הרוזן מלסטר, הידוע כאחד ממחזריה של המלכה
+                    אליזבת'</span></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveLeftToRight active-enter-animation"
+                style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p>כנהוג בתקופה, להקת השחקנים של ברבג' פעלה תחת חסותו של בן אצולה,
+                        במקרה הזה ה<b>רוזן מלֵסטר</b> שהיה איש חזק פוליטית ומקורב מאוד למלכה, ולכן היו ידועים כ"<b>אנשיו
+                            של לסטר</b>" (להקות שחקנים תמיד נקראו על שם נותן החסות שלהם). כפי שהיה מקובל, בתמורה להגנתו
+                        וחסותו של הרוזן, ברבג' ושחקניו העלו מופעים שונים שהאדירו את שמו, הן במרחב הציבורי והן באירועים
+                        פרטיים בחצר המלוכה.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- screen 4 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #efe2cf;">
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Folger_Temporary stage in a village square_045862-Medium_6000px_cropped.jpg&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation flyBox"
+                style="left: 5%;top: 5%;max-width: 35em;background-color: rgb(255 255 255 / 95%);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+                <p>עד אותו זמן, להקות שחקנים העלו הצגות <b>בחללים שונים ומגוונים</b>:
+                        בכיכרות העיר, בחצרות הפנימיות של בתי הספר למשפט (The Inns of Court) שם היה ביקוש גדול מאוד
+                        להצגות בקרב התלמידים, ובארמונות האצולה. אולם <b>בשנת 1572, לאחר מספר התפרצויות של מגפת הדבר
+                            בלונדון, הרשויות העירוניות אסרו על מופעי תאטרון</b> ברחבי העיר כדי למנוע התקהלויות, ובשנת
+                        1575 אף הוצא צו באישור המלכה שאסר על להקות שחקנים נודדות להיכנס לעיר או לפעול
+                        בתוכה.&nbsp;</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- screen 5 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #1e1e1e;">
+
+        <div class="centerFlex" alt="" style="min-height: 60vh;flex-direction: column;gap: 1.6em;margin: 20px;justify-content: start;">
+            <img src="./img/London_theatres_C16—C17,_after_Redwood.jpg" alt="תיאור תמונה נוסף" style="
+    width: 100%;
+    max-width: 600px;
+">
+
+        </div>
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation flyBox aniType-MoveLeftToRight active-enter-animation" style="bottom: 5%;left: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;">
+                <p>לאור האיסור לפעול בתוך חומות העיר, ברבג' החליט לבנות בשותפות עם גיסו <b>מבנה קבע מעץ שיעמוד על שטח
+                        שחכר מחוץ לתחום השיפוט העירוני</b>, באזור שורדיץ' (Shoreditch) - אזור שהיום נמצא במרכז לונדון
+                    אבל אז היה ידוע לשמצה כאזור ספר שפעלו בו בתי בושת רבים ובתי מרזח מפוקפקים.</p>
+                <p><b>וכך, ב-1576, בחסות פטרונו ובמימון מספר משקיעים, ברבג' הקים את
+                            התאטרון הקבוע הראשון על אדמת אנגליה מאז התקופה הרומית שנקרא בפשטות "התאטרון" (The
+                            Theatre)</b>. "התאטרון"&nbsp; היה בהתחלה משכנה של להקתו של ברבג' האב, אך אחר כך הפך לבית
+                        הקבוע של "<b>אנשי הלורד-צ'מברלין</b>", להקת השחקנים בה שייקספיר יפעל יחד עם ברבג' הבן, ריצ'ארד,
+                        עד לשנת 1597 אז נסגר ה"תאטרון" ונהרס.</p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- screen 6 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #1e1e1e;">
+
+        <div class="centerFlex" alt=""
+            style="min-height: 60vh;flex-direction: column;gap: 1.6em;margin: 20px;justify-content: start;">
+            <img src="./img/London_theatres_C16—C17,_after_Redwood allMarks.jpg" alt="תיאור תמונה נוסף" style="
+    width: 100%;
+    max-width: 600px;
+">
+
+        </div>
+
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig flyBox active-enter-animation"
+                style="bottom: 5%;left: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;">
+                <p>ה"תאטרון" לא היה היחיד מסוגו ויש אפילו ויכוח אם באמת היה המבנה
+                        הראשון, אבל הוא זכה להצלחה מסחררת והפך למודל לחיקוי. במהרה, ראשי להקות אחרים חיקו את ברבג' ובנו
+                        תאטראות מתחרים משלהם באזורים אחרים מחוץ לחומות העיר או השמישו לצורך זה מבנים קיימים
+                        אחרים.</p>
+                <p><b>בין התאטראות המפורסמים שפעלו בתקופה:</b></p>
+                <p style="
+                line-height: 1.8em;
+                direction: ltr;
+            "><b>The Rose </b>(1577)
+                                <br>
+                            <b>The Curtain </b>(1582)
+                            <br>
+                            <b>The Swan </b>(1596)</p>
+                <p></p>
+                <p>וכמובן תיאטרון הגלוב (The Globe) אותו יבנה שייקספיר בשנת 1599
+                        בשותפות עם ברבג’ הבן על הגדה הדרומית של התמזה לאחר סגירתו של "התאטרון" המקורי</p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- screen 7 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #e7e0cd;">
+
+        <div class="centerFlex" style="
+    position: relative;
+">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig marginBottomPhone active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;">אבל תרומתו החשובה של ג'יימס ברבג' הייתה לא רק בהקמת התאטרון המסחרי הראשון אלא גם <b>במיסוד האופנה לסוג אחר של מחזה ממה שהיה מוכר עד כה</b>.</span></p><p><span style="font-size: 19.2px;">&nbsp;כבר בתחילת הדרך ברבג' ושותפיו העסקיים הבינו שכדי להחזיר את ההשקעה ולהגדיל את הרווחים עליהם להציע לקהל הצגה מסוג אחר. כשלא הועלו הצגות בתאטרון, בעליו לרוב השכירו את החלל למופעים אחרים, ובמיוחד למופעי שיסוע כלבי ציד בדובים שהיו קשורים לבמה בשרשרת (מה שמכונה bear-baiting – מנהג שנמשך גם בזמנו של שייקספיר הרחק אל תוך המאה ה-18). סוג כזה של מופע אכזרי היה מאוד פופולרי בתקופה ומשך קהל רב צמא דם שנהג להמר על הדוב או הכלבים. בעלי התאטראות לקחו חלק מהרווחים וזה היה עסק מאוד משתלם. אבל גם זה לא היה מספיק.</span></p>
+            </div>
+<div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;/* top: 2em; *//* bottom: auto; */"><span style="">ייתכן שנוכחות הדובים חלחלה למחזה של שייקספיר <b>"אגדת חורף"</b> בהערת הבימוי המפורסמת, "Exit, pursued by a bear"</span></div>
+        </div>
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/Antigonus_chased_by_a_bear.jpg&quot;); background-size: cover; background-position: center 15%; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal right mobile_GardientVertical"></div>
+        </div>
+
+    </section>
+
+    <!-- screen 8 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #1e1e1e;">
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/Titus_Q3_(1611).jpg&quot;);background-size: cover;background-position: center center;position: relative;min-height: 60vh;background-size: contain;background-repeat: no-repeat;">
+            <div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;/* top: 2em; *//* bottom: auto; */"><span style=""><b>ייתכן שנוכחות הדובים חלחלה למחזה של שייקספיר "אגדת חורף" בהערת הבימוי המפורסמת, "Exit, pursued by a bear"</b></span></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-Blur active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p><span style="">הבעיה העיקרית הייתה שהמחזות ברפרטואר המוקדם של להקות השחקנים השונות – מחזות מוסר ישנים, מופעי קרקס וליצנות קצרים, ומעט מחזות מסורבלים על שלל נושאים מיתולוגיים או היסטוריים - לא הספיקו. <b>היה צורך במחזה מסוג חדש</b> – כזה שיהיה מספיק ארוך ומספיק חדשני לא רק למשוך קהל רב לזמן ממושך, אלא גם לוודא שאותו קהל יחזור לצפות בהצגות שוב ושוב.</span></p>
+            </div>
+            
+        </div>
+
+    </section>
+    <!-- screen 9 -->
+    <section class="screen backgroundImg" style="background-image: url(&quot;./img/0_Banquet_de_Tieste_(Orlando_Parentini)_-_Museo_Gregoriano_Etruscco_(XX).jpg&quot;);"><div class="imgDiscriptionOnImg " alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="width: fit-content;top: 2em;bottom: auto;"><span style="font-size: 11.52px;">המחזה <b>"טייסטס"</b> של סנקה, עם תיאורו האכזרי של נקמת דם וקניבליזם, היווה השראה ל<b>"טיטוס אנדרוניקוס"</b></span></div>
+        <div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation centerX" style="bottom: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;"><p><span style="font-size: 19.2px;">וכך, ברבג' ומנהלי תאטראות אחרים בתקופה החלו לפנות אל שלל בוגרי האוניברסיטה המובטלים שגדשו את בתי המרזח בעיר וביקשו מהם לכתוב להם מחזות חדשים ומסעירים על בסיס ניסיונם האקדמי בלמדנות החדשה כפי שהתנסו באוניברסיטה. הרעיון צלח, ובמהרה דור ראשון של מחזאים שנודעו כ"<b>שנוני האוניברסיטה</b>" (university wits) החל לכתוב עבור הבמה המסחרית לכל המרבה במחיר אוסף מרשים של מחזות רטוריים סנסציוניים.</span></p><p><span style="font-size: 19.2px;">אלו היו מחזות שהעתיקו את הסגנון הרטורי המוגזם של הדרמה הרומית של סנקה למחזות באנגלית עכשווית במגוון רב של נושאים, תוך שילוב מוטיבים מהמסורות העממיות של מחזות המוסר האלגוריים.</span></p>
+                </div>
+            </section>
+
+    <!-- screen 10 -->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="">
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p><span style="font-size: 19.2px;">גדול המחזאים של הדור הזה היה <b>כריסטופר מרלו</b> (1564-1593), בן גילו של שייקספיר, שהעמיד בזמן קצר (בין 1588 לערך עד למותו ב-1593) כשישה מחזות חדשניים בסגנון שירי-רטורי מוחצן שעוסקים באופן חתרני ובוטה בתאווה הרסנית לכוח והגדרה עצמית אלימה. המחזות של מרלו היו ללהיטים מסחררים ובמהרה כולם ניסו לחקות את סגנונו והצלחתו.</span></p>
+            </div>
+
+        </div>
+<div class="background-image" alt="" style="background-image: url(&quot;./img/Christopher_Marlowe.jpg&quot;); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        
+
+    </section>
+
+    <!-- screen 11 -->
+    <section class="screen GridLayout equal2ChildWidthv2 gardientBackColor" style="">
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/william shakespeare portrait.jpg&quot;); background-size: cover; background-position: center 15%; position: relative;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveLeftToRight active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+                <p>וכך גם שחקן צעיר בשם <b>וויליאם שייקספיר</b> שהחל לפעול בשנים האלה בלהקתו של ברבג' האב והחל כנראה בשלב כלשהו (1590 לערך) להציע לכתוב עבורם מחזות (אף שלא היה בוגר אוניברסיטה וללא "ההכשרה" המתאימה). בהתחלה שייקספיר ניסה לחקות את מרלו ולהתחרות בו אבל לאחר מותו הפתאומי של מרלו בקטטה אלימה ב-1593, שייקספיר התנער מהשפעתו והחל לפתח סגנון עצמאי.</p><p><span style="font-size: 19.2px;">לימים, ככל שכשרונו המובהק של שייקספיר לכתוב מחזות פופולריים במיוחד התבסס ושמו הלך לפניו, הוא וברבג' הבן, ריצ'ארד, הפכו לשותפים עסקיים עם חזקה שווה על להקת השחקנים שלהם – שותפות שתלווה את שייקספיר והשחקן הראשי שלו עד יום מותם.</span></p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
