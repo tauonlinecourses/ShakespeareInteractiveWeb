@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>מבנה התיאטרון האליזבתני</title>
+    <link rel="icon" type="image/x-icon" href="../GeneralImg/FaceRealIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.4">
+    <link rel="stylesheet" type="text/css" href="../Style/styles.css" />
+    <script defer src="../Code/code.js"></script>
+
+    <style id="animationStyle">
+    </style>
+</head>
+
+<body onload="start()">
+    <style>
+        .screen {
+            min-height: calc(100vh - 2em);
+            min-height: calc(100svh - 2em);
+        }
+
+        @media only screen and (max-width: 720px) {
+
+            .GridPhoneReveseOrder>*:nth-child(1) {
+                order: 2
+            }
+
+            .GridPhoneReveseOrder>*:nth-child(2) {
+                order: 1
+            }
+
+            .flexPhoneVertical {
+                flex-direction: column;
+            }
+
+            .phoneTop {
+                top: 2em;
+                bottom: auto !important;
+            }
+
+            .marginBottomPhone {
+                --marginBottomPhone: 5em;
+                margin-bottom: var(--marginBottomPhone) !important;
+            }
+        }
+    </style>
+    <!-- loading Screen -->
+    <section id="loadingScreen" class="screen"
+        style="position: fixed; z-index: 1000000; background: var(--MainColor); height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; color: white;">
+        <span class="loader"></span>
+        <span>טוען אתר</span>
+    </section>
+
+    <!-- screen 1 -->
+    <section class="screen backgroundImg centerFlex" alt=""
+        style="background-image: url(&quot;./img/Folger_The Globe_005800-Medium_6000px.jpg&quot;);flex-direction: column;background-position: center;background-color: rgb(232, 233, 228);">
+
+        <div class="flyBox" style="
+    background: transparent;
+    bottom: 10%;
+">
+            <h1 class="flyBox centerX"
+                style="text-align: center;background: #ffffffd4;padding: 0.5em;font-size: 3em;line-height: 1.1;box-shadow: 0px 4px 3px 4px #00000045;position: relative;margin-bottom: 20px;">
+                מבנה התיאטרון האליזבתני
+                <div class="BoxBottomBorder" style="width: 70%; --BoxBorderWidth:3px; margin: auto;"></div>
+
+            </h1>
+
+            <div class="flyBox"
+                style="width: 40vw;background-color: rgba(255, 255, 255, 0.9);z-index: 1;position: relative;margin: auto;padding: 1px 25px;">
+                <p><span >חשוב להכיר את מבנה התאטרון בו שייקספיר פעל. <strong>צורת הבמה שקהל עומד
+                            מסביבה היא רבת משמעות עבור האופן שבו שייקספיר כתב את המחזות שלו</strong>. למרות הבדלים קלים,
+                        מרבית התאטראות שנבנו באותה תקופה כמבני קבע תוכננו באופן דומה.</span></p>
+            </div>
+        </div>
+
+        <!-- 
+        <svg style="width: 3.5em; display: block; margin: 0px auto;" width="78" height="43" viewBox="0 0 78 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L37.5858 38.0858C38.3668 38.8668 39.6332 38.8668 40.4142 38.0858L74.5 4" stroke="white" stroke-width="7" stroke-linecap="round"/>
+        </svg>   -->
+    </section>
+
+    <!-- screen 2 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #e8dbc8;">
+        <div class="background-image" alt=""
+            style="background-image: url(&quot;./img/Folger_Temporary stage in a village square_045862_cropped.jpg&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-MoveLeftToRight active-enter-animation flyBox"
+                style="left: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+                <p><span >כשג'יימס ברבג' תכנן את מבנה התאטרון אותו רצה לבנות הוא ככל הנראה
+                        ניסה לשחזר את חלל הבמה שהיה מצוי בתוך ארבעת בתי הספר העתיקים למשפט בעיר, ה-Inns of Court. ככל
+                        שאנחנו מבינים, מדובר היה בחצר פנימית מרובעת שבתוכה הוקמה במה מעץ כך שהתלמידים יכלו לצפות בהצגה
+                        או מהרחבה מול הבמה, או מהחלונות והמרפסות מסביב החצר.&nbsp;</span></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- screen 3 -->
+    <section class="screen centerFlex equal2ChildWidth gardientBackColor resateGridOnPhone"
+        style="--startColor: #1e1e1e;min-height: 60vh;flex-direction: column;gap: 1.6em;padding: 20px;">
+
+        <div class="have-scroll-animation aniType-Blur active-enter-animation"
+            style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;">
+            <p><strong>בהתאמה לכך, עוצב מבנה התאטרון הטיפוסי</strong>: מבנה עץ גדול, מעוגל או מרובע, עם גג פתוח שבתוכו במה מרובעת
+                שנבנתה כנגד קיר עץ אחורי.</p>
+        </div>
+        <img src="./img/Hodge's_conjectural_Globe_reconstruction.jpg" alt="תיאור תמונה נוסף" style="
+width: 100%;
+max-width: 700px;
+margin-bottom: 2em;
+">
+
+
+        <div class="imgDiscriptionOnImgSmall"
+            style="bottom: 10px;left: 10px;TEXT-ALIGN: LEFT;color: #ffffff94;direction: ltr;max-width: 80%;">
+            &nbsp;Hodge's conjectural Globe reconstruction, by C. Walter Hodges, under CC BY-SA 4.0
+            &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons</div>
+    </section>
+
+    <!-- screen 4 -->
+    <section class="screen backgroundImg centerFlex" alt=""
+        style="flex-direction: column;background-size: contain;background: #5a5954;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg"
+            style="width: 100vw;height: 80vh;background-image: url(&quot;./img/Hodges_conjectural_Globe_reconstruction_1.jpg&quot;);background-size: contain;background-position: center top;background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-ScaleSmallToBig flyBox active-enter-animation"
+            style="left: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span style="">הבמה הייתה מוקפת בגלריות מקורות, לרוב בשלוש או שתי קומות, עם מושבים וספסלים
+                    מעץ.&nbsp;</span></p>
+        </div>
+
+    </section>
+
+    <!-- screen 5 -->
+    <section class="screen backgroundImg centerFlex" alt=""
+        style="flex-direction: column;background-size: contain;background: #5a5954;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg"
+            style="width: 100vw; height: 80vh; background-image: url(&quot;./img/Hodges_conjectural_Globe_reconstruction_2.jpg&quot;); background-size: contain; background-position: center top; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-MoveRightToLeft flyBox"
+            style="right: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style="">בקיר הבמה היו לרוב שתי דלתות ומרפסת או קומה עליונה. ככל שאנחנו יודעים, הבמה עצמה הייתה מקורה עם
+                גג מעץ וקש. בתאטרון הגלוב המקורי ששייקספיר ושותפיו בנו, הגג מעל הבמה היה מעוטר בציורים שסימלו את גלגל
+                המזלות.</p>
+        </div>
+
+    </section>
+
+    <!-- screen 6 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #5a5954;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 80vh; background-image: url(&quot;./img/Hodges_conjectural_Globe_reconstruction_3.jpg&quot;); background-size: contain; background-position: center top; background-repeat: no-repeat;">
+
+        </div><div class="imgDiscriptionOnImgSmall" style="bottom: 10px;left: 10px;TEXT-ALIGN: LEFT;color: white;direction: ltr;max-width: 80vw;">Hodge's conjectural Globe reconstruction, by C. Walter Hodges, under CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons</div>
+        <div class="have-scroll-animation aniType-MoveLeftToRight flyBox" style="left: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span style=""><span style="">רוב הבמות הייתה גם דלת עץ ברצפת הבמה שהובילה אל חלל מתחתיה. נגנים
+                        בדרך כלל ישבו על המרפסת מעל לבמה (אלא אם נעשה בה שימוש אחר במחזה), או בחלל התחתון לצדי
+                        הבמה.</span>&nbsp;</span></p>
+        </div>
+
+    </section>
+
+    <!-- screen 7 -->
+    <section class="screen GridLayout fr2and1ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #1e1e1e;">
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/Flickr_14767246605_2dcfce0dc1_o Image from page 331 of A short history of England and the British Empire.jpg&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom"></div>
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation flyBox" style="left: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+                <p>האיור המוצג כאן הוא איור מקורי מהתקופה של תאטרון ה-Swan שנבנה ב-1596. ניתן לראות כי מעל הבמה היה גם צריח עם מרפסת קטנה יותר שם בדרך כלל עמד כרוז שנשף בחצוצרה כדי לסמן את תחילתו של מחזה.</p>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <!-- screen 8 -->
+    <section class="screen backgroundImg" style="background-image: url(&quot;./img/Folger_[Shakespeares Globe Theatre, reconstruction] Joseph Q. Adams_008139-Medium_6000px.jpg&quot;);"><div class="flyBox have-scroll-animation active-enter-animation aniType-MoveLeftToRight" style="bottom: 10%;r;left: 10%;idth: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;"><p>לרוב, הבמה הייתה ריקה והיה <strong>שימוש מועט באביזרים ותפאורה</strong>. בדרך כלל נתלה מסך בד מצויר על הקיר האחורי של הבמה שהציג דימוי כלשהו של עולם ההצגה – למשל עצים לסמל יער, או עמודים יוונים לסמל את רומא או יוון העתיקה. ככל שאנחנו מבינים, הבד האחורי היה קבוע ולא הוחלף במהלך הצגה. </p><p>מאחר ומרבית חלל התאטרון היה פתוח לאוויר השמיים, ההצגות התקיימו במהלך עונות האביב והקיץ באור יום בכל תנאי מזג האוויר. כן היה שימוש מסוים באפקטים מיוחדים, כגון תותחים קטנים שירו מהמרפסת בצריח זיקוק שעשה הרבה עשן ורעש, או תוף פח גדול שניתן היה להרעיש בו (מעל או מתחת לבמה) כדי לדמות קול של רעם.</p>
+    </div>
+</section>
+
+    <!-- screen 9 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #1e1e1e;">
+        
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation flyBox" style="right: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+                <p>הרבה ממחזות התקופה היו אלימים ובניגוד לטרגדיה היוונית, האליזבתנים כן הראו על הבמה מעשי רצח וקרבות. הם השתמשו בחרבות קהות ובשקיות עם דם חזירים כדי לדמות פציעות ומוות.</p>
+            </div>
+            <div class="imgDiscriptionOnImgSmall" style="bottom: 10px;left: 10px;TEXT-ALIGN: LEFT;color: white;direction: ltr;">&nbsp;Test Test&nbsp;Test
+                Test Test Test Test Test Test Test Test Test</div>
+        </div>
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/artvee_Hamlet devant le corps de Polonius.jpg&quot;); background-size: cover; background-position: center center; position: relative; min-height: 60vh;">
+            <div class="gradient-Horizontal mobile_GardientVertical mobile_bottom right"></div>
+    <div class="imgDiscriptionOnImg left" alt="איור של אכו משקיפה על נרקיסוס אהובה, והוא שקוע באהבה עצמית לבבואתו באגם" style="bottom: 2em;width: fit-content;"><span>המלט שרצח בשוגג את פולוניוס, מציג את גופתו לקהל</span></div>
+        </div>
+
+    </section>
+
+    <!-- screen 10 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #e6d6bc;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw;height: 80vh;background-image: url(&quot;./img/Folger_Interior of the Second Globe_045891-Medium_6000px_cropped (1).jpg&quot;);background-size: contain;background-position: left top;background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-MoveRightToLeft flyBox" style="right: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span>הקהל התחלק <strong>לשלוש קבוצות שונות</strong>, בהתאם למעמד החברתי ולעלות התשלום בכניסה.</span></p>
+        </div>
+
+    </section>
+
+    <!-- screen 11 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 80vh; background-image: url(&quot;./img/Folger_Interior of the Second Globe_045891-Medium_6000px_cropped _1.jpg&quot;); background-size: contain; background-position: left top; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-ScaleSmallToBig flyBox active-enter-animation" style="right: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span style=""><strong>מחיר הכניסה הבסיסי היה פני אחד</strong> (בתקופה הזו פאונד אחד היה שווה 280 פניס, pennies), מחיר שווה ערך לעלות של כיכר לחם או קנקן בירה בפאב. מי ששילם פני אחד עמד ברחבה המרכזית סביב הבמה מתחת לכיפת השמיים. </span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 12 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 80vh; background-image: url(&quot;./img/Folger_Interior of the Second Globe_045891-Medium_6000px_cropped _2.jpg&quot;); background-size: contain; background-position: left top; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-Blur flyBox active-enter-animation" style="right: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span style="font-size: 19.2px; white-space-collapse: preserve;">מי ששילם פני נוסף הורשה לשבת באחד מהספסלים <strong>בקומות הגלריה</strong> המקורות שהקיפו את הבמה. אם שילם עוד כמה שילינגס קיבל גם כרית קטנה.</span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 13 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 80vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 80vh; background-image: url(&quot;./img/Folger_Interior of the Second Globe_045891-Medium_6000px_cropped_3.jpg&quot;); background-size: contain; background-position: left top; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-ScaleSmallToBig flyBox active-enter-animation" style="right: 5%;bottom: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span style="font-size: 19.2px; white-space-collapse: preserve;">בקיר המרכזי מול הבמה, בדרך כלל מעל לדלתות הכניסה, הייתה מרפסת מקורה עם מושבים נוחים שנועדה לבני אצולה. בני האצולה, אם באו לצפות בהצגה, לא שילמו ונכנסו דרך כניסה צדדית עם מדרגות שהובילו ישר למרפסת שלהם.</span></p><p style=""><span style="font-size: 19.2px; white-space-collapse: preserve;">שימו לב שלמרות שיש היום סרטים שמראים את המלכה אליזבת צופה בהצגה בתאטרון, זה לעולם לא קרה. אם היה ביקוש מטעם המלכה, להקות שחקנים הוזמנו להציג מולה בארמון. אבל כן היה נהוג שבני האצולה שנתנו את חסותם ללהקות השחקנים היו באים עם פמלייתם לצפות בהצגות של משרתיהם, וככל הנראה הצגות נפתחו עם נאומי הלל ושבח לפטרון האציל שישב בקהל. </span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 14 -->
+    <section class="screen backgroundImg" style="background-image: url(&quot;./img/Folger_Queen Elizabeth at the Globe Theatre witnessing_027678-Medium_6000px.jpg&quot;);min-height: 130vh;"><div class="flyBox have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="top: 10%;left: 10%;width: 50%;max-width: 35em;background-color: rgba(255, 255, 255, 0.9);z-index: 1;"><p><span style="">צריך להבין <strong>שהקהל האליזבתני לא היה "מהוגן" ומנומס</strong>. הקהל הרב שהקיף את הבמה היה רועש ואקטיבי, ואם ההצגה לא מצאה חן בעיניו, נשרקו שריקות בוז, חפצים נזרקו על הבמה ואף הייתה יכולה לפרוץ מהומה. באופן כללי, הצגות משכו אליהן לא רק קהל רב אלא גם מגוון רב של רוכלים, כייסים ודמויות מפוקפקות אחרות שניצלו את ההתקהלות לטובתם.</span></p><p><span >במיוחד מפורסמות "<strong>נערות התפוזים</strong>" שהיו מגיעות לכל הצגה למכור את מרכולתן – תפוזים שבמהרה הושלכו על השחקנים והבמה אם ההצגה לא נשאה חן. הרבה מ"נערות התפוזים", בדרך כלל נערות עניות מאוד, עבדו בעצם עבור בתי הבושת הרבים באזור ושידלו גברים לחזור אתן לבית הבושת לאחר ההצגה.</span></p>
+    </div>
+</section>
+    
+    <!-- screen 15 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 90vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw;height: 90vh;background-image: url(&quot;./img/Folger_Cutaway view sketch of the Globe Playhouse_046146-Medium_6000px.jpg&quot;);background-size: contain;background-position: centertop;background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-MoveLeftToRight flyBox active-enter-animation" style="left: 5%;top: 5%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span>מה כל זה אומר על המחזות של שייקספיר? ובכן, <strong>מחזאי התקופה התאימו את המחזות שכתבו לחלל שעמד לרשותם</strong>. חלל הבמה היה ריק, כך שמחזאים יכלו "להלביש" עליו, על דרך השירה והדמיון, שלל תמונות דרמטיות שדימו חללים שונים בעולם המחזה.</span></p><p style=""><span>היה נהוג לחלק את חלל הבמה לשלושה חלקים:</span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 16 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 90vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 90vh; background-image: url(&quot;./img/Folger_Cutaway view sketch of the Globe Playhouse_046146-Medium_6000px_1.jpg&quot;); background-size: contain; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-ScaleSmallToBig flyBox active-enter-animation" style="left: 5%;bottom: 30%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span ><strong>החלק המרכזי (הבמה עצמה)</strong>: בו התגוללה רוב עלילת המחזה.</span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 17 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 90vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 90vh; background-image: url(&quot;./img/Folger_Cutaway view sketch of the Globe Playhouse_046146-Medium_6000px_1.jpg&quot;); background-size: contain; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation aniType-ScaleSmallToBig flyBox active-enter-animation" style="left: 5%;bottom: 30%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span ><strong>החלק המרכזי (הבמה עצמה)</strong>: בו התגוללה רוב עלילת המחזה.</span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 18 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 90vh;">
+        <div class="background_ParallaxEffect  backgroundImg" style="width: 100vw; height: 90vh; background-image: url(&quot;./img/Folger_Cutaway view sketch of the Globe Playhouse_046146-Medium_6000px_3.jpg&quot;); background-size: contain; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation flyBox aniType-MoveLeftToRight active-enter-animation" style="left: 5%;bottom: 30%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span ><strong>החלק העליון (המרפסת שמעל הבמה)</strong>: המרפסת מעל הבמה ייצגה לעיתים מרפסת ממשית – כמו בתמונה המפורסמת ב"רומיאו ויוליה" – אבל היא ייצגה גם כל חלל אחר שהוא "מעל" לחלל הבמה שמתחת. למשל, כששייקספיר רצה לדמות תמונה שבה מלך פונה לנתינים שלו, המלך נעמד במרפסת ופנה לשחקנים מתחתיו. במחזה "ריצ'ארד השני" למשל, כששייקספיר ממחיז את רגע הדחתו של המלך, הוא מציג אותו בהתחלה על המרפסת, מדבר מטה למורדים שבגדו בו, ואז בהמשך הוא מראה את אותם בוגדים גוררים את המלך מהמרפסת ומוציאים אותו לבמה המרכזית למטה.</span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 19 -->
+    <section class="screen backgroundImg centerFlex" alt="" style="flex-direction: column;background-size: contain;background: #ebdcc5;position: relative;min-height: 90vh;">
+        <div class="backgroundImg" style="width: 100vw; height: 90vh; background-image: url(&quot;./img/Folger_[Shakespeares Globe Theatre, reconstruction] Joseph Q. Adams_008139-Medium_6000px_1.jpg&quot;); background-size: contain; background-repeat: no-repeat;">
+
+        </div>
+        <div class="have-scroll-animation flyBox aniType-MoveLeftToRight centerX active-enter-animation" style="left: 5%;top: 2%;max-width: 35em;background-color: rgba(255, 255, 255, 0.95);z-index: 1;margin: 25px;padding: 25px;margin-bottom: 3em;">
+            <p style=""><span >מאחר ומחזות התקופה סיפרו סיפורים שהתרחשו במספר רב של עולמות ועל פני תקופות זמן שונות (בניגוד למוסכמה היוונית-רומית הקלאסית, לפיה הצגה חייבת לספר סיפור שנפרס על פני יום אחד במקום אחד), <strong>היה צורך לעזור לקהל להבין את המעברים בין תמונות</strong>.</span></p><p style=""><span >השימוש בשתי הדלתות בקיר האחורי של הבמה היה כלי חשוב בהקשר הזה. האופן שבו שחקנים נכנסו לבמה מדלת אחת אבל יצאו מהבמה מהדלת השנייה, סימן לקהל את תחילתה וסיומה של תמונה. עם כניסתם לבמה, השחקנים עצמם לרוב מילאו את החסר בדיאלוג שלהם והסבירו איפה הם נמצאים וכמה זמן עבר בין תמונה אחת לאחרת.</span></p>
+        </div>
+
+    </section>
+    
+    <!-- screen 20 -->
+    <section class="screen GridLayout fr1and2ChildWidth gardientBackColor resateGridOnPhone" style="--startColor: #9b3b40;">
+        <div class="background-image" alt="" style="background-image: url(&quot;./img/Bernhardt_Hamlet_NoBG.webp&quot;);background-size: contain;background-position: bottom;position: relative;min-height: 60vh;background-repeat: no-repeat;margin-right: 30px;">
+            
+        </div>
+        <div class="centerFlex">
+            <div class="have-scroll-animation aniType-ScaleSmallToBig active-enter-animation" style="left: 10%; max-width: 35em; background-color: rgba(255, 255, 255, 0.9); z-index: 1; margin: 25px; padding: 25px;    margin-bottom: 3em;">
+                <p><span >וכך, מאחר ולא היה שימוש נרחב באלמנטים ויזואליים, <strong style="color: black;">מחזות התקופה, כפי שכבר אמרנו, עבדו בעיקר על הממד הקולי של שירה ורטוריקה. הקהל בא בעיקר כדי "לשמוע" הצגה, יותר מאשר "לצפות" בה</strong>. לכן, השירה והשפה הרטורית המקושטת היו חזות הכל – הן תיארו את עולם המחזה כולו ולא רק את עולמן הפנימי של דמויות שונות.</span></p><p><span >למשל, כשרומיאו מדבר על כך שהשמש זורחת מחוץ לחלונה של יוליה, הקהל נדרש לדמיין זאת מתוקף המילים. ומאחר והאקוסטיקה בתאטראות האלה לא הייתה טובה והקהל היה כנראה מאוד רועש, השחקנים נדרשו ליכולות רטוריות וכריזמה מיוחדות שאפשרו להם גם לדבר בקול רם וברור כך שכולם בקהל ישמעו אותם, וגם לדרוש את תשומת לב הקהל ברגעיים מרכזיים במחזה.</span></p>
+            </div>
+            
+        </div>
+
+    </section>
+</body>
+
+</html>
